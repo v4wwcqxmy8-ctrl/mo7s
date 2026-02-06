@@ -1,56 +1,199 @@
 <!doctype html>
-<html lang="en">   
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MO7S</title>
   <meta name="description" content="MO7S" />
   <link rel="icon" href="assets/mo7s-icon.jpg" />
   <link rel="stylesheet" href="styles.css" />
-        <div class="track" aria-hidden="true">
-        </div>
-     &nbsp
-        </section>
-     </div>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: #f5f5f5;
+    }
+
+    main {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .mark {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      text-transform: lowercase;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .pill {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 25px;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .pill:hover {
+      border-color: #999;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .pill--dd summary {
+      list-style: none;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .pill--dd summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .dd {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      margin-top: 0.5rem;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 10;
+      min-width: 150px;
+    }
+
+    .dd-item,
+    .dd a {
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: inherit;
+      border-radius: 8px;
+      transition: background 0.2s ease;
+      display: block;
+    }
+
+    .dd-item:hover,
+    .dd a:hover {
+      background: #f5f5f5;
+    }
+
+    .footer {
+      margin-top: auto;
+      padding-top: 2rem;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #666;
+    }
+
+    .mo7s {
+      font-weight: 600;
+    }
+
+    @media (max-width: 640px) {
+      .mark {
+        width: 150px;
+        height: 150px;
+      }
+
+      .tagline {
+        font-size: 1.25rem;
+      }
+
+      .links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .pill {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
     <section class="brand" aria-label="Brand">
       <img class="mark mark--circle" src="assets/mots-circle.jpg" alt="MO7S" decoding="async" />
       <p class="tagline">maximinimalism</p>
-    </div>
-      
-    &nbsp
-
-      
-      <nav class="links" aria-label="links">
-        <details class="pill pill--dd">
-          <summary>about</summary>
-          <div class="dd">
-            <div class="dd-item">bio</div>
-            <div class="dd-item">dates</div>
-          </div>
-        </details>
-
-        <details class="pill pill--dd">
-          <summary>contact</summary>
-          <div class="dd">
-            <a href="mailto:info@mo7s.com">email</a>
-          </div>
-        </details>
-
-        <details class="pill pill--dd">
-          <summary>socials</summary>
-          <div class="dd">
-            <a href="https://instagram.com/mo7s" target="_blank" rel="noopener noreferrer">instagram</a>
-            <a href="https://soundcloud.com/mo7s" target="_blank" rel="noopener noreferrer">soundcloud</a>
-            <a href="https://mixcloud.com/mo7s" target="_blank" rel="noopener noreferrer">mixcloud</a>
-            <a href="https://facebook.com/mo7s" target="_blank" rel="noopener noreferrer">facebook</a>
-          </div>
-        </details>
-      </nav>
     </section>
+      
+    <nav class="links" aria-label="links">
+      <details class="pill pill--dd">
+        <summary>about</summary>
+        <div class="dd">
+          <div class="dd-item">bio</div>
+          <div class="dd-item">dates</div>
+        </div>
+      </details>
+      <details class="pill pill--dd">
+        <summary>contact</summary>
+        <div class="dd">
+          <a href="mailto:info@mo7s.com">email</a>
+        </div>
+      </details>
+      <details class="pill pill--dd">
+        <summary>socials</summary>
+        <div class="dd">
+          <a href="https://instagram.com/mo7s" target="_blank" rel="noopener noreferrer">instagram</a>
+          <a href="https://soundcloud.com/mo7s" target="_blank" rel="noopener noreferrer">soundcloud</a>
+          <a href="https://mixcloud.com/mo7s" target="_blank" rel="noopener noreferrer">mixcloud</a>
+          <a href="https://facebook.com/mo7s" target="_blank" rel="noopener noreferrer">facebook</a>
+        </div>
+      </details>
+    </nav>
 
     <footer class="footer">
       <span>© <span id="y"></span> <span class="mo7s">MO7S</span></span>
     </footer>
   </main>
-
+  
   <script>
     document.getElementById('y').textContent = String(new Date().getFullYear());
   </script>
