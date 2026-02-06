@@ -91,12 +91,19 @@
       display: none;
     }
 
+    .pill--dd[open] {
+      padding-bottom: 1rem;
+    }
+
+    .pill--dd[open] .dd {
+      top: calc(100% - 0.25rem);
+    }
+
     .dd {
       position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      margin-top: 0.5rem;
+      top: calc(100% + 0.5rem);
+      left: 50%;
+      transform: translateX(-50%);
       background: #1a1a1a;
       border: 1px solid #333;
       border-radius: 12px;
@@ -107,6 +114,7 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.5);
       z-index: 10;
       min-width: 150px;
+      white-space: nowrap;
     }
 
     .dd-item,
