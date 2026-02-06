@@ -1,0 +1,269 @@
+:root{
+  --bg:#050607;
+  --fg:#e8eaed;
+  --muted:#9aa0a6;
+  --card:rgba(255,255,255,.06);
+  --stroke:rgba(255,255,255,.10);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+
+/* Roadway font:
+   - For local preview: if Roadway is installed on this Mac, the CSS below will use it.
+   - For hosting later: provide Roadway.woff2 (preferred) or Roadway.ttf and we’ll convert.
+*/
+
+body{
+  margin:0;
+  background:#000;
+  color:var(--fg);
+  font:16px/1.4 "Roadway", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  text-transform:lowercase;
+}
+
+.mo7s{
+  text-transform:uppercase;
+}
+
+.frame{
+  min-height:100%;
+  display:grid;
+  place-items:center;
+  gap:22px;
+  padding:28px 18px;
+}
+
+/* bio page: move header + links up */
+.bio-page .frame{
+  place-items:start center;
+  align-content:start;
+  padding-top:24px; /* ~1/4 inch */
+  gap:14px;
+}
+
+.hero{width:min(980px, 92vw)}
+
+.hero--bio{
+  width:min(760px, 72vw);
+  justify-self:center;
+}
+
+.links--bio{
+  margin-top:24px; /* move links down further */
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end; /* pop to the right */
+  justify-content:flex-start;
+  gap:10px;
+  justify-self:end;
+}
+
+.links--bio .pill{min-width:120px}
+
+@media (max-width:560px){
+  .bio-header{
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto auto;
+    grid-template-areas:
+      "logo"
+      "marquee"
+      "links";
+    justify-items:center;
+  }
+  .hero--bio{width:100%}
+  .links--bio{flex-direction:row; flex-wrap:wrap; justify-content:center}
+}
+
+.bio-header{
+  width:min(980px, 92vw);
+  display:grid;
+  grid-template-columns:120px 1fr;
+  grid-template-rows:auto auto;
+  grid-template-areas:
+    "logo marquee"
+    "links marquee";
+  align-items:start;
+  column-gap:24px; /* ~1/4 inch from marquee */
+  row-gap:24px;    /* ~1/4 inch */
+}
+
+.bio-mark{grid-area:logo}
+.hero--bio{grid-area:marquee}
+.links--bio{grid-area:links}
+
+.bio-mark{
+  width:120px;
+  height:120px;
+  display:block;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 12px 40px rgba(0,0,0,.55);
+  margin-top:12px; /* ~1/8 inch */
+}
+.bio-mark img{width:100%; height:100%; object-fit:cover; display:block}
+
+@media (max-width:560px){
+  .bio-header{grid-template-columns:84px 1fr}
+  .bio-mark{width:84px; height:84px; border-radius:14px}
+}
+
+.marquee{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  border-radius:18px;
+  border:1px solid var(--stroke);
+  background:var(--card);
+  box-shadow:0 12px 40px rgba(0,0,0,.55);
+}
+
+.track{
+  display:flex;
+  gap:18px;
+  padding:14px;
+  width:max-content;
+  animation: scroll 28s linear infinite;
+}
+
+.tile{
+  height:120px;
+  width:auto;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.08);
+  filter:contrast(1.05) saturate(1.05);
+}
+
+@keyframes scroll{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .track{ animation:none; }
+}
+
+.links{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+.links--bio{margin-top:12px}
+
+.pill{
+  color:var(--fg);
+  text-decoration:none;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(0,0,0,.40);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow:0 10px 30px rgba(0,0,0,.45);
+  min-width:118px;
+  text-align:center;
+  line-height:1;
+}
+
+.pill:hover{background:rgba(0,0,0,.55)}
+
+/* dropdown pills */
+.pill--dd{position:relative; display:inline-block; padding:0; min-width:118px}
+.pill--dd summary{
+  list-style:none;
+  cursor:pointer;
+  padding:10px 14px;
+  border-radius:999px;
+}
+.pill--dd summary::-webkit-details-marker{display:none}
+.pill--dd[open]{background:rgba(0,0,0,.55)}
+
+.dd{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:calc(100% + 10px);
+  min-width:220px;
+  padding:12px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(0,0,0,.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:0 18px 60px rgba(0,0,0,.6);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.dd-item{
+  padding:8px 10px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.04);
+  color:var(--fg);
+  text-align:center;
+}
+
+.dd a{color:var(--fg); text-decoration:none; padding:6px 8px; border-radius:10px}
+.dd a:hover{background:rgba(255,255,255,.08)}
+
+.brand{
+  width:min(720px, 92vw);
+  text-align:center;
+  padding:18px 18px 16px;
+}
+
+.mark{
+  width:min(420px, 88vw);
+  height:auto;
+  display:block;
+  margin:0 auto 14px;
+}
+
+.mark--circle{
+  width:min(340px, 72vw);
+  border-radius:999px;
+  box-shadow:0 20px 80px rgba(0,0,0,.65);
+}
+
+.tagline{margin:0 0 14px; color:var(--muted)}
+
+.footer{color:var(--muted); font-size:13px}
+
+.footer--pin{
+  position:fixed;
+  right:18px;
+  bottom:14px;
+  margin:0;
+}
+
+/* Bio page */
+.bio{
+  width:min(820px, 92vw);
+  text-align:left;
+}
+
+.bio-title{
+  margin:8px 0 8px;
+  font-size:40px;
+  letter-spacing:0.04em;
+}
+
+.bio-lede{margin:0 0 18px; color:var(--muted)}
+
+.bio-card{
+  border:1px solid var(--stroke);
+  background:rgba(255,255,255,.04);
+  border-radius:16px;
+  padding:16px 16px;
+  margin:12px 0;
+}
+
+.bio-card h2{margin:0 0 10px; font-size:16px; color:var(--fg)}
+
+.bio-card a{color:var(--fg)}
