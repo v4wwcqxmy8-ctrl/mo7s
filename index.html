@@ -61,7 +61,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
+      gap: 1.5rem; /* slightly more spacing between pills */
       width: 100%;
     }
 
@@ -74,6 +74,8 @@
       transition: all 0.3s ease;
       position: relative;
       color: #fff;
+      width: 160px; /* keep pills equal width on desktop */
+      text-align: center;
     }
 
     .pill:hover {
@@ -178,23 +180,24 @@
       <details class="pill pill--dd">
         <summary>about</summary>
         <div class="dd">
-          <div class="dd-item">bio</div>
-          <div class="dd-item">dates</div>
+          <a class="dd-item" href="past.html">past</a>
+          <div class="dd-item">present</div>
+          <div class="dd-item">future</div>
         </div>
       </details>
       <details class="pill pill--dd">
         <summary>contact</summary>
         <div class="dd">
-          <a href="mailto:info@mo7s.com">email</a>
+          <a class="dd-item" href="mailto:info@mo7s.com">email</a>
         </div>
       </details>
       <details class="pill pill--dd">
         <summary>socials</summary>
         <div class="dd">
-          <a href="https://instagram.com/mo7s" target="_blank" rel="noopener noreferrer">instagram</a>
-          <a href="https://soundcloud.com/mo7s" target="_blank" rel="noopener noreferrer">soundcloud</a>
-          <a href="https://mixcloud.com/mo7s" target="_blank" rel="noopener noreferrer">mixcloud</a>
-          <a href="https://facebook.com/mo7s" target="_blank" rel="noopener noreferrer">facebook</a>
+          <a class="dd-item" href="https://instagram.com/mo7s" target="_blank" rel="noopener noreferrer">instagram</a>
+          <a class="dd-item" href="https://soundcloud.com/mo7s" target="_blank" rel="noopener noreferrer">soundcloud</a>
+          <a class="dd-item" href="https://mixcloud.com/mo7s" target="_blank" rel="noopener noreferrer">mixcloud</a>
+          <a class="dd-item" href="https://facebook.com/mo7s" target="_blank" rel="noopener noreferrer">facebook</a>
         </div>
       </details>
     </nav>
