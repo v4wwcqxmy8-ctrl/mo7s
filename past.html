@@ -353,6 +353,41 @@
       if (e.key === 'ArrowLeft') return prev();
     });
 
+    // Simple mobile swipe (left/right) inside the viewer frame
+    let touchX0 = null;
+    let touchY0 = null;
+    const SWIPE_MIN_X = 40;
+    const SWIPE_MAX_Y = 60;
+
+    function onTouchStart(e) {
+      const t = e.changedTouches && e.changedTouches[0];
+      if (!t) return;
+      touchX0 = t.clientX;
+      touchY0 = t.clientY;
+    }
+
+    function onTouchEnd(e) {
+      if (touchX0 == null || touchY0 == null) return;
+      const t = e.changedTouches && e.changedTouches[0];
+      if (!t) return;
+      const dx = t.clientX - touchX0;
+      const dy = t.clientY - touchY0;
+
+      touchX0 = null;
+      touchY0 = null;
+
+      if (viewer.getAttribute('aria-hidden') === 'true') return;
+      if (Math.abs(dx) < SWIPE_MIN_X) return;
+      if (Math.abs(dy) > SWIPE_MAX_Y) return;
+
+      if (dx < 0) next();
+      else prev();
+    }
+
+    const frame = document.querySelector('.viewer__frame');
+    frame.addEventListener('touchstart', onTouchStart, { passive: true });
+    frame.addEventListener('touchend', onTouchEnd, { passive: true });
+
     fetch(MANIFEST_URL)
       .then(r => r.json())
       .then(data => {
