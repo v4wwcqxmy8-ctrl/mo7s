@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MO7S — present</title>
+  <meta name="description" content="MO7S — present" />
+  <link rel="icon" href="assets/mo7s-icon.jpg" />
+  <style>
+    @font-face {
+      font-family: 'Roadway';
+      src: url('assets/Roadway.ttf') format('truetype');
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #000;
+      --ink: #f2f2f2;
+      --muted: rgba(242,242,242,0.72);
+      --max: 980px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: radial-gradient(1200px 800px at 50% 20%, #141414, var(--bg));
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      min-height: 100vh;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.45);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .bar {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .title {
+      font-family: 'Roadway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 1rem;
+      color: var(--muted);
+    }
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 16px 46px;
+    }
+
+    figure {
+      margin: 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .card {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 18px 60px rgba(0,0,0,0.7);
+      background: #050505;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    figcaption {
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 1rem;
+    }
+
+    .em { color: var(--ink); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a href="index.html" aria-label="MO7S home">
+        <img class="logo" src="assets/mo7s-mark.png" alt="MO7S" decoding="async" />
+      </a>
+      <div class="title">PRESENT</div>
+    </div>
+  </header>
+
+  <main>
+    <figure>
+      <div class="card">
+        <img src="assets/present/blood-of-zeus-1600.jpg" alt="Blood of Zeus" loading="lazy" decoding="async" />
+      </div>
+      <figcaption>
+        After 3 seasons, <span class="em">Stephen</span> wrapped up production on <span class="em">Blood of Zeus</span> on Netflix where he was the <span class="em">Director of Technology</span>. A big salute to the Cast &amp; Crew. Powerhouse team and everyone at Netflix!!
+      </figcaption>
+    </figure>
+  </main>
+</body>
+</html>
