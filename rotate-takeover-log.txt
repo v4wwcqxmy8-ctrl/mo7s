@@ -1,0 +1,7 @@
+35	ccw90	assets/past/full/in-right-683e228fc3af.jpg
+36	ccw90	assets/past/full/back-f46f9ff8b79b.jpg
+38	ccw90	assets/past/full/in-left-98748d7352d1.jpg
+39	cw90	assets/past/full/in-right-d1715085129b.jpg
+40	rot180	assets/past/full/in-left-8ba911b69534.jpg
+41	ccw90	assets/past/full/in-right-59aebd1891ef.jpg
+42	rot180	assets/past/full/inhale-back-252b97510625.jpg
