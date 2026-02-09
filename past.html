@@ -444,6 +444,7 @@
         viewerVid.src = videoUrl;
         // autoplay on first click (muted+playsinline enables mobile autoplay)
         viewerVid.muted = false;
+        viewerVid.volume = 1.0;
         viewerVid.play().catch(() => { /* autoplay with audio may be blocked */ });
       } else {
         muteBtn.style.display = 'none';
