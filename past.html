@@ -309,20 +309,35 @@
   </header>
 
   <main>
-    <section class="section" id="events" aria-label="Events">
-      <h2 class="section__title">events</h2>
-      <div class="wall" id="wall-events"></div>
-    </section>
+    <details class="sect" id="events" open>
+      <summary>
+        <span class="chev">›</span>
+        <h2 class="section__title">events</h2>
+      </summary>
+      <div class="sect__body">
+        <div class="wall" id="wall-events"></div>
+      </div>
+    </details>
 
-    <section class="section" id="releases" aria-label="Releases">
-      <h2 class="section__title">releases</h2>
-      <div class="wall" id="wall-releases"></div>
-    </section>
+    <details class="sect" id="releases">
+      <summary>
+        <span class="chev">›</span>
+        <h2 class="section__title">releases</h2>
+      </summary>
+      <div class="sect__body">
+        <div class="wall" id="wall-releases"></div>
+      </div>
+    </details>
 
-    <section class="section" id="appearances" aria-label="Appearances">
-      <h2 class="section__title">appearances</h2>
-      <div class="wall" id="wall-appearances"></div>
-    </section>
+    <details class="sect" id="appearances">
+      <summary>
+        <span class="chev">›</span>
+        <h2 class="section__title">appearances</h2>
+      </summary>
+      <div class="sect__body">
+        <div class="wall" id="wall-appearances"></div>
+      </div>
+    </details>
   </main>
 
   <div class="viewer" id="viewer" aria-hidden="true">
@@ -488,6 +503,18 @@
         }
         setActive();
         window.addEventListener('hashchange', setActive);
+
+        function openSection() {
+          const h = (location.hash || '#events').replace('#','');
+          for (const k of ['events','releases','appearances']) {
+            const d = document.getElementById(k);
+            if (d && d.tagName === 'DETAILS') {
+              d.open = (k === h);
+            }
+          }
+        }
+        openSection();
+        window.addEventListener('hashchange', openSection);
       })
       .catch(() => {
         wallEvents.textContent = 'Could not load flyers.';
