@@ -2,17 +2,17 @@
   "count": 88,
   "items": [
     {
-      "src": "inbound:file_8",
-      "full": "assets/past/full/above-below.jpg",
-      "thumb": "assets/past/thumb/above-below.jpg",
-      "title": "As Above So Below",
-      "category": "events"
-    },
-    {
       "src": "inbound:file_9",
       "full": "assets/past/full/american-dad.jpg",
       "thumb": "assets/past/thumb/american-dad.jpg",
       "title": "American Dad (board)",
+      "category": "appearances"
+    },
+    {
+      "src": "inbound:file_8",
+      "full": "assets/past/full/above-below.jpg",
+      "thumb": "assets/past/thumb/above-below.jpg",
+      "title": "As Above So Below",
       "category": "events"
     },
     {

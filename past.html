@@ -309,7 +309,7 @@
   </header>
 
   <main>
-    <details class="sect" id="events" open>
+    <details class="sect" id="events">
       <summary>
         <span class="chev">›</span>
         <h2 class="section__title">events</h2>
@@ -495,7 +495,7 @@
 
         // set active pill based on hash
         function setActive() {
-          const h = (location.hash || '#events').replace('#','');
+          const h = (location.hash || '').replace('#','');
           for (const k of ['events','releases','appearances']) {
             const a = document.getElementById('lnk-'+k);
             if (a) a.setAttribute('aria-current', k===h ? 'page' : 'false');
@@ -505,11 +505,11 @@
         window.addEventListener('hashchange', setActive);
 
         function openSection() {
-          const h = (location.hash || '#events').replace('#','');
+          const h = (location.hash || '').replace('#','');
           for (const k of ['events','releases','appearances']) {
             const d = document.getElementById(k);
             if (d && d.tagName === 'DETAILS') {
-              d.open = (k === h);
+              d.open = (h ? (k === h) : false);
             }
           }
         }
