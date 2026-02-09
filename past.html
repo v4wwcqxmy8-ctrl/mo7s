@@ -242,6 +242,18 @@
       position: relative;
     }
 
+        .viewer__vid {
+      width: 100%;
+      height: auto;
+      max-height: 88vh;
+      display: none;
+      background: #000;
+    }
+
+    .viewer__vid[aria-hidden="false"] {
+      display: block;
+    }
+
     .viewer__img {
       width: 100%;
       height: auto;
@@ -375,6 +387,7 @@
       <button class="nav nav--prev" id="prevBtn" type="button" aria-label="Previous">‹</button>
       <button class="nav nav--next" id="nextBtn" type="button" aria-label="Next">›</button>
 
+      <video class="viewer__vid" id="viewerVid" playsinline muted controls preload="metadata"></video>
       <img class="viewer__img" id="viewerImg" alt="" />
     </div>
   </div>
@@ -390,6 +403,7 @@
     const wallAppearances = document.getElementById('wall-appearances');
     const viewer = document.getElementById('viewer');
     const viewerImg = document.getElementById('viewerImg');
+    const viewerVid = document.getElementById('viewerVid');
     const cap = document.getElementById('cap');
     const openFull = document.getElementById('openFull');
     const closeBtn = document.getElementById('closeBtn');
@@ -402,10 +416,33 @@
     function renderViewer() {
       const item = ITEMS[currentIndex];
       if (!item) return;
-      viewerImg.src = item.full + (item.full.includes('?') ? '&' : '?') + 'v=' + ASSET_VER;
-      viewerImg.alt = item.title || 'flyer';
       cap.textContent = item.title || '';
-      openFull.href = (item.video || item.full) + (((item.video || item.full).includes('?')) ? '&' : '?') + 'v=' + ASSET_VER;
+      const fullUrl = item.full + (item.full.includes('?') ? '&' : '?') + 'v=' + ASSET_VER;
+      const videoUrl = item.video ? (item.video + (item.video.includes('?') ? '&' : '?') + 'v=' + ASSET_VER) : null;
+
+      // stop previous video
+      viewerVid.pause();
+      viewerVid.removeAttribute('src');
+      viewerVid.load();
+
+      if (videoUrl) {
+        viewerImg.setAttribute('aria-hidden','true');
+        viewerImg.style.display = 'none';
+        viewerVid.setAttribute('aria-hidden','false');
+        viewerVid.style.display = 'block';
+        viewerVid.src = videoUrl;
+        // autoplay on first click (muted+playsinline enables mobile autoplay)
+        viewerVid.play().catch(() => {});
+      } else {
+        viewerVid.setAttribute('aria-hidden','true');
+        viewerVid.style.display = 'none';
+        viewerImg.setAttribute('aria-hidden','false');
+        viewerImg.style.display = 'block';
+        viewerImg.src = fullUrl;
+        viewerImg.alt = item.title || 'flyer';
+      }
+
+      openFull.href = videoUrl || fullUrl;
     }
 
     function openViewerAt(i) {
@@ -418,6 +455,9 @@
     function closeViewer() {
       viewer.setAttribute('aria-hidden', 'true');
       viewerImg.src = '';
+      viewerVid.pause();
+      viewerVid.removeAttribute('src');
+      viewerVid.load();
       document.body.style.overflow = '';
       currentIndex = -1;
     }
