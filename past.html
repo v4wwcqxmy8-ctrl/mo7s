@@ -132,13 +132,28 @@
     }
 
     /* Apple Music cover stack (cover is the link) */
-    .am-stack {
+     .am-stack {
       position: relative;
       display: inline-block;
       width: 100%;
       max-width: 320px;
       border-radius: 16px;
       overflow: hidden;
+    }
+
+    /* MO7S black mark layered on top of the Apple Music cover art */
+    .am-stack::after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      width: 86px;
+      height: 86px;
+      background: url('assets/mo7s-mark.png') center / contain no-repeat;
+      /* turn the yellow mark into a black silhouette */
+      filter: grayscale(1) brightness(0);
+      opacity: 0.28;
+      pointer-events: none;
     }
 
     .am-cover {
@@ -148,31 +163,6 @@
       object-fit: cover;
       border: 1px solid rgba(255,255,255,0.12);
       box-shadow: 0 14px 44px rgba(0,0,0,0.55);
-    }
-
-    .am-overlay {
-      position: absolute;
-      pointer-events: none;
-    }
-
-    .am-overlay--apple {
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      opacity: 0.14;
-      mix-blend-mode: screen;
-    }
-
-    /* Corner badge (option 1) */
-    .am-overlay--mo7s {
-      width: 86px;
-      height: 86px;
-      right: 10px;
-      bottom: 10px;
-      opacity: 0.26;
-      mix-blend-mode: lighten;
-      filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45));
     }
 
     .flip {
@@ -454,8 +444,6 @@
         <div class="embed">
           <a class="am-stack" href="https://music.apple.com/us/artist/mo7s/275693837" target="_blank" rel="noopener noreferrer" aria-label="MO7S on Apple Music">
             <img class="am-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music/v4/22/5f/83/225f83d8-94f0-c735-dc54-6f77c513f5c0/888608738279.jpg/600x600bb.jpg" alt="MO7S cover art" loading="lazy" decoding="async" />
-            <img class="am-overlay am-overlay--apple" src="assets/brand/apple/apple-music-512.jpg" alt="" aria-hidden="true" decoding="async" />
-            <img class="am-overlay am-overlay--mo7s" src="assets/mo7s-mark.png" alt="" aria-hidden="true" decoding="async" />
           </a>
         </div>
         <div class="wall" id="wall-releases"></div>
