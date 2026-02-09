@@ -127,6 +127,54 @@
       color: rgba(242,242,242,0.65);
     }
 
+    .embed {
+      margin: 10px 0 14px;
+    }
+
+    /* Apple Music cover stack (cover is the link) */
+    .am-stack {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      max-width: 320px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .am-cover {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      display: block;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 14px 44px rgba(0,0,0,0.55);
+    }
+
+    .am-overlay {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .am-overlay--apple {
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 0.14;
+      mix-blend-mode: screen;
+    }
+
+    /* Corner badge (option 1) */
+    .am-overlay--mo7s {
+      width: 86px;
+      height: 86px;
+      right: 10px;
+      bottom: 10px;
+      opacity: 0.26;
+      mix-blend-mode: lighten;
+      filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45));
+    }
+
     .flip {
       transform: none;
     }
