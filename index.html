@@ -103,6 +103,10 @@
       bottom: calc(100% - 0.25rem);
     }
 
+    .pill--socials .dd {
+      min-width: 320px;
+    }
+
     .dd {
       position: absolute;
       bottom: calc(100% + 0.5rem);
@@ -123,15 +127,16 @@
 
         .iconrow {
       display: flex;
-      gap: 12px;
+      flex-wrap: wrap;
+      gap: 14px;
       align-items: center;
       justify-content: center;
       padding: 6px 4px;
     }
 
     .iconlink {
-      width: 88px;
-      height: 88px;
+      width: min(42vw, 140px);
+      height: min(42vw, 140px);
       border-radius: 12px;
       overflow: hidden;
       border: 1px solid #333;
@@ -225,7 +230,7 @@
           <a class="dd-item" href="mailto:info@mo7s.com">email</a>
         </div>
       </details>
-      <details class="pill pill--dd">
+      <details class="pill pill--dd pill--socials">
         <summary>socials</summary>
         <div class="dd">
           <div class="iconrow">
