@@ -1,0 +1,5 @@
+35	rot180	assets/past/full/in-right-683e228fc3af.jpg
+40	rot180	assets/past/full/in-left-8ba911b69534.jpg
+42	rot180	assets/past/full/inhale-back-252b97510625.jpg
+43	rot180	assets/past/full/inhale-front-6dc5f8998eff.jpg
+47	cw90	assets/past/full/invasion-3da151a401c4.jpg
