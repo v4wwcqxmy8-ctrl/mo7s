@@ -393,7 +393,7 @@
       <button class="nav nav--prev" id="prevBtn" type="button" aria-label="Previous">‹</button>
       <button class="nav nav--next" id="nextBtn" type="button" aria-label="Next">›</button>
 
-      <video class="viewer__vid" id="viewerVid" playsinline muted controls preload="metadata"></video>
+      <video class="viewer__vid" id="viewerVid" playsinline controls preload="metadata"></video>
       <img class="viewer__img" id="viewerImg" alt="" />
     </div>
   </div>
@@ -438,7 +438,8 @@
         viewerVid.style.display = 'block';
         viewerVid.src = videoUrl;
         // autoplay on first click (muted+playsinline enables mobile autoplay)
-        viewerVid.play().catch(() => {});
+        viewerVid.muted = false;
+        viewerVid.play().catch(() => { /* autoplay with audio may be blocked */ });
       } else {
         viewerVid.setAttribute('aria-hidden','true');
         viewerVid.style.display = 'none';
