@@ -9,11 +9,6 @@
 *{box-sizing:border-box}
 html,body{height:100%}
 
-/* Roadway font:
-   - For local preview: if Roadway is installed on this Mac, the CSS below will use it.
-   - For hosting later: provide Roadway.woff2 (preferred) or Roadway.ttf and we'll convert.
-*/
-
 body{
   margin:0;
   background:#000;
@@ -34,11 +29,10 @@ body{
   padding:28px 18px;
 }
 
-/* bio page: move header + links up */
 .bio-page .frame{
   place-items:start center;
   align-content:start;
-  padding-top:24px; /* ~1/4 inch */
+  padding-top:24px;
   gap:14px;
 }
 
@@ -50,14 +44,14 @@ body{
 }
 
 .links--bio{
-  margin-top:24px; /* move links down further */
+  margin-top:24px;
   display:flex;
   flex-direction:column;
-  align-items:flex-start; /* align to the left instead of right */
+  align-items:flex-start;
   justify-content:flex-start;
   gap:10px;
-  justify-self:start; /* position at the left of grid area */
-  align-self:end; /* pop to the bottom */
+  justify-self:start;
+  align-self:end;
 }
 
 .links--bio .pill{min-width:120px}
@@ -85,8 +79,8 @@ body{
     "logo marquee"
     "links marquee";
   align-items:start;
-  column-gap:24px; /* ~1/4 inch from marquee */
-  row-gap:24px;    /* ~1/4 inch */
+  column-gap:24px;
+  row-gap:24px;
 }
 
 .bio-mark{grid-area:logo}
@@ -101,7 +95,7 @@ body{
   overflow:hidden;
   border:1px solid rgba(255,255,255,.14);
   box-shadow:0 12px 40px rgba(0,0,0,.55);
-  margin-top:12px; /* ~1/8 inch */
+  margin-top:12px;
 }
 .bio-mark img{width:100%; height:100%; object-fit:cover; display:block}
 
@@ -172,7 +166,6 @@ body{
 
 .pill:hover{background:rgba(0,0,0,.55)}
 
-/* dropdown pills */
 .pill--dd{position:relative; display:inline-block; padding:0; min-width:118px}
 .pill--dd summary{
   list-style:none;
@@ -260,7 +253,6 @@ body{
   margin:0;
 }
 
-/* Bio page */
 .bio{
   width:min(820px, 92vw);
   text-align:left;
@@ -284,4 +276,4 @@ body{
 
 .bio-card h2{margin:0 0 10px; font-size:16px; color:var(--fg)}
 
-.bio-card a{color:var(--fg)
+.bio-card a{color:var(--fg)}
