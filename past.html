@@ -341,10 +341,26 @@
         </a>
         <span>PAST</span>
       </div>
+
+      <nav class="subnav" aria-label="Past sections">
+        <a href="#appearances" id="lnk-appearances">appearances</a>
+        <a href="#events" id="lnk-events">events</a>
+        <a href="#releases" id="lnk-releases">releases</a>
+      </nav>
     </div>
   </header>
 
   <main>
+        <details class="sect" id="appearances">
+      <summary>
+        <span class="chev">›</span>
+        <h2 class="section__title">appearances</h2>
+      </summary>
+      <div class="sect__body">
+        <div class="wall" id="wall-appearances"></div>
+      </div>
+    </details>
+
     <details class="sect" id="events">
       <summary>
         <span class="chev">›</span>
@@ -362,16 +378,6 @@
       </summary>
       <div class="sect__body">
         <div class="wall" id="wall-releases"></div>
-      </div>
-    </details>
-
-    <details class="sect" id="appearances">
-      <summary>
-        <span class="chev">›</span>
-        <h2 class="section__title">appearances</h2>
-      </summary>
-      <div class="sect__body">
-        <div class="wall" id="wall-appearances"></div>
       </div>
     </details>
   </main>
@@ -528,7 +534,7 @@
       .then(r => r.json())
       .then(data => {
         ITEMS = data.items || [];
-        const frags = { events: document.createDocumentFragment(), releases: document.createDocumentFragment(), appearances: document.createDocumentFragment() };
+        const frags = { appearances: document.createDocumentFragment(), events: document.createDocumentFragment(), releases: document.createDocumentFragment() };
 
         ITEMS.forEach((item, i) => {
           const a = document.createElement('a');
