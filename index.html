@@ -96,11 +96,12 @@
     }
 
     .pill--dd[open] {
-      padding-top: 1rem;
+      /* dropdown opens below */
     }
 
     .pill--dd[open] .dd {
-      bottom: calc(100% - 0.25rem);
+      top: calc(100% + 0.5rem);
+      bottom: auto;
     }
 
     .pill--socials .dd {
@@ -109,7 +110,8 @@
 
     .dd {
       position: absolute;
-      bottom: calc(100% + 0.5rem);
+      top: calc(100% + 0.5rem);
+      bottom: auto;
       left: 50%;
       transform: translateX(-50%);
       background: #1a1a1a;
