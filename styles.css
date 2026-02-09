@@ -185,7 +185,8 @@ body{
 
 .dd{
   position:absolute;
-  right:0;
+  left:50%;
+  transform:translateX(-50%);
   top:calc(100% + 10px);
   min-width:220px;
   padding:12px;
@@ -211,6 +212,23 @@ body{
 
 .dd a{color:var(--fg); text-decoration:none; padding:6px 8px; border-radius:10px}
 .dd a:hover{background:rgba(255,255,255,.08)}
+
+.iconrow{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.iconlink{
+  display:block;
+  text-align:center;
+}
+
+.iconlink img{
+  width:48px;
+  height:48px;
+  border-radius:8px;
+}
 
 .brand{
   width:min(720px, 92vw);
