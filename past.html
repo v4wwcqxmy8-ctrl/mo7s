@@ -141,21 +141,6 @@
       overflow: hidden;
     }
 
-    /* MO7S black mark layered on top of the Apple Music cover art */
-    .am-stack::after {
-      content: "";
-      position: absolute;
-      right: 10px;
-      bottom: 10px;
-      width: 86px;
-      height: 86px;
-      background: url('assets/mo7s-mark.png') center / contain no-repeat;
-      /* turn the yellow mark into a black silhouette */
-      filter: grayscale(1) brightness(0);
-      opacity: 0.28;
-      pointer-events: none;
-    }
-
     .am-cover {
       width: 100%;
       aspect-ratio: 1 / 1;
