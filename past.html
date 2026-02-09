@@ -560,7 +560,7 @@
         // set active pill based on hash
         function setActive() {
           const h = (location.hash || '').replace('#','');
-          for (const k of ['events','releases','appearances']) {
+          for (const k of ['appearances','events','releases']) {
             const a = document.getElementById('lnk-'+k);
             if (a) a.setAttribute('aria-current', k===h ? 'page' : 'false');
           }
@@ -570,7 +570,7 @@
 
         function openSection() {
           const h = (location.hash || '').replace('#','');
-          for (const k of ['events','releases','appearances']) {
+          for (const k of ['appearances','events','releases']) {
             const d = document.getElementById(k);
             if (d && d.tagName === 'DETAILS') {
               d.open = (h ? (k === h) : false);
