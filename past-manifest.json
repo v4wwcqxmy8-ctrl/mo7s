@@ -2,19 +2,19 @@
   "count": 89,
   "items": [
     {
+      "src": "inbound:file_9",
+      "full": "assets/past/full/american-dad.jpg",
+      "thumb": "assets/past/thumb/american-dad.jpg",
+      "title": "American Dad (board)",
+      "category": "appearances"
+    },
+    {
       "src": "inbound:appearance-clip.m4v",
       "full": "assets/past/full/appearance-clip.jpg",
       "thumb": "assets/past/thumb/appearance-clip.jpg",
       "title": "Appearance (clip)",
       "category": "appearances",
       "video": "assets/past/videos/appearance-clip.mp4"
-    },
-    {
-      "src": "inbound:file_9",
-      "full": "assets/past/full/american-dad.jpg",
-      "thumb": "assets/past/thumb/american-dad.jpg",
-      "title": "American Dad (board)",
-      "category": "appearances"
     },
     {
       "src": "inbound:file_8",
