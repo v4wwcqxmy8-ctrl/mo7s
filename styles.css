@@ -214,8 +214,8 @@ body{
 .dd a:hover{background:rgba(255,255,255,.08)}
 
 .iconrow{
-  display:flex;
-  flex-direction:column;
+  display:grid;
+  grid-template-columns:1fr 1fr;
   gap:12px;
 }
 
