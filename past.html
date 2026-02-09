@@ -180,6 +180,30 @@
     }
 
     /* subtle “grunge” overlay without heavy filters */
+    .playbadge {
+      position: absolute;
+      inset: 10px 10px auto auto;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.55);
+      border: 1px solid rgba(255,255,255,0.16);
+      display: grid;
+      place-items: center;
+      color: rgba(242,242,242,0.9);
+      font-size: 14px;
+      line-height: 1;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .flyer[data-video="1"]::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
     .flyer::after {
       content: "";
       position: absolute;
@@ -381,7 +405,7 @@
       viewerImg.src = item.full + (item.full.includes('?') ? '&' : '?') + 'v=' + ASSET_VER;
       viewerImg.alt = item.title || 'flyer';
       cap.textContent = item.title || '';
-      openFull.href = item.full + (item.full.includes('?') ? '&' : '?') + 'v=' + ASSET_VER;
+      openFull.href = (item.video || item.full) + (((item.video || item.full).includes('?')) ? '&' : '?') + 'v=' + ASSET_VER;
     }
 
     function openViewerAt(i) {

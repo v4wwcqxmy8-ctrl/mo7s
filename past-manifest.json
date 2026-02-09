@@ -1,6 +1,14 @@
 {
-  "count": 88,
+  "count": 89,
   "items": [
+    {
+      "src": "inbound:appearance-clip.m4v",
+      "full": "assets/past/full/appearance-clip.jpg",
+      "thumb": "assets/past/thumb/appearance-clip.jpg",
+      "title": "Appearance (clip)",
+      "category": "appearances",
+      "video": "assets/past/videos/appearance-clip.m4v"
+    },
     {
       "src": "inbound:file_9",
       "full": "assets/past/full/american-dad.jpg",
