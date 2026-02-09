@@ -5,529 +5,617 @@
       "src": "inbound:file_8",
       "full": "assets/past/full/above-below.jpg",
       "thumb": "assets/past/thumb/above-below.jpg",
-      "title": "As Above So Below"
+      "title": "As Above So Below",
+      "category": "events"
     },
     {
       "src": "inbound:file_9",
       "full": "assets/past/full/american-dad.jpg",
       "thumb": "assets/past/thumb/american-dad.jpg",
-      "title": "American Dad (board)"
+      "title": "American Dad (board)",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/3AMSF.jpg",
       "full": "assets/past/full/3amsf-d54f2b8e973c.jpg",
       "thumb": "assets/past/thumb/3amsf-d54f2b8e973c.jpg",
-      "title": "3AMSF"
+      "title": "3AMSF",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/AVALON/January 10 2003/BACK.JPG",
       "full": "assets/past/full/back-7809623640bf.jpg",
       "thumb": "assets/past/thumb/back-7809623640bf.jpg",
-      "title": "BACK"
+      "title": "BACK",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/AVALON/January 10 2003/DIGWEED FRONT.JPG",
       "full": "assets/past/full/digweed-front-89f72ea82358.jpg",
       "thumb": "assets/past/thumb/digweed-front-89f72ea82358.jpg",
-      "title": "DIGWEED FRONT"
+      "title": "DIGWEED FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/AVALON/January 10 2003/January 03 Front.JPG",
       "full": "assets/past/full/january-03-front-2c607b1f1989.jpg",
       "thumb": "assets/past/thumb/january-03-front-2c607b1f1989.jpg",
-      "title": "January 03 Front"
+      "title": "January 03 Front",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/AXIS/9:13:02/EPSON001.JPG",
       "full": "assets/past/full/epson001-3766e642e4e7.jpg",
       "thumb": "assets/past/thumb/epson001-3766e642e4e7.jpg",
-      "title": "EPSON001"
+      "title": "EPSON001",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Adrenaline 2:26:2000/Adrenaline_FOLD.jpg",
       "full": "assets/past/full/adrenaline-fold-17d7eca48bdd.jpg",
       "thumb": "assets/past/thumb/adrenaline-fold-17d7eca48bdd.jpg",
-      "title": "Adrenaline_FOLD"
+      "title": "Adrenaline_FOLD",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Adrenaline 2:26:2000/BACK.JPG",
       "full": "assets/past/full/back-d82242c2ff7d.jpg",
       "thumb": "assets/past/thumb/back-d82242c2ff7d.jpg",
-      "title": "BACK"
+      "title": "BACK",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Adrenaline 2:26:2000/FRONT.JPG",
       "full": "assets/past/full/front-16b5e962b19c.jpg",
       "thumb": "assets/past/thumb/front-16b5e962b19c.jpg",
-      "title": "FRONT"
+      "title": "FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Adrenaline 2:26:2000/IN LEFT.JPG",
       "full": "assets/past/full/in-left-ab429aad0692.jpg",
       "thumb": "assets/past/thumb/in-left-ab429aad0692.jpg",
-      "title": "IN LEFT"
+      "title": "IN LEFT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Bedrock_Breaks_back.jpg",
       "full": "assets/past/full/bedrock-breaks-back-06e08dde3a9e.jpg",
       "thumb": "assets/past/thumb/bedrock-breaks-back-06e08dde3a9e.jpg",
-      "title": "Bedrock_Breaks_back"
+      "title": "Bedrock_Breaks_back",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Big Bang/BACK.JPG",
       "full": "assets/past/full/back-1aadedd7be79.jpg",
       "thumb": "assets/past/thumb/back-1aadedd7be79.jpg",
-      "title": "BACK"
+      "title": "BACK",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Big Bang/BigBang.jpg",
       "full": "assets/past/full/bigbang-19bcfea5998b.jpg",
       "thumb": "assets/past/thumb/bigbang-19bcfea5998b.jpg",
-      "title": "BigBang"
+      "title": "BigBang",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Big Bang/FRONT.JPG",
       "full": "assets/past/full/front-0f71f0aa4fb2.jpg",
       "thumb": "assets/past/thumb/front-0f71f0aa4fb2.jpg",
-      "title": "FRONT"
+      "title": "FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Boston_Bedrock_Breaks.jpg",
       "full": "assets/past/full/boston-bedrock-breaks-c6d3623b7ecb.jpg",
       "thumb": "assets/past/thumb/boston-bedrock-breaks-c6d3623b7ecb.jpg",
-      "title": "Boston_Bedrock_Breaks"
+      "title": "Boston_Bedrock_Breaks",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Bounce 7:13:2002/BACK.JPG",
       "full": "assets/past/full/back-4563139a99c9.jpg",
       "thumb": "assets/past/thumb/back-4563139a99c9.jpg",
-      "title": "BACK"
+      "title": "BACK",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Bounce 7:13:2002/Bounce_Fort_Lauderdale.jpg",
       "full": "assets/past/full/bounce-fort-lauderdale-4dac295a11e8.jpg",
       "thumb": "assets/past/thumb/bounce-fort-lauderdale-4dac295a11e8.jpg",
-      "title": "Bounce_Fort_Lauderdale"
+      "title": "Bounce_Fort_Lauderdale",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Bounce 7:13:2002/EPSON001~.JPG",
       "full": "assets/past/full/epson001-63b40ac62ee2.jpg",
       "thumb": "assets/past/thumb/epson001-63b40ac62ee2.jpg",
-      "title": "EPSON001~"
+      "title": "EPSON001~",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Bounce 7:13:2002/FRONT.JPG",
       "full": "assets/past/full/front-2fb2b236037c.jpg",
       "thumb": "assets/past/thumb/front-2fb2b236037c.jpg",
-      "title": "FRONT"
+      "title": "FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Bounce 7:13:2002/IN BOTTOM.JPG",
       "full": "assets/past/full/in-bottom-3d2bd1ec02ce.jpg",
       "thumb": "assets/past/thumb/in-bottom-3d2bd1ec02ce.jpg",
-      "title": "IN BOTTOM"
+      "title": "IN BOTTOM",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Bounce 7:13:2002/IN TOP.JPG",
       "full": "assets/past/full/in-top-d0ee5b3eec9d.jpg",
       "thumb": "assets/past/thumb/in-top-d0ee5b3eec9d.jpg",
-      "title": "IN TOP"
+      "title": "IN TOP",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Brainwave/EPSON001.JPG",
       "full": "assets/past/full/epson001-c8a853521ddd.jpg",
       "thumb": "assets/past/thumb/epson001-c8a853521ddd.jpg",
-      "title": "EPSON001"
+      "title": "EPSON001",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Brainwave/FRONT.JPG",
       "full": "assets/past/full/front-99f58e6423d5.jpg",
       "thumb": "assets/past/thumb/front-99f58e6423d5.jpg",
-      "title": "FRONT"
+      "title": "FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/C.R.E.A.M./BACK.JPG",
       "full": "assets/past/full/back-6e9faa9e2600.jpg",
       "thumb": "assets/past/thumb/back-6e9faa9e2600.jpg",
-      "title": "BACK"
+      "title": "BACK",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/C.R.E.A.M./FRONT.JPG",
       "full": "assets/past/full/front-177fa8037115.jpg",
       "thumb": "assets/past/thumb/front-177fa8037115.jpg",
-      "title": "FRONT"
+      "title": "FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/DAWN/BACK.JPG",
       "full": "assets/past/full/back-6c38f8ac698c.jpg",
       "thumb": "assets/past/thumb/back-6c38f8ac698c.jpg",
-      "title": "BACK"
+      "title": "BACK",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/DAWN/Dawn.jpg",
       "full": "assets/past/full/dawn-032e22cf4b63.jpg",
       "thumb": "assets/past/thumb/dawn-032e22cf4b63.jpg",
-      "title": "Dawn"
+      "title": "Dawn",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/DAWN/FRONT.JPG",
       "full": "assets/past/full/front-b99fe518e85b.jpg",
       "thumb": "assets/past/thumb/front-b99fe518e85b.jpg",
-      "title": "FRONT"
+      "title": "FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Earthfest 4:21:2001/BACK DIRECTIONS.JPG",
       "full": "assets/past/full/back-directions-21ff5790eeda.jpg",
       "thumb": "assets/past/thumb/back-directions-21ff5790eeda.jpg",
-      "title": "BACK DIRECTIONS"
+      "title": "BACK DIRECTIONS",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Earthfest 4:21:2001/BACK.JPG",
       "full": "assets/past/full/back-7acafeadac3c.jpg",
       "thumb": "assets/past/thumb/back-7acafeadac3c.jpg",
-      "title": "BACK"
+      "title": "BACK",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Earthfest 4:21:2001/FRONT.JPG",
       "full": "assets/past/full/front-524a03ddaf24.jpg",
       "thumb": "assets/past/thumb/front-524a03ddaf24.jpg",
-      "title": "FRONT"
+      "title": "FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Earthfest 4:21:2001/IN CENTER.JPG",
       "full": "assets/past/full/in-center-1f88d07d045f.jpg",
       "thumb": "assets/past/thumb/in-center-1f88d07d045f.jpg",
-      "title": "IN CENTER"
+      "title": "IN CENTER",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Earthfest 4:21:2001/IN LEFT.JPG",
       "full": "assets/past/full/in-left-2a6823a970a8.jpg",
       "thumb": "assets/past/thumb/in-left-2a6823a970a8.jpg",
-      "title": "IN LEFT"
+      "title": "IN LEFT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Earthfest 4:21:2001/IN RIGHT.JPG",
       "full": "assets/past/full/in-right-683e228fc3af.jpg",
       "thumb": "assets/past/thumb/in-right-683e228fc3af.jpg",
-      "title": "IN RIGHT"
+      "title": "IN RIGHT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Inhale First Breath/BACK.JPG",
       "full": "assets/past/full/back-f46f9ff8b79b.jpg",
       "thumb": "assets/past/thumb/back-f46f9ff8b79b.jpg",
-      "title": "BACK"
+      "title": "BACK",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Inhale First Breath/FRONT.JPG",
       "full": "assets/past/full/front-81d547792979.jpg",
       "thumb": "assets/past/thumb/front-81d547792979.jpg",
-      "title": "FRONT"
+      "title": "FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Inhale First Breath/IN LEFT.JPG",
       "full": "assets/past/full/in-left-98748d7352d1.jpg",
       "thumb": "assets/past/thumb/in-left-98748d7352d1.jpg",
-      "title": "IN LEFT"
+      "title": "IN LEFT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Inhale First Breath/IN RIGHT.JPG",
       "full": "assets/past/full/in-right-d1715085129b.jpg",
       "thumb": "assets/past/thumb/in-right-d1715085129b.jpg",
-      "title": "IN RIGHT"
+      "title": "IN RIGHT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Inhale Second Breath/IN LEFT.JPG",
       "full": "assets/past/full/in-left-8ba911b69534.jpg",
       "thumb": "assets/past/thumb/in-left-8ba911b69534.jpg",
-      "title": "IN LEFT"
+      "title": "IN LEFT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Inhale Second Breath/In Right.JPG",
       "full": "assets/past/full/in-right-59aebd1891ef.jpg",
       "thumb": "assets/past/thumb/in-right-59aebd1891ef.jpg",
-      "title": "In Right"
+      "title": "In Right",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Inhale Second Breath/Inhale BACK.JPG",
       "full": "assets/past/full/inhale-back-252b97510625.jpg",
       "thumb": "assets/past/thumb/inhale-back-252b97510625.jpg",
-      "title": "Inhale BACK"
+      "title": "Inhale BACK",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Inhale Second Breath/Inhale FRONT.JPG",
       "full": "assets/past/full/inhale-front-6dc5f8998eff.jpg",
       "thumb": "assets/past/thumb/inhale-front-6dc5f8998eff.jpg",
-      "title": "Inhale FRONT"
+      "title": "Inhale FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Meant_To_Be_2000.jpg",
       "full": "assets/past/full/meant-to-be-2000-f33636b446bd.jpg",
       "thumb": "assets/past/thumb/meant-to-be-2000-f33636b446bd.jpg",
-      "title": "Meant_To_Be_2000"
+      "title": "Meant_To_Be_2000",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/NL.jpg",
       "full": "assets/past/full/nl-7fb0e71be61e.jpg",
       "thumb": "assets/past/thumb/nl-7fb0e71be61e.jpg",
-      "title": "NL"
+      "title": "NL",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/NL_LONG.jpg",
       "full": "assets/past/full/nl-long-7015dea07e35.jpg",
       "thumb": "assets/past/thumb/nl-long-7015dea07e35.jpg",
-      "title": "NL_LONG"
+      "title": "NL_LONG",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/New England Invasion/Invasion.jpg",
       "full": "assets/past/full/invasion-3da151a401c4.jpg",
       "thumb": "assets/past/thumb/invasion-3da151a401c4.jpg",
-      "title": "Invasion"
+      "title": "Invasion",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Northern Lights 12:1:2000/BACK.JPG",
       "full": "assets/past/full/back-3152fcff79c4.jpg",
       "thumb": "assets/past/thumb/back-3152fcff79c4.jpg",
-      "title": "BACK"
+      "title": "BACK",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Northern Lights 12:1:2000/FRONT.JPG",
       "full": "assets/past/full/front-21e08608fbee.jpg",
       "thumb": "assets/past/thumb/front-21e08608fbee.jpg",
-      "title": "FRONT"
+      "title": "FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Northern Lights 12:1:2000/IN LEFT.JPG",
       "full": "assets/past/full/in-left-420c50b85ee4.jpg",
       "thumb": "assets/past/thumb/in-left-420c50b85ee4.jpg",
-      "title": "IN LEFT"
+      "title": "IN LEFT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Northern Lights 12:1:2000/IN RIGHT.JPG",
       "full": "assets/past/full/in-right-23057ab9c148.jpg",
       "thumb": "assets/past/thumb/in-right-23057ab9c148.jpg",
-      "title": "IN RIGHT"
+      "title": "IN RIGHT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Northern_Lights_FULL.jpg",
       "full": "assets/past/full/northern-lights-full-8d3313477439.jpg",
       "thumb": "assets/past/thumb/northern-lights-full-8d3313477439.jpg",
-      "title": "Northern_Lights_FULL"
+      "title": "Northern_Lights_FULL",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Northern_Lineup.jpg",
       "full": "assets/past/full/northern-lineup-5f21c0eb6ea6.jpg",
       "thumb": "assets/past/thumb/northern-lineup-5f21c0eb6ea6.jpg",
-      "title": "Northern_Lineup"
+      "title": "Northern_Lineup",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/QUEST/FRONT.JPG",
       "full": "assets/past/full/front-ddbad10c2956.jpg",
       "thumb": "assets/past/thumb/front-ddbad10c2956.jpg",
-      "title": "FRONT"
+      "title": "FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/QUEST/QUEST BACK.JPG",
       "full": "assets/past/full/quest-back-1f3f68c62ab7.jpg",
       "thumb": "assets/past/thumb/quest-back-1f3f68c62ab7.jpg",
-      "title": "QUEST BACK"
+      "title": "QUEST BACK",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Revelation 8:25:2000/BACK.JPG",
       "full": "assets/past/full/back-5dc3a2e6f6a6.jpg",
       "thumb": "assets/past/thumb/back-5dc3a2e6f6a6.jpg",
-      "title": "BACK"
+      "title": "BACK",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Revelation 8:25:2000/FRONT.JPG",
       "full": "assets/past/full/front-ba0faa446da2.jpg",
       "thumb": "assets/past/thumb/front-ba0faa446da2.jpg",
-      "title": "FRONT"
+      "title": "FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Revelation 8:25:2000/IN LEFT.JPG",
       "full": "assets/past/full/in-left-57acc0add4ce.jpg",
       "thumb": "assets/past/thumb/in-left-57acc0add4ce.jpg",
-      "title": "IN LEFT"
+      "title": "IN LEFT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Revelation 8:25:2000/IN RIGHT.JPG",
       "full": "assets/past/full/in-right-f6341e351b23.jpg",
       "thumb": "assets/past/thumb/in-right-f6341e351b23.jpg",
-      "title": "IN RIGHT"
+      "title": "IN RIGHT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/SCREAM 5/BACK FOLD.JPG",
       "full": "assets/past/full/back-fold-3915d15133d6.jpg",
       "thumb": "assets/past/thumb/back-fold-3915d15133d6.jpg",
-      "title": "BACK FOLD"
+      "title": "BACK FOLD",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/SCREAM 5/FRONT 2.JPG",
       "full": "assets/past/full/front-2-d95247d65bb7.jpg",
       "thumb": "assets/past/thumb/front-2-d95247d65bb7.jpg",
-      "title": "FRONT 2"
+      "title": "FRONT 2",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/SCREAM 5/FRONT.JPG",
       "full": "assets/past/full/front-6050697ab725.jpg",
       "thumb": "assets/past/thumb/front-6050697ab725.jpg",
-      "title": "FRONT"
+      "title": "FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/SUMMER.jpg",
       "full": "assets/past/full/summer-9dc6c4e830a8.jpg",
       "thumb": "assets/past/thumb/summer-9dc6c4e830a8.jpg",
-      "title": "SUMMER"
+      "title": "SUMMER",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Spirit Of The Beat/BACK.JPG",
       "full": "assets/past/full/back-f9821ab0faf4.jpg",
       "thumb": "assets/past/thumb/back-f9821ab0faf4.jpg",
-      "title": "BACK"
+      "title": "BACK",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Spirit Of The Beat/FRONT.JPG",
       "full": "assets/past/full/front-1f69bd983abc.jpg",
       "thumb": "assets/past/thumb/front-1f69bd983abc.jpg",
-      "title": "FRONT"
+      "title": "FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Summer_of_Love_2000.jpg",
       "full": "assets/past/full/summer-of-love-2000-c87a83cee62a.jpg",
       "thumb": "assets/past/thumb/summer-of-love-2000-c87a83cee62a.jpg",
-      "title": "Summer_of_Love_2000"
+      "title": "Summer_of_Love_2000",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Supersonic Astronauts 10:6:2000/BACK.JPG",
       "full": "assets/past/full/back-20f3ef1e2f56.jpg",
       "thumb": "assets/past/thumb/back-20f3ef1e2f56.jpg",
-      "title": "BACK"
+      "title": "BACK",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Supersonic Astronauts 10:6:2000/FRONT LEFT.JPG",
       "full": "assets/past/full/front-left-d60f5f4e7cf2.jpg",
       "thumb": "assets/past/thumb/front-left-d60f5f4e7cf2.jpg",
-      "title": "FRONT LEFT"
+      "title": "FRONT LEFT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Supersonic Astronauts 10:6:2000/FRONT RIGHT.JPG",
       "full": "assets/past/full/front-right-c2cc1320c92c.jpg",
       "thumb": "assets/past/thumb/front-right-c2cc1320c92c.jpg",
-      "title": "FRONT RIGHT"
+      "title": "FRONT RIGHT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Supersonic Astronauts 10:6:2000/IN CENTER.JPG",
       "full": "assets/past/full/in-center-ddcb7d3eeaf3.jpg",
       "thumb": "assets/past/thumb/in-center-ddcb7d3eeaf3.jpg",
-      "title": "IN CENTER"
+      "title": "IN CENTER",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Supersonic Astronauts 10:6:2000/IN LEFT.JPG",
       "full": "assets/past/full/in-left-438cdda5086e.jpg",
       "thumb": "assets/past/thumb/in-left-438cdda5086e.jpg",
-      "title": "IN LEFT"
+      "title": "IN LEFT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Supersonic Astronauts 10:6:2000/IN RIGHT.JPG",
       "full": "assets/past/full/in-right-e36eef603245.jpg",
       "thumb": "assets/past/thumb/in-right-e36eef603245.jpg",
-      "title": "IN RIGHT"
+      "title": "IN RIGHT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/TABLES TURN 2002/BACK.JPG",
       "full": "assets/past/full/back-1619cc6cb208.jpg",
       "thumb": "assets/past/thumb/back-1619cc6cb208.jpg",
-      "title": "BACK"
+      "title": "BACK",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/TABLES TURN 2002/FRONT.JPG",
       "full": "assets/past/full/front-4cf51c3b82d1.jpg",
       "thumb": "assets/past/thumb/front-4cf51c3b82d1.jpg",
-      "title": "FRONT"
+      "title": "FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/TABLES TURN 2002/INSIDE CLIPPED.JPG",
       "full": "assets/past/full/inside-clipped-1b44fcf492fb.jpg",
       "thumb": "assets/past/thumb/inside-clipped-1b44fcf492fb.jpg",
-      "title": "INSIDE CLIPPED"
+      "title": "INSIDE CLIPPED",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/TABLES TURN 2002/Tables_Turn_LONG.jpg",
       "full": "assets/past/full/tables-turn-long-f1ad6d39864e.jpg",
       "thumb": "assets/past/thumb/tables-turn-long-f1ad6d39864e.jpg",
-      "title": "Tables_Turn_LONG"
+      "title": "Tables_Turn_LONG",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Til Dawn Breaks 4:28:2000/BACK.JPG",
       "full": "assets/past/full/back-39ffea381cd1.jpg",
       "thumb": "assets/past/thumb/back-39ffea381cd1.jpg",
-      "title": "BACK"
+      "title": "BACK",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Til Dawn Breaks 4:28:2000/FRONT.JPG",
       "full": "assets/past/full/front-53345c66c739.jpg",
       "thumb": "assets/past/thumb/front-53345c66c739.jpg",
-      "title": "FRONT"
+      "title": "FRONT",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Til Dawn Breaks 4:28:2000/Til_Dawn_Breaks.jpg",
       "full": "assets/past/full/til-dawn-breaks-b6269fe17b88.jpg",
       "thumb": "assets/past/thumb/til-dawn-breaks-b6269fe17b88.jpg",
-      "title": "Til_Dawn_Breaks"
+      "title": "Til_Dawn_Breaks",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Unreal B-Boy 6:22:2002/UnrealB&Wflyer.jpg",
       "full": "assets/past/full/unrealb-wflyer-13d4cf9383cb.jpg",
       "thumb": "assets/past/thumb/unrealb-wflyer-13d4cf9383cb.jpg",
-      "title": "UnrealB&Wflyer"
+      "title": "UnrealB&Wflyer",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Unreal B-Boy 6:22:2002/Unreal_Clipped.jpg",
       "full": "assets/past/full/unreal-clipped-50224781ce8a.jpg",
       "thumb": "assets/past/thumb/unreal-clipped-50224781ce8a.jpg",
-      "title": "Unreal_Clipped"
+      "title": "Unreal_Clipped",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Unreal B-Boy 6:22:2002/Unreal_LONG.jpg",
       "full": "assets/past/full/unreal-long-395cb37320cc.jpg",
       "thumb": "assets/past/thumb/unreal-long-395cb37320cc.jpg",
-      "title": "Unreal_LONG"
+      "title": "Unreal_LONG",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Unreal B-Boy 6:22:2002/Unreal_web1.jpg",
       "full": "assets/past/full/unreal-web1-a81b2108e3ba.jpg",
       "thumb": "assets/past/thumb/unreal-web1-a81b2108e3ba.jpg",
-      "title": "Unreal_web1"
+      "title": "Unreal_web1",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Unreal B-Boy 6:22:2002/unreal_ubb2.jpg",
       "full": "assets/past/full/unreal-ubb2-232f1e63b6b9.jpg",
       "thumb": "assets/past/thumb/unreal-ubb2-232f1e63b6b9.jpg",
-      "title": "unreal_ubb2"
+      "title": "unreal_ubb2",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Unreal_web1.jpg",
       "full": "assets/past/full/unreal-web1-82e649572a9d.jpg",
       "thumb": "assets/past/thumb/unreal-web1-82e649572a9d.jpg",
-      "title": "Unreal_web1"
+      "title": "Unreal_web1",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/YES_Fest.jpg",
       "full": "assets/past/full/yes-fest-944cf229e90b.jpg",
       "thumb": "assets/past/thumb/yes-fest-944cf229e90b.jpg",
-      "title": "YES_Fest"
+      "title": "YES_Fest",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/apple_flyer001.jpg",
       "full": "assets/past/full/apple-flyer001-d49e76a130c4.jpg",
       "thumb": "assets/past/thumb/apple-flyer001-d49e76a130c4.jpg",
-      "title": "apple_flyer001"
+      "title": "apple_flyer001",
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/apple_flyer002.jpg",
       "full": "assets/past/full/apple-flyer002-36ae4bd9c5a9.jpg",
       "thumb": "assets/past/thumb/apple-flyer002-36ae4bd9c5a9.jpg",
-      "title": "apple_flyer002"
+      "title": "apple_flyer002",
+      "category": "events"
     }
   ]
 }

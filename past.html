@@ -86,6 +86,47 @@
       display: inline-block;
     }
 
+    .subnav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: 10px;
+      padding-left: 14px;
+      border-left: 1px solid rgba(255,255,255,0.10);
+      flex-wrap: wrap;
+    }
+
+    .subnav a {
+      text-decoration: none;
+      color: rgba(242,242,242,0.65);
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(16,16,16,0.35);
+    }
+
+    .subnav a[aria-current="page"] {
+      color: rgba(242,242,242,0.92);
+      border-color: rgba(255,255,255,0.22);
+      background: rgba(16,16,16,0.55);
+    }
+
+    .section {
+      margin-top: 18px;
+    }
+
+    .section__title {
+      margin: 0 0 12px;
+      font-family: 'Roadway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      color: rgba(242,242,242,0.65);
+    }
+
     .flip {
       transform: none;
     }
@@ -268,7 +309,20 @@
   </header>
 
   <main>
-    <section class="wall" id="wall" aria-label="Flyer wall"></section>
+    <section class="section" id="events" aria-label="Events">
+      <h2 class="section__title">events</h2>
+      <div class="wall" id="wall-events"></div>
+    </section>
+
+    <section class="section" id="releases" aria-label="Releases">
+      <h2 class="section__title">releases</h2>
+      <div class="wall" id="wall-releases"></div>
+    </section>
+
+    <section class="section" id="appearances" aria-label="Appearances">
+      <h2 class="section__title">appearances</h2>
+      <div class="wall" id="wall-appearances"></div>
+    </section>
   </main>
 
   <div class="viewer" id="viewer" aria-hidden="true">
@@ -292,7 +346,9 @@
     const MANIFEST_URL = 'past-manifest.json';
     const ASSET_VER = 'rotfix1'; // cache-buster for rotated images
 
-    const wall = document.getElementById('wall');
+    const wallEvents = document.getElementById('wall-events');
+    const wallReleases = document.getElementById('wall-releases');
+    const wallAppearances = document.getElementById('wall-appearances');
     const viewer = document.getElementById('viewer');
     const viewerImg = document.getElementById('viewerImg');
     const cap = document.getElementById('cap');
@@ -393,7 +449,7 @@
       .then(r => r.json())
       .then(data => {
         ITEMS = data.items || [];
-        const frag = document.createDocumentFragment();
+        const frags = { events: document.createDocumentFragment(), releases: document.createDocumentFragment(), appearances: document.createDocumentFragment() };
 
         ITEMS.forEach((item, i) => {
           const a = document.createElement('a');
@@ -414,13 +470,27 @@
           img.alt = item.title || 'flyer';
 
           a.appendChild(img);
-          frag.appendChild(a);
+          const cat = (item.category || 'events').toLowerCase();
+          (frags[cat] || frags.events).appendChild(a);
         });
 
-        wall.appendChild(frag);
+        wallEvents.appendChild(frags.events);
+        wallReleases.appendChild(frags.releases);
+        wallAppearances.appendChild(frags.appearances);
+
+        // set active pill based on hash
+        function setActive() {
+          const h = (location.hash || '#events').replace('#','');
+          for (const k of ['events','releases','appearances']) {
+            const a = document.getElementById('lnk-'+k);
+            if (a) a.setAttribute('aria-current', k===h ? 'page' : 'false');
+          }
+        }
+        setActive();
+        window.addEventListener('hashchange', setActive);
       })
       .catch(() => {
-        wall.textContent = 'Could not load flyers.';
+        wallEvents.textContent = 'Could not load flyers.';
       });
   </script>
 </body>
