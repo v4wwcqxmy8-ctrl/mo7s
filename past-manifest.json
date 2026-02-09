@@ -1,6 +1,14 @@
 {
-  "count": 89,
+  "count": 90,
   "items": [
+    {
+      "src": "/Users/slampig/Desktop/Manders.m4v",
+      "full": "assets/past/full/manders.jpg",
+      "thumb": "assets/past/thumb/manders.jpg",
+      "title": "Manders (clip)",
+      "category": "appearances",
+      "video": "assets/past/videos/manders.mp4"
+    },
     {
       "src": "inbound:file_9",
       "full": "assets/past/full/american-dad.jpg",
