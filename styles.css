@@ -187,7 +187,7 @@ body{
   position:absolute;
   left:50%;
   transform:translateX(-50%);
-  bottom:calc(100% + 10px);
+  top:calc(100% + 10px);
   min-width:220px;
   padding:12px;
   border-radius:16px;
