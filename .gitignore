@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+Thumbs.db
+
+# Editor/OS misc
+*.swp
+*.swo
+*.tmp
+
+# Node / tooling
+node_modules/
+
+# OpenClaw / scratch
+*.log
