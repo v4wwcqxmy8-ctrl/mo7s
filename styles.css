@@ -11,7 +11,7 @@ html,body{height:100%}
 
 /* Roadway font:
    - For local preview: if Roadway is installed on this Mac, the CSS below will use it.
-   - For hosting later: provide Roadway.woff2 (preferred) or Roadway.ttf and we’ll convert.
+   - For hosting later: provide Roadway.woff2 (preferred) or Roadway.ttf and we'll convert.
 */
 
 body{
@@ -53,10 +53,11 @@ body{
   margin-top:24px; /* move links down further */
   display:flex;
   flex-direction:column;
-  align-items:flex-end; /* pop to the right */
+  align-items:flex-start; /* align to the left instead of right */
   justify-content:flex-start;
   gap:10px;
-  justify-self:end;
+  justify-self:start; /* position at the left of grid area */
+  align-self:end; /* pop to the bottom */
 }
 
 .links--bio .pill{min-width:120px}
