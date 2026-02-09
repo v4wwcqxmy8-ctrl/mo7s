@@ -231,6 +231,32 @@
 
     .viewer[aria-hidden="false"] { display: flex; }
 
+    .tapplay {
+      position: absolute;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 6;
+      background: rgba(0,0,0,0.25);
+    }
+
+    .tapplay[aria-hidden="false"] {
+      display: flex;
+    }
+
+    .tapplay__btn {
+      appearance: none;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(16,16,16,0.65);
+      color: rgba(242,242,242,0.92);
+      border-radius: 999px;
+      padding: 12px 16px;
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+    }
+
     .viewer__frame {
       width: min(92vw, 960px);
       max-height: 88vh;
@@ -394,6 +420,7 @@
       <button class="nav nav--prev" id="prevBtn" type="button" aria-label="Previous">‹</button>
       <button class="nav nav--next" id="nextBtn" type="button" aria-label="Next">›</button>
 
+      <div class="tapplay" id="tapplay" aria-hidden="true"><button class="tapplay__btn" id="tapplayBtn" type="button">tap to play</button></div>
       <video class="viewer__vid" id="viewerVid" playsinline controls preload="metadata"></video>
       <img class="viewer__img" id="viewerImg" alt="" />
     </div>
@@ -411,6 +438,8 @@
     const viewer = document.getElementById('viewer');
     const viewerImg = document.getElementById('viewerImg');
     const viewerVid = document.getElementById('viewerVid');
+    const tapplay = document.getElementById('tapplay');
+    const tapplayBtn = document.getElementById('tapplayBtn');
     const cap = document.getElementById('cap');
     const openFull = document.getElementById('openFull');
     const muteBtn = document.getElementById('muteBtn');
@@ -421,6 +450,7 @@
     let ITEMS = [];
     let currentIndex = -1;
       muteBtn.style.display = 'none';
+      tapplay.setAttribute('aria-hidden','true');
 
     function renderViewer() {
       const item = ITEMS[currentIndex];
@@ -448,6 +478,7 @@
         viewerVid.play().catch(() => { /* autoplay with audio may be blocked */ });
       } else {
         muteBtn.style.display = 'none';
+      tapplay.setAttribute('aria-hidden','true');
         viewerVid.setAttribute('aria-hidden','true');
         viewerVid.style.display = 'none';
         viewerImg.setAttribute('aria-hidden','false');
@@ -459,11 +490,57 @@
       openFull.href = videoUrl || fullUrl;
     }
 
+    function attemptPlayWithAudio() {
+      viewerVid.muted = false;
+      viewerVid.volume = 1.0;
+      const p = viewerVid.play();
+      if (p && typeof p.catch === 'function') {
+        p.catch(() => {
+          // browser blocked audible autoplay; show explicit tap-to-play
+          tapplay.setAttribute('aria-hidden','false');
+        });
+      }
+    }
+
     function openViewerAt(i) {
       currentIndex = (i + ITEMS.length) % ITEMS.length;
+      const item = ITEMS[currentIndex];
       viewer.setAttribute('aria-hidden', 'false');
-      renderViewer();
       document.body.style.overflow = 'hidden';
+
+      // Render title + links
+      cap.textContent = item?.title || '';
+      const fullUrl = item.full + (item.full.includes('?') ? '&' : '?') + 'v=' + ASSET_VER;
+      const videoUrl = item.video ? (item.video + (item.video.includes('?') ? '&' : '?') + 'v=' + ASSET_VER) : null;
+
+      // stop previous video
+      viewerVid.pause();
+      viewerVid.removeAttribute('src');
+      viewerVid.load();
+      tapplay.setAttribute('aria-hidden','true');
+
+      if (videoUrl) {
+        viewerImg.setAttribute('aria-hidden','true');
+        viewerImg.style.display = 'none';
+        viewerVid.setAttribute('aria-hidden','false');
+        viewerVid.style.display = 'block';
+        viewerVid.src = videoUrl;
+        openFull.href = videoUrl;
+        muteBtn.style.display = 'inline-block';
+        muteBtn.textContent = (viewerVid.muted ? 'unmute' : 'mute');
+
+        // IMPORTANT: attempt play immediately (still inside the click handler)
+        attemptPlayWithAudio();
+      } else {
+        muteBtn.style.display = 'none';
+        viewerVid.setAttribute('aria-hidden','true');
+        viewerVid.style.display = 'none';
+        viewerImg.setAttribute('aria-hidden','false');
+        viewerImg.style.display = 'block';
+        viewerImg.src = fullUrl;
+        viewerImg.alt = item.title || 'flyer';
+        openFull.href = fullUrl;
+      }
     }
 
     function closeViewer() {
@@ -475,18 +552,19 @@
       document.body.style.overflow = '';
       currentIndex = -1;
       muteBtn.style.display = 'none';
+      tapplay.setAttribute('aria-hidden','true');
     }
 
     function next() {
       if (!ITEMS.length) return;
       currentIndex = (currentIndex + 1) % ITEMS.length;
-      renderViewer();
+      openViewerAt(currentIndex);
     }
 
     function prev() {
       if (!ITEMS.length) return;
       currentIndex = (currentIndex - 1 + ITEMS.length) % ITEMS.length;
-      renderViewer();
+      openViewerAt(currentIndex);
     }
 
     viewer.addEventListener('click', (e) => {
@@ -496,6 +574,11 @@
     closeBtn.addEventListener('click', closeViewer);
     nextBtn.addEventListener('click', next);
     prevBtn.addEventListener('click', prev);
+    tapplayBtn.addEventListener('click', () => {
+      tapplay.setAttribute('aria-hidden','true');
+      attemptPlayWithAudio();
+    });
+
     muteBtn.addEventListener('click', () => {
       viewerVid.muted = !viewerVid.muted;
       muteBtn.textContent = viewerVid.muted ? 'unmute' : 'mute';
