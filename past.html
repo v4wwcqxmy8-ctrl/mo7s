@@ -387,6 +387,7 @@
       <div class="viewer__top">
         <button class="btn" id="closeBtn" type="button">close</button>
         <div class="cap" id="cap"></div>
+        <button class="btn" id="muteBtn" type="button" style="display:none">mute</button>
         <a class="btn" id="openFull" href="#" target="_blank" rel="noopener noreferrer">open</a>
       </div>
 
@@ -412,12 +413,14 @@
     const viewerVid = document.getElementById('viewerVid');
     const cap = document.getElementById('cap');
     const openFull = document.getElementById('openFull');
+    const muteBtn = document.getElementById('muteBtn');
     const closeBtn = document.getElementById('closeBtn');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
 
     let ITEMS = [];
     let currentIndex = -1;
+      muteBtn.style.display = 'none';
 
     function renderViewer() {
       const item = ITEMS[currentIndex];
@@ -432,6 +435,8 @@
       viewerVid.load();
 
       if (videoUrl) {
+        muteBtn.style.display = 'inline-block';
+        muteBtn.textContent = (viewerVid.muted ? 'unmute' : 'mute');
         viewerImg.setAttribute('aria-hidden','true');
         viewerImg.style.display = 'none';
         viewerVid.setAttribute('aria-hidden','false');
@@ -441,6 +446,7 @@
         viewerVid.muted = false;
         viewerVid.play().catch(() => { /* autoplay with audio may be blocked */ });
       } else {
+        muteBtn.style.display = 'none';
         viewerVid.setAttribute('aria-hidden','true');
         viewerVid.style.display = 'none';
         viewerImg.setAttribute('aria-hidden','false');
@@ -467,6 +473,7 @@
       viewerVid.load();
       document.body.style.overflow = '';
       currentIndex = -1;
+      muteBtn.style.display = 'none';
     }
 
     function next() {
@@ -488,6 +495,10 @@
     closeBtn.addEventListener('click', closeViewer);
     nextBtn.addEventListener('click', next);
     prevBtn.addEventListener('click', prev);
+    muteBtn.addEventListener('click', () => {
+      viewerVid.muted = !viewerVid.muted;
+      muteBtn.textContent = viewerVid.muted ? 'unmute' : 'mute';
+    });
 
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') return closeViewer();
