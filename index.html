@@ -119,6 +119,37 @@
       white-space: nowrap;
     }
 
+        .iconrow {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 4px;
+    }
+
+    .iconlink {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #333;
+      background: #111;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .iconlink:hover {
+      border-color: #666;
+    }
+
+    .iconlink img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     .dd-item,
     .dd a {
       padding: 0.5rem 1rem;
@@ -194,11 +225,21 @@
       <details class="pill pill--dd">
         <summary>socials</summary>
         <div class="dd">
-          <a class="dd-item" href="https://instagram.com/mo7s" target="_blank" rel="noopener noreferrer">instagram</a>
-          <a class="dd-item" href="https://soundcloud.com/mo7s" target="_blank" rel="noopener noreferrer">soundcloud</a>
-          <a class="dd-item" href="https://mixcloud.com/mo7s" target="_blank" rel="noopener noreferrer">mixcloud</a>
-          <a class="dd-item" href="https://facebook.com/mo7s" target="_blank" rel="noopener noreferrer">facebook</a>
-        </div>
+          <div class="iconrow">
+            <a class="iconlink" href="https://instagram.com/mo7s" target="_blank" rel="noopener noreferrer" aria-label="instagram">
+              <img src="assets/icons/social/instagram.jpg" alt="" decoding="async" loading="lazy" />
+            </a>
+            <a class="iconlink" href="https://soundcloud.com/mo7s" target="_blank" rel="noopener noreferrer" aria-label="soundcloud">
+              <img src="assets/icons/social/soundcloud.jpg" alt="" decoding="async" loading="lazy" />
+            </a>
+            <a class="iconlink" href="https://mixcloud.com/mo7s" target="_blank" rel="noopener noreferrer" aria-label="mixcloud">
+              <img src="assets/icons/social/mixcloud.jpg" alt="" decoding="async" loading="lazy" />
+            </a>
+            <a class="iconlink" href="https://facebook.com/mo7s" target="_blank" rel="noopener noreferrer" aria-label="facebook">
+              <img src="assets/icons/social/facebook.jpg" alt="" decoding="async" loading="lazy" />
+            </a>
+          </div>
+</div>
       </details>
     </nav>
 
