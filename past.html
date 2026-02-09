@@ -290,6 +290,7 @@
     // Lightweight: load manifest, render thumbs, lazy-load by browser.
     // Tap opens viewer; full-size image loads on demand.
     const MANIFEST_URL = 'past-manifest.json';
+    const ASSET_VER = 'rotfix1'; // cache-buster for rotated images
 
     const wall = document.getElementById('wall');
     const viewer = document.getElementById('viewer');
@@ -306,10 +307,10 @@
     function renderViewer() {
       const item = ITEMS[currentIndex];
       if (!item) return;
-      viewerImg.src = item.full;
+      viewerImg.src = item.full + (item.full.includes('?') ? '&' : '?') + 'v=' + ASSET_VER;
       viewerImg.alt = item.title || 'flyer';
       cap.textContent = item.title || '';
-      openFull.href = item.full;
+      openFull.href = item.full + (item.full.includes('?') ? '&' : '?') + 'v=' + ASSET_VER;
     }
 
     function openViewerAt(i) {
@@ -409,7 +410,7 @@
           const img = document.createElement('img');
           img.loading = 'lazy';
           img.decoding = 'async';
-          img.src = item.thumb;
+          img.src = item.thumb + (item.thumb.includes('?') ? '&' : '?') + 'v=' + ASSET_VER;
           img.alt = item.title || 'flyer';
 
           a.appendChild(img);
