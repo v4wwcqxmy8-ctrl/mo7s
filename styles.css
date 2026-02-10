@@ -178,9 +178,9 @@ body{
 
 .dd{
   position:absolute;
-  left:50%;
-  transform:translateX(-50%);
+  left:0;
   top:calc(100% + 10px);
+  transform:none;
   min-width:220px;
   padding:12px;
   border-radius:16px;
