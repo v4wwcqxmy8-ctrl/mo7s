@@ -10,7 +10,7 @@
   <style>
     * {
       margin: 0;
-      padding: 4px;
+      padding: 0;
       box-sizing: border-box;
     }
 
@@ -47,9 +47,7 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      object-fit: contain;
-      padding: 6px;
-      background: transparent;
+      object-fit: cover;
     }
 
     .tagline {
@@ -96,78 +94,34 @@
     }
 
     .pill--dd[open] {
-      /* dropdown opens below */
+      padding-top: 1rem;
     }
 
     .pill--dd[open] .dd {
-      top: calc(100% + 0.5rem);
-      bottom: auto;
-    }
-
-    .pill--socials .dd {
-      min-width: 200px;
-      left: calc(100% + 0.75rem);
-      top: 50%;
-      transform: translateY(-50%);
+      bottom: calc(100% - 0.25rem);
     }
 
     .dd {
       position: absolute;
-      top: calc(100% + 0.5rem);
-      bottom: auto;
+      bottom: calc(100% + 0.5rem);
       left: 50%;
       transform: translateX(-50%);
       background: #1a1a1a;
       border: 1px solid #333;
       border-radius: 12px;
-      padding: 0.35rem;
+      padding: 0.5rem;
       display: flex;
       flex-direction: column;
       gap: 0.25rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.5);
       z-index: 10;
-      min-width: 140px;
+      min-width: 150px;
       white-space: nowrap;
-    }
-
-        .iconrow {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      justify-content: center;
-      padding: 6px 4px;
-    }
-
-    .iconlink {
-      width: min(21vw, 70px);
-      height: min(21vw, 70px);
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid #333;
-      background: #e9e9e9;
-      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .iconlink:hover {
-      border-color: #666;
-    }
-
-    .iconlink img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      padding: 4px;
-      display: block;
     }
 
     .dd-item,
     .dd a {
-      font-size: 0.9rem;
-      padding: 0.4rem 0.75rem;
+      padding: 0.5rem 1rem;
       text-decoration: none;
       color: #fff;
       border-radius: 8px;
@@ -227,38 +181,24 @@
         <summary>about</summary>
         <div class="dd">
           <a class="dd-item" href="past.html">past</a>
-          <a class="dd-item" href="present.html">present</a>
+          <div class="dd-item">present</div>
           <div class="dd-item">future</div>
         </div>
       </details>
       <details class="pill pill--dd">
         <summary>contact</summary>
         <div class="dd">
-          <div class="iconrow">
-            <a class="iconlink" href="mailto:info@mo7s.com" aria-label="email">
-              <img src="assets/icons/social/Mail_(iOS).svg.png" alt="" decoding="async" loading="lazy" />
-            </a>
-          </div>
-</div>
+          <a class="dd-item" href="mailto:info@mo7s.com">email</a>
+        </div>
       </details>
-      <details class="pill pill--dd pill--socials">
+      <details class="pill pill--dd">
         <summary>socials</summary>
         <div class="dd">
-          <div class="iconrow">
-            <a class="iconlink" href="https://instagram.com/mo7s" target="_blank" rel="noopener noreferrer" aria-label="instagram">
-              <img src="assets/icons/social/ig.png" alt="" decoding="async" loading="lazy" />
-            </a>
-            <a class="iconlink" href="https://soundcloud.com/mo7s" target="_blank" rel="noopener noreferrer" aria-label="soundcloud">
-              <img src="assets/icons/social/soundcloud.jpg" alt="" decoding="async" loading="lazy" />
-            </a>
-            <a class="iconlink" href="https://mixcloud.com/mo7s" target="_blank" rel="noopener noreferrer" aria-label="mixcloud">
-              <img src="assets/icons/social/mixcloud.png" alt="" decoding="async" loading="lazy" />
-            </a>
-            <a class="iconlink" href="https://facebook.com/mo7s" target="_blank" rel="noopener noreferrer" aria-label="facebook">
-              <img src="assets/icons/social/Facebook_logo_(square).png" alt="" decoding="async" loading="lazy" />
-            </a>
-          </div>
-</div>
+          <a class="dd-item" href="https://instagram.com/mo7s" target="_blank" rel="noopener noreferrer">instagram</a>
+          <a class="dd-item" href="https://soundcloud.com/mo7s" target="_blank" rel="noopener noreferrer">soundcloud</a>
+          <a class="dd-item" href="https://mixcloud.com/mo7s" target="_blank" rel="noopener noreferrer">mixcloud</a>
+          <a class="dd-item" href="https://facebook.com/mo7s" target="_blank" rel="noopener noreferrer">facebook</a>
+        </div>
       </details>
     </nav>
 
