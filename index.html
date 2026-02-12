@@ -170,11 +170,16 @@
 
     .pillLabel {
       position: relative;
-      z-index: 1;
-      padding: 0 0.85rem;
+      z-index: 2;
+      padding: 0 0.95rem;
       border-radius: 999px;
-      background: var(--cell);
-      box-shadow: 0 0 0 6px var(--cell); /* creates a clean window over the stripe */
+      background: linear-gradient(180deg, var(--cell2), var(--cell));
+      box-shadow: 0 0 0 10px var(--cell);
+    }
+
+    /* soften any stripe peeking through due to subpixel rendering */
+    .pill--dd > summary::after {
+      z-index: 1;
     }
 
     /* inline dropdown panels (stacked layout) */
