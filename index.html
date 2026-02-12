@@ -168,6 +168,20 @@
         padding: 1rem 1.5rem;
         font-size: 1.05rem;
       }
+
+      /* mobile: dropdowns become inline panels under stacked pills */
+      .pill--dd[open] .dd {
+        top: auto;
+        bottom: auto;
+      }
+
+      .dd {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+        width: 100%;
+        min-width: 0;
+      }
     }
   </style>
 </head>
