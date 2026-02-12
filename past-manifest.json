@@ -589,14 +589,14 @@
       "full": "assets/past/full/unreal-long-395cb37320cc.jpg",
       "thumb": "assets/past/thumb/unreal-long-395cb37320cc.jpg",
       "title": "Unreal_LONG",
-      "category": "appearances"
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Unreal B-Boy 6:22:2002/Unreal_web1.jpg",
       "full": "assets/past/full/unreal-web1-a81b2108e3ba.jpg",
       "thumb": "assets/past/thumb/unreal-web1-a81b2108e3ba.jpg",
       "title": "Unreal_web1",
-      "category": "appearances"
+      "category": "events"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Unreal B-Boy 6:22:2002/unreal_ubb2.jpg",
@@ -624,14 +624,14 @@
       "full": "assets/past/full/apple-flyer001-d49e76a130c4.jpg",
       "thumb": "assets/past/thumb/apple-flyer001-d49e76a130c4.jpg",
       "title": "apple_flyer001",
-      "category": "events"
+      "category": "appearances"
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/apple_flyer002.jpg",
       "full": "assets/past/full/apple-flyer002-36ae4bd9c5a9.jpg",
       "thumb": "assets/past/thumb/apple-flyer002-36ae4bd9c5a9.jpg",
       "title": "apple_flyer002",
-      "category": "events"
+      "category": "appearances"
     }
   ]
 }
