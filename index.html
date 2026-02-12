@@ -77,6 +77,7 @@
       width: 100%;
     }
 
+    /* Base pill button (used for plain links AND <summary>) */
     .pill {
       background: var(--cell);
       border: 1px solid var(--cell-border);
@@ -102,11 +103,47 @@
       transform: translateY(1px) scale(0.99);
     }
 
-    .pill--dd summary {
+    /* <details> wrapper should NOT look like a pill (avoids weird padding/ghost space) */
+    .pill--dd {
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      padding: 0;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    /* Make the clickable <summary> look like the pill */
+    .pill--dd > summary {
       list-style: none;
       cursor: pointer;
       user-select: none;
       display: block;
+    }
+
+    .pill--dd > summary.pill {
+      margin: 0;
+    }
+
+    /* also apply pill look to summary even if class isn't present */
+    .pill--dd > summary {
+      background: var(--cell);
+      border: 1px solid var(--cell-border);
+      border-radius: 25px;
+      padding: 0.75rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.55);
+      transition: transform 140ms ease, box-shadow 160ms ease, border-color 160ms ease, background 160ms ease;
+    }
+
+    .pill--dd > summary:hover {
+      border-color: var(--cell-border-strong);
+      background: var(--cell2);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.65), 0 0 0 2px rgba(234,210,0,0.16);
+    }
+
+    .pill--dd > summary:active {
+      transform: translateY(1px) scale(0.99);
     }
 
     .pill--dd summary::-webkit-details-marker {
@@ -205,7 +242,7 @@
     </section>
       
     <nav class="links" aria-label="links">
-      <details class="pill pill--dd">
+      <details class="pill--dd">
         <summary>about</summary>
         <div class="dd">
           <a class="dd-item" href="past.html">past</a>
@@ -213,13 +250,13 @@
           <div class="dd-item">future</div>
         </div>
       </details>
-      <details class="pill pill--dd">
+      <details class="pill--dd">
         <summary>contact</summary>
         <div class="dd">
           <a class="dd-item" href="mailto:info@mo7s.com">email</a>
         </div>
       </details>
-      <details class="pill pill--dd">
+      <details class="pill--dd">
         <summary>socials</summary>
         <div class="dd">
           <a class="dd-item" href="https://instagram.com/mo7s" target="_blank" rel="noopener noreferrer">instagram</a>
