@@ -43,6 +43,14 @@
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      width: auto;
+    }
+
     .bar {
       max-width: var(--max);
       margin: 0 auto;
@@ -58,6 +66,34 @@
       height: 54px;
       object-fit: contain;
       display: block;
+    }
+
+    .subnav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: 10px;
+      padding-left: 14px;
+      border-left: 1px solid rgba(255,255,255,0.10);
+      flex-wrap: wrap;
+    }
+
+    .subnav a {
+      text-decoration: none;
+      color: rgba(242,242,242,0.65);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 5px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(16,16,16,0.35);
+    }
+
+    .subnav a[aria-current="page"] {
+      color: rgba(242,242,242,0.92);
+      border-color: rgba(255,255,255,0.22);
+      background: rgba(16,16,16,0.55);
     }
 
     .title {
@@ -106,10 +142,17 @@
 <body>
   <header>
     <div class="bar">
-      <a href="index.html" aria-label="MO7S home">
-        <img class="logo" src="assets/mo7s-mark.png" alt="MO7S" decoding="async" />
-      </a>
-      <div class="title">PRESENT</div>
+      <div class="brand">
+        <a href="index.html" aria-label="MO7S home">
+          <img class="logo" src="assets/mo7s-mark.png" alt="MO7S" decoding="async" />
+        </a>
+        <div class="title">PRESENT</div>
+      </div>
+      <nav class="subnav" aria-label="About">
+        <a href="past.html">past</a>
+        <a href="present.html" aria-current="page">present</a>
+        <a href="future.html">future</a>
+      </nav>
     </div>
   </header>
 

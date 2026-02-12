@@ -12,69 +12,170 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
 
-  <link rel="stylesheet" href="styles.css" />
   <style>
+    @font-face {
+      font-family: 'Roadway';
+      src: url('assets/Roadway.ttf') format('truetype');
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #000;
+      --ink: #f2f2f2;
+      --muted: rgba(242,242,242,0.72);
+      --max: 980px;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
-      background: #000;
-      color: #fff;
       margin: 0;
+      background: radial-gradient(1200px 800px at 50% 20%, #141414, var(--bg));
+      color: var(--ink);
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
       min-height: 100vh;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.45);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .bar {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 16px;
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      width: auto;
+    }
+
+    .brand a {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 2rem 1.25rem;
-      text-align: center;
+      text-decoration: none;
     }
 
-    .wrap {
-      width: 100%;
-      max-width: 720px;
+    .logo {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      display: block;
+      opacity: 0.98;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-family: 'Roadway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 1.0rem;
+      display: inline-block;
+    }
+
+    .subnav {
       display: flex;
-      flex-direction: column;
-      gap: 1rem;
       align-items: center;
+      gap: 10px;
+      margin-left: 10px;
+      padding-left: 14px;
+      border-left: 1px solid rgba(255,255,255,0.10);
+      flex-wrap: wrap;
     }
 
-    img {
-      width: min(560px, 100%);
+    .subnav a {
+      text-decoration: none;
+      color: rgba(242,242,242,0.65);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 5px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(16,16,16,0.35);
+    }
+
+    .subnav a[aria-current="page"] {
+      color: rgba(242,242,242,0.92);
+      border-color: rgba(255,255,255,0.22);
+      background: rgba(16,16,16,0.55);
+    }
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 16px 46px;
+      display: grid;
+      gap: 16px;
+      justify-items: center;
+    }
+
+    .card {
+      width: min(720px, 100%);
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 18px 60px rgba(0,0,0,0.7);
+      background: #050505;
+    }
+
+    .card img {
+      width: 100%;
       height: auto;
-      border-radius: 14px;
-      border: 1px solid rgba(234,210,0,0.35);
-      box-shadow: 0 18px 48px rgba(0,0,0,0.7);
+      display: block;
     }
 
     .soon {
-      font-size: 1.15rem;
+      width: min(720px, 100%);
+      text-align: center;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(0,0,0,0.25);
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: #fff;
-      opacity: 0.92;
-      margin-top: 0.25rem;
-    }
-
-    .back {
-      margin-top: 1rem;
-      display: inline-block;
-      color: rgba(255,255,255,0.75);
-      text-decoration: none;
-      border: 1px solid rgba(234,210,0,0.25);
-      border-radius: 999px;
-      padding: 0.6rem 1.1rem;
-    }
-
-    .back:hover {
-      border-color: rgba(234,210,0,0.6);
-      color: #fff;
+      color: rgba(242,242,242,0.85);
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <img src="assets/bio-shot.jpg" alt="MO7S" loading="eager" decoding="async" />
+  <header>
+    <div class="bar">
+      <div class="brand">
+        <a href="index.html" aria-label="MO7S home">
+          <img class="logo" src="assets/mo7s-mark.png" alt="MO7S" decoding="async" />
+        </a>
+        <span>FUTURE</span>
+      </div>
+      <nav class="subnav" aria-label="About">
+        <a href="past.html">past</a>
+        <a href="present.html">present</a>
+        <a href="future.html" aria-current="page">future</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <img src="assets/bio-shot.jpg" alt="MO7S" loading="eager" decoding="async" />
+    </div>
     <div class="soon">COMING SOON!</div>
-    <a class="back" href="index.html">back</a>
   </main>
 </body>
 </html>
