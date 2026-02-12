@@ -116,12 +116,14 @@
     }
 
     .pill--dd[open] .dd {
-      bottom: calc(100% - 0.25rem);
+      top: calc(100% + 0.5rem);
+      bottom: auto;
     }
 
     .dd {
       position: absolute;
-      bottom: calc(100% + 0.5rem);
+      top: calc(100% + 0.5rem);
+      bottom: auto;
       left: 50%;
       transform: translateX(-50%);
       background: var(--cell);
