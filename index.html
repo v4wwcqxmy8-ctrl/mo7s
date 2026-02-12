@@ -112,6 +112,20 @@
       display: none;
     }
 
+    .pill--dd summary::marker {
+      content: "";
+    }
+
+    .pill--dd summary {
+      list-style: none;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .pill--dd summary::-webkit-details-marker {
+      display: none;
+    }
+
     
     .dd-item,
     .dd a {
