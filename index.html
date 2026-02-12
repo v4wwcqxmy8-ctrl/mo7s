@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
 :root {
-      --slow-yellow: #ead200;
+      --slow-yellow: #f2d400;
       --cell: #0f0f0f;
       --cell2: #151515;
       --cell-border: rgba(234,210,0,0.35);
@@ -158,30 +158,6 @@
       content: "";
     }
 
-
-
-    /* keep tape stripe behind text by giving the label its own solid backing */
-    .pill--dd > summary {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-
-    .pillLabel {
-      position: relative;
-      z-index: 2;
-      padding: 0 0.95rem;
-      border-radius: 999px;
-      background: linear-gradient(180deg, var(--cell2), var(--cell));
-      box-shadow: 0 0 0 10px var(--cell);
-    }
-
-    /* soften any stripe peeking through due to subpixel rendering */
-    .pill--dd > summary::after {
-      z-index: 1;
-    }
-
     /* inline dropdown panels (stacked layout) */
     .dd {
       position: static;
@@ -231,7 +207,7 @@
       right: 16px;
       top: 50%;
       transform: translateY(-50%);
-      height: 18px;
+      height: 16px;
       border-radius: 8px;
       opacity: 0.62;
       pointer-events: none;
@@ -246,19 +222,19 @@
       -webkit-mask-image: linear-gradient(
         90deg,
         #000 0%,
-        #000 48.4375%,
-        transparent 48.4375%,
-        transparent 51.5625%,
-        #000 51.5625%,
+        #000 46%,
+        transparent 46%,
+        transparent 54%,
+        #000 54%,
         #000 100%
       );
       mask-image: linear-gradient(
         90deg,
         #000 0%,
-        #000 48.4375%,
-        transparent 48.4375%,
-        transparent 51.5625%,
-        #000 51.5625%,
+        #000 46%,
+        transparent 46%,
+        transparent 54%,
+        #000 54%,
         #000 100%
       );
       filter: saturate(1.05) contrast(1.05);
@@ -319,7 +295,7 @@
       
     <nav class="links" aria-label="links">
       <details class="pill--dd">
-        <summary><span class="pillLabel">about</span></summary>
+        <summary>about</summary>
         <div class="dd">
           <a class="dd-item" href="past.html">past</a>
           <a class="dd-item" href="present.html">present</a>
@@ -327,13 +303,13 @@
         </div>
       </details>
       <details class="pill--dd">
-        <summary><span class="pillLabel">contact</span></summary>
+        <summary>contact</summary>
         <div class="dd">
           <a class="dd-item" href="mailto:info@mo7s.com">email</a>
         </div>
       </details>
       <details class="pill--dd">
-        <summary><span class="pillLabel">socials</span></summary>
+        <summary>socials</summary>
         <div class="dd">
           <a class="dd-item" href="https://instagram.com/mo7s" target="_blank" rel="noopener noreferrer">instagram</a>
           <a class="dd-item" href="https://soundcloud.com/mo7s" target="_blank" rel="noopener noreferrer">soundcloud</a>
