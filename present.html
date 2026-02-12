@@ -137,6 +137,54 @@
     }
 
     .em { color: var(--ink); }
+
+    .section {
+      margin-top: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .h {
+      color: rgba(242,242,242,0.72);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      font-family: 'Roadway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    .mixcard {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 18px 60px rgba(0,0,0,0.7);
+      background: #050505;
+      padding: 12px;
+    }
+
+    .mixcard iframe {
+      display: block;
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .mixmeta {
+      margin-top: 8px;
+      font-size: 10px;
+      color: #cccccc;
+      line-break: anywhere;
+      word-break: normal;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-family: Interstate, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Garuda, Verdana, Tahoma, sans-serif;
+      font-weight: 100;
+    }
+
+    .mixmeta a { color: #cccccc; text-decoration: none; }
+    .mixmeta a:hover { text-decoration: underline; }
+
   </style>
 </head>
 <body>
@@ -164,6 +212,17 @@
       <figcaption>
         After 3 seasons, <span class="em">Stephen</span> wrapped up production on <span class="em">Blood of Zeus</span> on Netflix where he was the <span class="em">Director of Technology</span>. A big salute to the Cast &amp; Crew. Powerhouse team and everyone at Netflix!!
       </figcaption>
+
+      <section class="section" aria-label="Recent mix">
+        <div class="h">Recent mix</div>
+        <div class="mixcard">
+          <iframe height="166" scrolling="no" frameborder="no" allow="autoplay" loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2138057721&color=%23ead200&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+          <div class="mixmeta">
+            <a href="https://soundcloud.com/mo7s" title="MO7S" target="_blank" rel="noopener noreferrer">MO7S</a> ·
+            <a href="https://soundcloud.com/mo7s/while-i-was-gone" title='"While I Was Gone"' target="_blank" rel="noopener noreferrer">"While I Was Gone"</a>
+          </div>
+        </div>
+      </section>
     </figure>
   </main>
 </body>
