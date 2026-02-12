@@ -147,6 +147,11 @@
     }
 
     @media (max-width: 900px) {
+      .links {
+        flex-direction: column;
+        align-items: center;
+      }
+
       /* When the viewport is narrow (mobile, tablet, narrow desktop),
          avoid floating dropdowns that overlap the logo/tagline. */
       .dd {
@@ -171,6 +176,12 @@
         transform: none;
         min-width: 0;
       }
+      .pill {
+        width: 100%;
+        max-width: 380px;
+        text-align: center;
+      }
+
     }
 
     @media (max-width: 640px) {
