@@ -1,0 +1,15 @@
+34	rot180	assets/past/full/front-524a03ddaf24.jpg
+35	rot180	assets/past/full/in-center-1f88d07d045f.jpg
+36	rot180	assets/past/full/in-left-2a6823a970a8.jpg
+38	rot180	assets/past/full/back-f46f9ff8b79b.jpg
+39	ccw90	assets/past/full/front-81d547792979.jpg
+40	ccw90	assets/past/full/in-left-98748d7352d1.jpg
+44	ccw90	assets/past/full/inhale-back-252b97510625.jpg
+60	rot180	assets/past/full/in-left-57acc0add4ce.jpg
+63	rot180	assets/past/full/front-2-d95247d65bb7.jpg
+71	ccw90	assets/past/full/front-right-c2cc1320c92c.jpg
+72	ccw90	assets/past/full/in-center-ddcb7d3eeaf3.jpg
+79	ccw90	assets/past/full/back-39ffea381cd1.jpg
+80	ccw90	assets/past/full/front-53345c66c739.jpg
+81	ccw90	assets/past/full/til-dawn-breaks-b6269fe17b88.jpg
+82	ccw90	assets/past/full/unrealb-wflyer-13d4cf9383cb.jpg
