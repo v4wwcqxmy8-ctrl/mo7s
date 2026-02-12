@@ -8,6 +8,16 @@
   <link rel="icon" href="assets/mo7s-icon.jpg" />
   <link rel="stylesheet" href="styles.css" />
   <style>
+:root {
+      --slow-yellow: #ead200;
+      --cell: #0f0f0f;
+      --cell2: #151515;
+      --cell-border: rgba(234,210,0,0.35);
+      --cell-border-strong: rgba(234,210,0,0.75);
+      --text: #ffffff;
+    }
+
+
     * {
       margin: 0;
       padding: 0;
@@ -68,21 +78,27 @@
     }
 
     .pill {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--cell);
+      border: 1px solid var(--cell-border);
       border-radius: 25px;
       padding: 0.75rem 1.5rem;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: transform 140ms ease, box-shadow 160ms ease, border-color 160ms ease, background 160ms ease;
       position: relative;
-      color: #fff;
+      color: var(--text);
       width: 160px; /* keep pills equal width on desktop */
       text-align: center;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.55);
     }
 
     .pill:hover {
-      border-color: #666;
-      box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+      border-color: var(--cell-border-strong);
+      background: var(--cell2);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.65), 0 0 0 2px rgba(234,210,0,0.16);
+    }
+
+    .pill:active {
+      transform: translateY(1px) scale(0.99);
     }
 
     .pill--dd summary {
@@ -108,8 +124,8 @@
       bottom: calc(100% + 0.5rem);
       left: 50%;
       transform: translateX(-50%);
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--cell);
+      border: 1px solid var(--cell-border);
       border-radius: 12px;
       padding: 0.5rem;
       display: flex;
@@ -123,6 +139,7 @@
 
     .dd-item,
     .dd a {
+      border: 1px solid transparent;
       padding: 0.5rem 1rem;
       text-decoration: none;
       color: #fff;
@@ -133,7 +150,8 @@
 
     .dd-item:hover,
     .dd a:hover {
-      background: #2a2a2a;
+      background: rgba(234,210,0,0.08);
+      border: 1px solid rgba(234,210,0,0.25);
     }
 
     .footer {
