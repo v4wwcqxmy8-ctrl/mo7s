@@ -63,6 +63,22 @@
       text-align: center;
     }
 
+    /* tagline reveal (desktop hover) */
+    .brand:hover .tagline,
+    .brand:focus-within .tagline {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* On touch devices (no hover), keep it visible */
+    @media (hover: none) {
+      .tagline {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+
     .mark {
       width: 200px;
       height: 200px;
@@ -79,6 +95,10 @@
       line-height: 1.15;
       text-transform: lowercase;
       white-space: nowrap;
+    
+      opacity: 0;
+      transform: translateY(-4px);
+      transition: opacity 180ms ease, transform 180ms ease;
     }
 
     .links {
