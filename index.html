@@ -69,13 +69,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-
-    /* On touch devices (no hover), keep it visible */
-    @media (hover: none) {
-      .tagline {
-        opacity: 1;
-        transform: none;
-      }
     }
 
 
@@ -114,13 +107,13 @@
       background: var(--cell);
       border: 1px solid var(--cell-border);
       border-radius: 28px;
-      padding: 1rem 1.85rem;
+      padding: 1.1rem 2.05rem;
       cursor: pointer;
       transition: transform 140ms ease, box-shadow 160ms ease, border-color 160ms ease, background 160ms ease;
       position: relative;
       color: var(--text);
       width: 100%;
-      max-width: 460px;
+      max-width: 500px;
       text-align: center;
       box-shadow: 0 10px 26px rgba(0,0,0,0.55);
     }
@@ -142,7 +135,7 @@
       box-shadow: none;
       padding: 0;
       width: 100%;
-      max-width: 460px;
+      max-width: 500px;
     }
 
     /* Make the clickable <summary> look like the pill */
@@ -162,12 +155,12 @@
       background: var(--cell);
       border: 1px solid var(--cell-border);
       border-radius: 28px;
-      padding: 1rem 1.85rem;
+      padding: 1.1rem 2.05rem;
       text-align: center;
       font-family: 'Roadway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      font-size: 0.92rem;
+      font-size: 1.02rem;
       text-shadow: 0 0 8px var(--cell), 0 0 12px var(--cell);
       box-shadow: 0 10px 26px rgba(0,0,0,0.55);
       transition: transform 140ms ease, box-shadow 160ms ease, border-color 160ms ease, background 160ms ease;
@@ -213,7 +206,7 @@
       font-family: 'Roadway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      font-size: 0.84rem;
+      font-size: 0.92rem;
       border: 1px solid transparent;
       padding: 0.65rem 1rem;
       text-decoration: none;
@@ -310,7 +303,7 @@
 
       .pill {
         width: 100%;
-        max-width: 460px;
+        max-width: 500px;
         text-align: center;
         padding: 1.1rem 1.9rem;
         font-size: 1.18rem;
@@ -320,6 +313,13 @@
       .dd {
         margin-top: 12px;
       }
+    }
+  
+
+    /* touch toggle */
+    .tagline--show {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
     }
   </style>
 </head>
@@ -364,5 +364,27 @@
   <script>
     document.getElementById('y').textContent = String(new Date().getFullYear());
   </script>
+
+  <script>
+    // touch-friendly tagline reveal: tap the logo/brand to show briefly
+    (function taglineTap(){
+      const brand = document.querySelector('.brand');
+      const tag = document.querySelector('.tagline');
+      if(!brand || !tag) return;
+      let t = null;
+      function show(){
+        tag.classList.add('tagline--show');
+        if(t) clearTimeout(t);
+        t = setTimeout(() => tag.classList.remove('tagline--show'), 2500);
+      }
+      brand.addEventListener('click', (e) => {
+        // Only do this on touch-ish devices
+        if(window.matchMedia && window.matchMedia('(hover: none)').matches){
+          show();
+        }
+      }, {passive:true});
+    })();
+  </script>
+
 </body>
 </html>
