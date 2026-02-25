@@ -484,12 +484,23 @@
     const nextBtn = document.getElementById('nextBtn');
 
     let ITEMS = [];
-    let currentIndex = -1;
+
+    // Viewer navigation should stay within the section you opened from.
+    // currentView = array of manifest indexes (in the *rendered* order for that section).
+    let currentView = [];
+    let viewPos = -1;
+
       muteBtn.style.display = 'none';
       tapplay.setAttribute('aria-hidden','true');
 
+    function currentItem() {
+      if (!currentView.length || viewPos < 0) return null;
+      const idx = currentView[viewPos];
+      return ITEMS[idx] || null;
+    }
+
     function renderViewer() {
-      const item = ITEMS[currentIndex];
+      const item = currentItem();
       if (!item) return;
       cap.textContent = item.title || '';
       const fullUrl = item.full + (item.full.includes('?') ? '&' : '?') + 'v=' + ASSET_VER;
@@ -538,9 +549,12 @@
       }
     }
 
-    function openViewerAt(i) {
-      currentIndex = (i + ITEMS.length) % ITEMS.length;
-      const item = ITEMS[currentIndex];
+    function openViewer(view, pos) {
+      currentView = Array.isArray(view) ? view : [];
+      viewPos = Math.max(0, Math.min(pos, currentView.length - 1));
+      const item = currentItem();
+      if (!item) return;
+
       viewer.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
 
@@ -586,21 +600,22 @@
       viewerVid.removeAttribute('src');
       viewerVid.load();
       document.body.style.overflow = '';
-      currentIndex = -1;
+      currentView = [];
+      viewPos = -1;
       muteBtn.style.display = 'none';
       tapplay.setAttribute('aria-hidden','true');
     }
 
     function next() {
-      if (!ITEMS.length) return;
-      currentIndex = (currentIndex + 1) % ITEMS.length;
-      openViewerAt(currentIndex);
+      if (!currentView.length) return;
+      viewPos = (viewPos + 1) % currentView.length;
+      openViewer(currentView, viewPos);
     }
 
     function prev() {
-      if (!ITEMS.length) return;
-      currentIndex = (currentIndex - 1 + ITEMS.length) % ITEMS.length;
-      openViewerAt(currentIndex);
+      if (!currentView.length) return;
+      viewPos = (viewPos - 1 + currentView.length) % currentView.length;
+      openViewer(currentView, viewPos);
     }
 
     viewer.addEventListener('click', (e) => {
@@ -708,7 +723,7 @@
 
         const frags = { appearances: document.createDocumentFragment(), events: document.createDocumentFragment(), releases: document.createDocumentFragment() };
 
-        function makeTile(item, i) {
+        function makeTile(item, i, view, pos) {
           const a = document.createElement('a');
           a.className = 'flyer';
           // slight randomness for wall feel (use manifest index so it stays consistent)
@@ -717,7 +732,7 @@
           a.href = item.full;
           a.addEventListener('click', (e) => {
             e.preventDefault();
-            openViewerAt(i);
+            openViewer(view, pos);
           });
 
           const img = document.createElement('img');
@@ -729,9 +744,13 @@
           return a;
         }
 
-        buckets.events.forEach(({ item, i }) => frags.events.appendChild(makeTile(item, i)));
-        buckets.releases.forEach(({ item, i }) => frags.releases.appendChild(makeTile(item, i)));
-        buckets.appearances.forEach(({ item, i }) => frags.appearances.appendChild(makeTile(item, i)));
+        const eventsView = buckets.events.map(x => x.i);
+        const releasesView = buckets.releases.map(x => x.i);
+        const appearancesView = buckets.appearances.map(x => x.i);
+
+        buckets.events.forEach(({ item, i }, pos) => frags.events.appendChild(makeTile(item, i, eventsView, pos)));
+        buckets.releases.forEach(({ item, i }, pos) => frags.releases.appendChild(makeTile(item, i, releasesView, pos)));
+        buckets.appearances.forEach(({ item, i }, pos) => frags.appearances.appendChild(makeTile(item, i, appearancesView, pos)));
 
         wallEvents.appendChild(frags.events);
         wallReleases.appendChild(frags.releases);
