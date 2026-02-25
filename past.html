@@ -666,12 +666,46 @@
       .then(r => r.json())
       .then(data => {
         ITEMS = data.items || [];
+
+        // For sorting: support YYYY, YYYY-MM, YYYY-MM-DD. Unknown dates sort last.
+        function dateKey(v) {
+          if (!v) return -Infinity;
+          const s = String(v).trim();
+          const m = s.match(/^(\d{4})(?:-(\d{2})(?:-(\d{2}))?)?$/);
+          if (!m) return -Infinity;
+          const y = Number(m[1]);
+          const mo = Number(m[2] || '01');
+          const d = Number(m[3] || '01');
+          // use UTC millis as comparable key
+          const t = Date.UTC(y, Math.max(0, mo - 1), Math.max(1, d));
+          return Number.isFinite(t) ? t : -Infinity;
+        }
+
+        const buckets = { appearances: [], events: [], releases: [] };
+        ITEMS.forEach((item, i) => {
+          const cat = (item.category || 'events').toLowerCase();
+          (buckets[cat] || buckets.events).push({ item, i });
+        });
+
+        // Events: newest → oldest by item.date (event date). No-date items fall to bottom.
+        buckets.events.sort((a, b) => {
+          const ka = dateKey(a.item.date);
+          const kb = dateKey(b.item.date);
+          if (ka !== kb) return kb - ka;
+          // stable-ish fallback
+          const ta = (a.item.title || '').toLowerCase();
+          const tb = (b.item.title || '').toLowerCase();
+          if (ta < tb) return -1;
+          if (ta > tb) return 1;
+          return a.i - b.i;
+        });
+
         const frags = { appearances: document.createDocumentFragment(), events: document.createDocumentFragment(), releases: document.createDocumentFragment() };
 
-        ITEMS.forEach((item, i) => {
+        function makeTile(item, i) {
           const a = document.createElement('a');
           a.className = 'flyer';
-          // slight randomness for wall feel
+          // slight randomness for wall feel (use manifest index so it stays consistent)
           const r = ((i % 7) - 3) * 0.35; // -1.05..+1.05 deg
           a.style.setProperty('--r', r.toFixed(2) + 'deg');
           a.href = item.full;
@@ -685,11 +719,13 @@
           img.decoding = 'async';
           img.src = item.thumb + (item.thumb.includes('?') ? '&' : '?') + 'v=' + ASSET_VER;
           img.alt = item.title || 'flyer';
-
           a.appendChild(img);
-          const cat = (item.category || 'events').toLowerCase();
-          (frags[cat] || frags.events).appendChild(a);
-        });
+          return a;
+        }
+
+        buckets.events.forEach(({ item, i }) => frags.events.appendChild(makeTile(item, i)));
+        buckets.releases.forEach(({ item, i }) => frags.releases.appendChild(makeTile(item, i)));
+        buckets.appearances.forEach(({ item, i }) => frags.appearances.appendChild(makeTile(item, i)));
 
         wallEvents.appendChild(frags.events);
         wallReleases.appendChild(frags.releases);
