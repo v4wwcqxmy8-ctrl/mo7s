@@ -1,5 +1,5 @@
 {
-  "count": 119,
+  "count": 116,
   "items": [
     {
       "src": "/Users/slampig/Desktop/to_site/appearences/2-2.jpg",
@@ -121,13 +121,6 @@
       "category": "events"
     },
     {
-      "src": "/Users/slampig/Desktop/to_site/events/IMG_5095.JPG",
-      "full": "assets/past/full/img-5095-347b06e6d605.jpg",
-      "thumb": "assets/past/thumb/img-5095-347b06e6d605.jpg",
-      "title": "IMG 5095",
-      "category": "events"
-    },
-    {
       "src": "/Users/slampig/Desktop/to_site/events/IMG_5471.jpeg",
       "full": "assets/past/full/img-5471-9522517f73b2.jpg",
       "thumb": "assets/past/thumb/img-5471-9522517f73b2.jpg",
@@ -146,20 +139,6 @@
       "full": "assets/past/full/img-6077-ddd899c8272d.jpg",
       "thumb": "assets/past/thumb/img-6077-ddd899c8272d.jpg",
       "title": "IMG 6077",
-      "category": "events"
-    },
-    {
-      "src": "/Users/slampig/Desktop/to_site/events/IMG_6078.JPG",
-      "full": "assets/past/full/img-6078-4777db367a15.jpg",
-      "thumb": "assets/past/thumb/img-6078-4777db367a15.jpg",
-      "title": "IMG 6078",
-      "category": "events"
-    },
-    {
-      "src": "/Users/slampig/Desktop/to_site/events/January 03 Front.JPG",
-      "full": "assets/past/full/january-03-front-91cc923ddb2e.jpg",
-      "thumb": "assets/past/thumb/january-03-front-91cc923ddb2e.jpg",
-      "title": "January 03 Front",
       "category": "events"
     },
     {
