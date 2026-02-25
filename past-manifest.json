@@ -189,7 +189,8 @@
       "full": "assets/past/full/tight-crew-a628a1935e03.jpg",
       "thumb": "assets/past/thumb/tight-crew-a628a1935e03.jpg",
       "title": "Tight Crew",
-      "category": "events"
+      "category": "events",
+      "pin": 0.9
     },
     {
       "src": "/Users/slampig/Desktop/Manders.m4v",
