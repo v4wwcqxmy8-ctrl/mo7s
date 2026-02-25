@@ -327,8 +327,11 @@
       width: 44px;
       height: 44px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(16,16,16,0.55);
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(0,0,0,0.68);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.55);
       color: var(--ink);
       display: grid;
       place-items: center;
@@ -336,6 +339,7 @@
       line-height: 1;
       cursor: pointer;
       user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .nav:hover { border-color: rgba(255,255,255,0.3); }
@@ -363,13 +367,17 @@
 
     .btn {
       appearance: none;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(16,16,16,0.55);
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(0,0,0,0.68);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.45);
       color: var(--ink);
       border-radius: 999px;
       padding: 8px 12px;
       font-size: 0.9rem;
       cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .btn:active { transform: translateY(1px); }
