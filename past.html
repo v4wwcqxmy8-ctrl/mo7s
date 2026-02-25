@@ -710,24 +710,61 @@
           (buckets[cat] || buckets.events).push({ item, i });
         });
 
-        // Events: pinned first (item.pin), then newest → oldest by item.date (event date).
-        // No-date items sort last unless pinned.
-        buckets.events.sort((a, b) => {
-          const pa = Number(a.item.pin || 0);
-          const pb = Number(b.item.pin || 0);
-          if (pa !== pb) return pb - pa;
+        // Events: pinned first (item.pin), then newest -> oldest by item.date (event date).
+        // Keep folded-flyer sets together using item.set + item.setPos.
+        function groupFor(x) {
+          const s = x.item.set;
+          return s ? ('set:' + s) : ('item:' + String(x.i));
+        }
 
-          const ka = dateKey(a.item.date);
-          const kb = dateKey(b.item.date);
-          if (ka !== kb) return kb - ka;
+        function groupMeta(key, rows) {
+          let pin = 0;
+          let dk = -Infinity;
+          let title = '';
+          for (const r of rows) {
+            const p = Number(r.item.pin || 0);
+            if (p > pin) pin = p;
+            const k = dateKey(r.item.date);
+            if (k > dk) dk = k;
+            const t = (r.item.title || '');
+            if (!title || t.toLowerCase() < title.toLowerCase()) title = t;
+          }
+          return { key, pin, dk, title };
+        }
 
-          // stable-ish fallback
-          const ta = (a.item.title || '').toLowerCase();
-          const tb = (b.item.title || '').toLowerCase();
+        function setPos(item) {
+          const v = item.setPos;
+          if (v == null) return 1e9;
+          const n = Number(v);
+          return Number.isFinite(n) ? n : 1e9;
+        }
+
+        const eventGroups = new Map();
+        buckets.events.forEach((row) => {
+          const g = groupFor(row);
+          if (!eventGroups.has(g)) eventGroups.set(g, []);
+          eventGroups.get(g).push(row);
+        });
+
+        const sortedGroupKeys = Array.from(eventGroups.keys()).sort((ka, kb) => {
+          const ga = groupMeta(ka, eventGroups.get(ka));
+          const gb = groupMeta(kb, eventGroups.get(kb));
+          if (ga.pin !== gb.pin) return gb.pin - ga.pin;
+          if (ga.dk !== gb.dk) return gb.dk - ga.dk;
+          const ta = (ga.title || '').toLowerCase();
+          const tb = (gb.title || '').toLowerCase();
           if (ta < tb) return -1;
           if (ta > tb) return 1;
-          return a.i - b.i;
+          return ka < kb ? -1 : (ka > kb ? 1 : 0);
         });
+
+        const newEvents = [];
+        for (const k of sortedGroupKeys) {
+          const rows = eventGroups.get(k);
+          rows.sort((a, b) => setPos(a.item) - setPos(b.item));
+          newEvents.push(...rows);
+        }
+        buckets.events = newEvents;
 
         const frags = { appearances: document.createDocumentFragment(), events: document.createDocumentFragment(), releases: document.createDocumentFragment() };
 

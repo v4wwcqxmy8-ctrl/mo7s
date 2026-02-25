@@ -255,14 +255,18 @@
       "full": "assets/past/full/adrenaline-fold-17d7eca48bdd.jpg",
       "thumb": "assets/past/thumb/adrenaline-fold-17d7eca48bdd.jpg",
       "title": "Adrenaline_FOLD",
-      "category": "events"
+      "category": "events",
+      "set": "adrenaline",
+      "setPos": 1
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Adrenaline 2:26:2000/BACK.JPG",
       "full": "assets/past/full/back-d82242c2ff7d.jpg",
       "thumb": "assets/past/thumb/back-d82242c2ff7d.jpg",
       "title": "BACK",
-      "category": "events"
+      "category": "events",
+      "set": "adrenaline",
+      "setPos": 2
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Adrenaline 2:26:2000/FRONT.JPG",
@@ -290,7 +294,9 @@
       "full": "assets/past/full/back-1aadedd7be79.jpg",
       "thumb": "assets/past/thumb/back-1aadedd7be79.jpg",
       "title": "BACK",
-      "category": "events"
+      "category": "events",
+      "set": "big-bang",
+      "setPos": 2
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Big Bang/BigBang.jpg",
@@ -304,7 +310,9 @@
       "full": "assets/past/full/front-0f71f0aa4fb2.jpg",
       "thumb": "assets/past/thumb/front-0f71f0aa4fb2.jpg",
       "title": "FRONT",
-      "category": "events"
+      "category": "events",
+      "set": "big-bang",
+      "setPos": 1
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Boston_Bedrock_Breaks.jpg",
@@ -318,7 +326,9 @@
       "full": "assets/past/full/back-4563139a99c9.jpg",
       "thumb": "assets/past/thumb/back-4563139a99c9.jpg",
       "title": "BACK",
-      "category": "events"
+      "category": "events",
+      "set": "bounce",
+      "setPos": 2
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Bounce 7:13:2002/Bounce_Fort_Lauderdale.jpg",
@@ -332,7 +342,9 @@
       "full": "assets/past/full/epson001-63b40ac62ee2.jpg",
       "thumb": "assets/past/thumb/epson001-63b40ac62ee2.jpg",
       "title": "EPSON001~",
-      "category": "events"
+      "category": "events",
+      "set": "bounce",
+      "setPos": 1
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Bounce 7:13:2002/FRONT.JPG",
@@ -374,14 +386,18 @@
       "full": "assets/past/full/back-6e9faa9e2600.jpg",
       "thumb": "assets/past/thumb/back-6e9faa9e2600.jpg",
       "title": "BACK",
-      "category": "events"
+      "category": "events",
+      "set": "cream",
+      "setPos": 2
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/C.R.E.A.M./FRONT.JPG",
       "full": "assets/past/full/front-177fa8037115.jpg",
       "thumb": "assets/past/thumb/front-177fa8037115.jpg",
       "title": "FRONT",
-      "category": "events"
+      "category": "events",
+      "set": "cream",
+      "setPos": 1
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/DAWN/BACK.JPG",
@@ -409,14 +425,18 @@
       "full": "assets/past/full/back-directions-21ff5790eeda.jpg",
       "thumb": "assets/past/thumb/back-directions-21ff5790eeda.jpg",
       "title": "BACK DIRECTIONS",
-      "category": "events"
+      "category": "events",
+      "set": "earthfest",
+      "setPos": 3
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Earthfest 4:21:2001/BACK.JPG",
       "full": "assets/past/full/back-7acafeadac3c.jpg",
       "thumb": "assets/past/thumb/back-7acafeadac3c.jpg",
       "title": "BACK",
-      "category": "events"
+      "category": "events",
+      "set": "earthfest",
+      "setPos": 1
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Earthfest 4:21:2001/FRONT.JPG",
@@ -430,7 +450,9 @@
       "full": "assets/past/full/in-center-1f88d07d045f.jpg",
       "thumb": "assets/past/thumb/in-center-1f88d07d045f.jpg",
       "title": "IN CENTER",
-      "category": "events"
+      "category": "events",
+      "set": "earthfest",
+      "setPos": 2
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Earthfest 4:21:2001/IN LEFT.JPG",
@@ -451,14 +473,18 @@
       "full": "assets/past/full/back-f46f9ff8b79b.jpg",
       "thumb": "assets/past/thumb/back-f46f9ff8b79b.jpg",
       "title": "BACK",
-      "category": "events"
+      "category": "events",
+      "set": "inhale",
+      "setPos": 1
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Inhale First Breath/FRONT.JPG",
       "full": "assets/past/full/front-81d547792979.jpg",
       "thumb": "assets/past/thumb/front-81d547792979.jpg",
       "title": "FRONT",
-      "category": "events"
+      "category": "events",
+      "set": "inhale",
+      "setPos": 2
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Inhale First Breath/IN LEFT.JPG",
@@ -521,7 +547,9 @@
       "full": "assets/past/full/nl-long-7015dea07e35.jpg",
       "thumb": "assets/past/thumb/nl-long-7015dea07e35.jpg",
       "title": "NL_LONG",
-      "category": "events"
+      "category": "events",
+      "set": "northern",
+      "setPos": 4
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/New England Invasion/Invasion.jpg",
@@ -535,14 +563,18 @@
       "full": "assets/past/full/back-3152fcff79c4.jpg",
       "thumb": "assets/past/thumb/back-3152fcff79c4.jpg",
       "title": "BACK",
-      "category": "events"
+      "category": "events",
+      "set": "northern",
+      "setPos": 1
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Northern Lights 12:1:2000/FRONT.JPG",
       "full": "assets/past/full/front-21e08608fbee.jpg",
       "thumb": "assets/past/thumb/front-21e08608fbee.jpg",
       "title": "FRONT",
-      "category": "events"
+      "category": "events",
+      "set": "northern",
+      "setPos": 2
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Northern Lights 12:1:2000/IN LEFT.JPG",
@@ -563,7 +595,9 @@
       "full": "assets/past/full/northern-lights-full-8d3313477439.jpg",
       "thumb": "assets/past/thumb/northern-lights-full-8d3313477439.jpg",
       "title": "Northern_Lights_FULL",
-      "category": "events"
+      "category": "events",
+      "set": "northern",
+      "setPos": 3
     },
     {
       "src": "/Users/slampig/Desktop/MO7S Fliers/Northern_Lineup.jpg",
