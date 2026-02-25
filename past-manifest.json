@@ -1,5 +1,5 @@
 {
-  "count": 116,
+  "count": 119,
   "items": [
     {
       "src": "/Users/slampig/Desktop/to_site/appearences/2-2.jpg",
@@ -242,6 +242,13 @@
       "category": "events"
     },
     {
+      "src": "/Users/slampig/Desktop/MO7S Fliers/AVALON/January 10 2003/BACK.JPG",
+      "full": "assets/past/full/back-7809623640bf.jpg",
+      "thumb": "assets/past/thumb/back-7809623640bf.jpg",
+      "title": "BACK",
+      "category": "events"
+    },
+    {
       "src": "/Users/slampig/Desktop/MO7S Fliers/AVALON/January 10 2003/DIGWEED FRONT.JPG",
       "full": "assets/past/full/digweed-front-89f72ea82358.jpg",
       "thumb": "assets/past/thumb/digweed-front-89f72ea82358.jpg",
@@ -379,6 +386,13 @@
       "full": "assets/past/full/front-99f58e6423d5.jpg",
       "thumb": "assets/past/thumb/front-99f58e6423d5.jpg",
       "title": "FRONT",
+      "category": "events"
+    },
+    {
+      "src": "/Users/slampig/Desktop/MO7S Fliers/C.R.E.A.M./BACK.JPG",
+      "full": "assets/past/full/back-6e9faa9e2600.jpg",
+      "thumb": "assets/past/thumb/back-6e9faa9e2600.jpg",
+      "title": "BACK",
       "category": "events"
     },
     {
@@ -736,6 +750,13 @@
       "full": "assets/past/full/tables-turn-long-f1ad6d39864e.jpg",
       "thumb": "assets/past/thumb/tables-turn-long-f1ad6d39864e.jpg",
       "title": "Tables_Turn_LONG",
+      "category": "events"
+    },
+    {
+      "src": "/Users/slampig/Desktop/MO7S Fliers/Til Dawn Breaks 4:28:2000/BACK.JPG",
+      "full": "assets/past/full/back-39ffea381cd1.jpg",
+      "thumb": "assets/past/thumb/back-39ffea381cd1.jpg",
+      "title": "BACK",
       "category": "events"
     },
     {
