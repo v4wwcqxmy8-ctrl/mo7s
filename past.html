@@ -687,11 +687,17 @@
           (buckets[cat] || buckets.events).push({ item, i });
         });
 
-        // Events: newest → oldest by item.date (event date). No-date items fall to bottom.
+        // Events: pinned first (item.pin), then newest → oldest by item.date (event date).
+        // No-date items sort last unless pinned.
         buckets.events.sort((a, b) => {
+          const pa = Number(a.item.pin || 0);
+          const pb = Number(b.item.pin || 0);
+          if (pa !== pb) return pb - pa;
+
           const ka = dateKey(a.item.date);
           const kb = dateKey(b.item.date);
           if (ka !== kb) return kb - ka;
+
           // stable-ish fallback
           const ta = (a.item.title || '').toLowerCase();
           const tb = (b.item.title || '').toLowerCase();
