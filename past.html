@@ -179,7 +179,6 @@
       margin: 10px 0 14px;
     }
 
-    /* Apple Music cover stack (cover is the link) */
      .am-stack {
       position: relative;
       display: inline-block;
@@ -214,7 +213,6 @@
       padding: 18px 16px 42px;
     }
 
-    /* “flyer wall” grid */
     .wall {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -250,7 +248,6 @@
       filter: contrast(1.05) saturate(1.02);
     }
 
-    /* subtle “grunge” overlay without heavy filters */
     .playbadge {
       position: absolute;
       inset: 10px 10px auto auto;
@@ -288,7 +285,6 @@
       opacity: 0.9;
     }
 
-    /* viewer */
     .viewer {
       position: fixed;
       inset: 0;
@@ -511,10 +507,8 @@
   </div>
 
   <script>
-    // Lightweight: load manifest, render thumbs, lazy-load by browser.
-    // Tap opens viewer; full-size image loads on demand.
     const MANIFEST_URL = 'past-manifest.json';
-    const ASSET_VER = 'rotfix1'; // cache-buster for rotated images
+    const ASSET_VER = 'rotfix1';
 
     const wallEvents = document.getElementById('wall-events');
     const wallReleases = document.getElementById('wall-releases');
@@ -533,8 +527,6 @@
 
     let ITEMS = [];
 
-    // Viewer navigation should stay within the section you opened from.
-    // currentView = array of manifest indexes (in the *rendered* order for that section).
     let currentView = [];
     let viewPos = -1;
 
@@ -554,7 +546,6 @@
       const fullUrl = item.full + (item.full.includes('?') ? '&' : '?') + 'v=' + ASSET_VER;
       const videoUrl = item.video ? (item.video + (item.video.includes('?') ? '&' : '?') + 'v=' + ASSET_VER) : null;
 
-      // stop previous video
       viewerVid.pause();
       viewerVid.removeAttribute('src');
       viewerVid.load();
@@ -567,10 +558,9 @@
         viewerVid.setAttribute('aria-hidden','false');
         viewerVid.style.display = 'block';
         viewerVid.src = videoUrl;
-        // autoplay on first click (muted+playsinline enables mobile autoplay)
         viewerVid.muted = false;
         viewerVid.volume = 1.0;
-        viewerVid.play().catch(() => { /* autoplay with audio may be blocked */ });
+        viewerVid.play().catch(() => {});
       } else {
         muteBtn.style.display = 'none';
       tapplay.setAttribute('aria-hidden','true');
@@ -591,7 +581,6 @@
       const p = viewerVid.play();
       if (p && typeof p.catch === 'function') {
         p.catch(() => {
-          // browser blocked audible autoplay; show explicit tap-to-play
           tapplay.setAttribute('aria-hidden','false');
         });
       }
@@ -606,12 +595,10 @@
       viewer.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
 
-      // Render title + links
       cap.textContent = item?.title || '';
       const fullUrl = item.full + (item.full.includes('?') ? '&' : '?') + 'v=' + ASSET_VER;
       const videoUrl = item.video ? (item.video + (item.video.includes('?') ? '&' : '?') + 'v=' + ASSET_VER) : null;
 
-      // stop previous video
       viewerVid.pause();
       viewerVid.removeAttribute('src');
       viewerVid.load();
@@ -627,7 +614,6 @@
         muteBtn.style.display = 'inline-block';
         muteBtn.textContent = (viewerVid.muted ? 'unmute' : 'mute');
 
-        // IMPORTANT: attempt play immediately (still inside the click handler)
         attemptPlayWithAudio();
       } else {
         muteBtn.style.display = 'none';
@@ -667,7 +653,6 @@
     }
 
     viewer.addEventListener('click', (e) => {
-      // click backdrop closes
       if (e.target === viewer) closeViewer();
     });
     closeBtn.addEventListener('click', closeViewer);
@@ -690,7 +675,6 @@
       if (e.key === 'ArrowLeft') return prev();
     });
 
-    // Simple mobile swipe (left/right) inside the viewer frame
     let touchX0 = null;
     let touchY0 = null;
     const SWIPE_MIN_X = 40;
@@ -730,7 +714,6 @@
       .then(data => {
         ITEMS = data.items || [];
 
-        // For sorting: support YYYY, YYYY-MM, YYYY-MM-DD. Unknown dates sort last.
         function dateKey(v) {
           if (!v) return -Infinity;
           const s = String(v).trim();
@@ -739,7 +722,6 @@
           const y = Number(m[1]);
           const mo = Number(m[2] || '01');
           const d = Number(m[3] || '01');
-          // use UTC millis as comparable key
           const t = Date.UTC(y, Math.max(0, mo - 1), Math.max(1, d));
           return Number.isFinite(t) ? t : -Infinity;
         }
@@ -750,8 +732,6 @@
           (buckets[cat] || buckets.events).push({ item, i });
         });
 
-        // Events: pinned first (item.pin), then newest -> oldest by item.date (event date).
-        // Keep folded-flyer sets together using item.set + item.setPos.
         function groupFor(x) {
           const s = x.item.set;
           return s ? ('set:' + s) : ('item:' + String(x.i));
@@ -811,8 +791,7 @@
         function makeTile(item, i, view, pos) {
           const a = document.createElement('a');
           a.className = 'flyer';
-          // slight randomness for wall feel (use manifest index so it stays consistent)
-          const r = ((i % 7) - 3) * 0.35; // -1.05..+1.05 deg
+          const r = ((i % 7) - 3) * 0.35;
           a.style.setProperty('--r', r.toFixed(2) + 'deg');
           a.href = item.full;
           a.addEventListener('click', (e) => {
@@ -841,7 +820,6 @@
         wallReleases.appendChild(frags.releases);
         wallAppearances.appendChild(frags.appearances);
 
-        // set active pill based on hash
         function setActive() {
           const h = (location.hash || '').replace('#','');
           for (const k of ['appearances','events','releases']) {

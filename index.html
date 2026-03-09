@@ -63,7 +63,6 @@
       text-align: center;
     }
 
-    /* tagline reveal (desktop hover) */
     .brand:hover .tagline,
     .brand:focus-within .tagline {
       opacity: 1;
@@ -100,7 +99,6 @@
       width: 100%;
     }
 
-    /* Base pill button (used for plain links AND <summary>) */
     .pill {
       background: var(--cell);
       border: 1px solid var(--cell-border);
@@ -126,7 +124,6 @@
       transform: translateY(1px) scale(0.99);
     }
 
-    /* <details> wrapper should NOT look like a pill (avoids weird padding/ghost space) */
     .pill--dd {
       background: transparent;
       border: 0;
@@ -136,7 +133,6 @@
       max-width: 500px;
     }
 
-    /* Make the clickable <summary> look like the pill */
     .pill--dd > summary {
       list-style: none;
       cursor: pointer;
@@ -148,7 +144,6 @@
       margin: 0;
     }
 
-    /* also apply pill look to summary even if class isn't present */
     .pill--dd > summary {
       background: var(--cell);
       border: 1px solid var(--cell-border);
@@ -182,7 +177,6 @@
       content: "";
     }
 
-    /* inline dropdown panels (stacked layout) */
     .dd {
       position: static;
       transform: none;
@@ -222,7 +216,6 @@
 
 
 
-    /* 2b tape band (centered), left+right only, empty center for label */
     .pill--dd > summary {
       position: relative;
       overflow: hidden;
@@ -246,7 +239,6 @@
         #0a0a0a 10px,
         #0a0a0a 20px
       );
-      /* show only left + right bands; keep center clear for text */
       -webkit-mask-image: linear-gradient(
         90deg,
         #000 0%,
@@ -307,14 +299,12 @@
         font-size: 1.18rem;
       }
 
-      /* mobile: slightly roomier dropdown panel */
       .dd {
         margin-top: 12px;
       }
     }
   
 
-    /* touch toggle */
     .tagline--show {
       opacity: 1 !important;
       transform: translateY(0) !important;
@@ -364,7 +354,6 @@
   </script>
 
   <script>
-    // touch-friendly tagline reveal: tap the logo/brand to show briefly
     (function taglineTap(){
       const brand = document.querySelector('.brand');
       const tag = document.querySelector('.tagline');
@@ -376,7 +365,6 @@
         t = setTimeout(() => tag.classList.remove('tagline--show'), 2500);
       }
       brand.addEventListener('click', (e) => {
-        // Only do this on touch-ish devices
         if(window.matchMedia && window.matchMedia('(hover: none)').matches){
           show();
         }
