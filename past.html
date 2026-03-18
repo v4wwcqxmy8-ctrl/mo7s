@@ -508,7 +508,7 @@
 
   <script>
     const MANIFEST_URL = 'past-manifest.json';
-    const ASSET_VER = 'rotfix1';
+    // Asset versioning disabled; use plain URLs and rely on deploy/cache headers.
 
     const wallEvents = document.getElementById('wall-events');
     const wallReleases = document.getElementById('wall-releases');
@@ -543,8 +543,8 @@
       const item = currentItem();
       if (!item) return;
       cap.textContent = item.title || '';
-      const fullUrl = item.full + (item.full.includes('?') ? '&' : '?') + 'v=' + ASSET_VER;
-      const videoUrl = item.video ? (item.video + (item.video.includes('?') ? '&' : '?') + 'v=' + ASSET_VER) : null;
+      const fullUrl = item.full;
+      const videoUrl = item.video ? item.video : null;
 
       viewerVid.pause();
       viewerVid.removeAttribute('src');
@@ -596,8 +596,8 @@
       document.body.style.overflow = 'hidden';
 
       cap.textContent = item?.title || '';
-      const fullUrl = item.full + (item.full.includes('?') ? '&' : '?') + 'v=' + ASSET_VER;
-      const videoUrl = item.video ? (item.video + (item.video.includes('?') ? '&' : '?') + 'v=' + ASSET_VER) : null;
+      const fullUrl = item.full;
+      const videoUrl = item.video ? item.video : null;
 
       viewerVid.pause();
       viewerVid.removeAttribute('src');
@@ -802,7 +802,7 @@
           const img = document.createElement('img');
           img.loading = 'lazy';
           img.decoding = 'async';
-          img.src = item.thumb + (item.thumb.includes('?') ? '&' : '?') + 'v=' + ASSET_VER;
+          img.src = item.thumb;
           img.alt = item.title || 'flyer';
           a.appendChild(img);
           return a;
