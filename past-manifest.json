@@ -850,6 +850,20 @@
       "thumb": "assets/past/thumb/unreal-web1-82e649572a9d.jpg",
       "title": "Unreal_web1",
       "category": "events"
+    },
+    {
+      "src": "/Users/admin/Desktop/Freedom_1999.jpg",
+      "full": "assets/past/full/freedom-1999.jpg",
+      "thumb": "assets/past/thumb/freedom-1999.jpg",
+      "title": "Freedom 1999",
+      "category": "events"
+    },
+    {
+      "src": "/Users/admin/Desktop/pny2k.jpg",
+      "full": "assets/past/full/pny2k.jpg",
+      "thumb": "assets/past/thumb/pny2k.jpg",
+      "title": "PNY2K",
+      "category": "events"
     }
   ]
 }
