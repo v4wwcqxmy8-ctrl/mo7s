@@ -3,8 +3,8 @@
   "items": [
     {
       "src": "inbound:file_8",
-      "full": "assets/past/full/NE_INVASION_MIAMI_FULL.jpg",
-      "thumb": "assets/past/thumb_named/NE_INVASION_MIAMI_FULL.jpg",
+      "full": "assets/past/full/AASB_2024.jpg",
+      "thumb": "assets/past/thumb_named/AASB_2024.jpg",
       "title": "As Above So Below",
       "category": "events",
       "pin": 1
@@ -95,8 +95,8 @@
     },
     {
       "src": "/Users/slampig/Desktop/to_site/events/QUEST BACK.JPG",
-      "full": "assets/past/full/quest-back-32941a7acc69.jpg",
-      "thumb": "assets/past/thumb_named/quest-back-32941a7acc69.jpg",
+      "full": "assets/past/full/QUEST_BACK.jpg",
+      "thumb": "assets/past/thumb_named/QUEST_BACK.jpg",
       "title": "QUEST BACK",
       "category": "events"
     },
@@ -604,6 +604,20 @@
       "full": "assets/past/full/pny2k.jpg",
       "thumb": "assets/past/thumb_named/pny2k.jpg",
       "title": "PNY2K",
+      "category": "events"
+    },
+    {
+      "src": "/Users/admin/Desktop/mo7s/assets/past/full/MEAT_KATIE_PHOENIX_FRONT.jpg",
+      "full": "assets/past/full/MEAT_KATIE_PHOENIX_FRONT.jpg",
+      "thumb": "assets/past/thumb_named/MEAT_KATIE_PHOENIX_FRONT.jpg",
+      "title": "Meat Katie Phoenix",
+      "category": "events"
+    },
+    {
+      "src": "/Users/admin/Desktop/mo7s/assets/past/full/MOONSHINE_FULL.jpg",
+      "full": "assets/past/full/MOONSHINE_FULL.jpg",
+      "thumb": "assets/past/thumb_named/MOONSHINE_FULL.jpg",
+      "title": "Moonshine",
       "category": "events"
     }
   ]
