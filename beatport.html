@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MO7S — Beatport</title>
+  <style>
+    :root {
+      --bg: #080808;
+      --ink: #f2f2f2;
+      --muted: #a8a8a8;
+      --tile: #101010;
+      --shadow: rgba(0,0,0,0.55);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .beatport-tracks {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .track-card {
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--tile);
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 10px 28px var(--shadow);
+    }
+
+    .track-embed {
+      width: 100%;
+      height: 160px;
+      border: none;
+      background: #000;
+    }
+
+    .loading {
+      text-align: center;
+      color: var(--muted);
+      padding: 40px 20px;
+    }
+
+    .error {
+      color: #ff6464;
+      text-align: center;
+      padding: 20px;
+      background: rgba(255,100,100,0.1);
+      border-radius: 8px;
+      border-left: 3px solid #ff6464;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>MO7S on Beatport</h1>
+    <div class="beatport-tracks" id="beatport-tracks">
+      <div class="loading">Loading your Beatport tracks...</div>
+    </div>
+  </div>
+
+  <script>
+    const BEATPORT_ARTIST_ID = 275693837; // MO7S artist ID
+    const API_URL = `https://www.beatport.com/artist/mo7s/${BEATPORT_ARTIST_ID}`;
+
+    async function loadBeatportTracks() {
+      const container = document.getElementById('beatport-tracks');
+      
+      try {
+        // Fetch from Beatport API
+        const response = await fetch(
+          `https://api.beatport.com/v4/catalog/artists/${BEATPORT_ARTIST_ID}/tracks?perPage=12`,
+          {
+            headers: {
+              'Accept': 'application/json'
+            },
+            mode: 'cors'
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error(`API returned ${response.status}`);
+        }
+
+        const data = await response.json();
+        
+        if (!data.results || data.results.length === 0) {
+          container.innerHTML = `
+            <div class="error">
+              No tracks found. <a href="${API_URL}" target="_blank" rel="noopener">View on Beatport</a>
+            </div>
+          `;
+          return;
+        }
+
+        container.innerHTML = '';
+
+        // Get unique releases
+        const releaseMap = new Map();
+        data.results.forEach(track => {
+          if (track.release && !releaseMap.has(track.release.id)) {
+            releaseMap.set(track.release.id, track);
+          }
+        });
+
+        // Create cards for up to 12 tracks
+        Array.from(releaseMap.values())
+          .slice(0, 12)
+          .forEach(track => {
+            const card = document.createElement('div');
+            card.className = 'track-card';
+            card.innerHTML = `
+              <iframe 
+                class="track-embed"
+                src="https://embed.beatport.com/player/?id=${track.id}&type=track"
+                frameborder="0"
+                scrolling="no"
+                allowfullscreen
+              ></iframe>
+            `;
+            container.appendChild(card);
+          });
+
+      } catch (err) {
+        container.innerHTML = `
+          <div class="error">
+            <strong>Unable to load Beatport tracks:</strong><br/>
+            ${err.message}<br/>
+            <a href="${API_URL}" target="_blank" rel="noopener">View on Beatport</a>
+          </div>
+        `;
+        console.error('Beatport API error:', err);
+      }
+    }
+
+    // Load on page ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadBeatportTracks);
+    } else {
+      loadBeatportTracks();
+    }
+  </script>
+</body>
+</html>
