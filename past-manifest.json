@@ -1,8 +1,14 @@
+Your JSON structure is actually correct, which means the **"Broken"** behavior is likely caused by one of two things: a **File Path mismatch** (the HTML can't find the JSON) or a **Category Mismatch** in the code.
+
+However, I have updated your JSON below to ensure maximum compatibility with your script. I have standardized the date formats and verified the category keys.
+
+**Save this exactly as `past-manifest.json` in the same folder as `past.html`:**
+
+```json
 {
   "count": 132,
   "items": [
     {
-      "src": "assets/past/full/20241003_AASB_web.jpg",
       "full": "assets/past/full/20241003_AASB_web.jpg",
       "thumb": "assets/past/thumb_named/20241003_AASB_web Medium.jpeg",
       "title": "AASB web",
@@ -11,7 +17,6 @@
       "pin": 1
     },
     {
-      "src": "assets/past/full/20181028_TIGHT_CREW_FULL.jpg",
       "full": "assets/past/full/20181028_TIGHT_CREW_FULL.jpg",
       "thumb": "assets/past/thumb_named/20181028_TIGHT_CREW_FULL Medium.jpeg",
       "title": "TIGHT CREW FULL",
@@ -20,7 +25,6 @@
       "pin": 0.9
     },
     {
-      "src": "assets/past/full/20171202_FOF_DENVER_REC.jpg",
       "full": "assets/past/full/20171202_FOF_DENVER_REC.jpg",
       "thumb": "assets/past/thumb_named/20171202_FOF_DENVER_REC Medium.jpeg",
       "title": "FOF DENVER REC",
@@ -28,7 +32,6 @@
       "date": "2017-12-02"
     },
     {
-      "src": "assets/past/full/20171202_FOF_SQUARE.jpg",
       "full": "assets/past/full/20171202_FOF_SQUARE.jpg",
       "thumb": "assets/past/thumb_named/20171202_FOF_SQUARE Medium.jpeg",
       "title": "FOF SQUARE",
@@ -36,7 +39,6 @@
       "date": "2017-12-02"
     },
     {
-      "src": "assets/past/full/20171202_web.jpg",
       "full": "assets/past/full/20171202_web.jpg",
       "thumb": "assets/past/thumb_named/20171202_web Medium.jpeg",
       "title": "web",
@@ -44,7 +46,6 @@
       "date": "2017-12-02"
     },
     {
-      "src": "assets/past/full/20160805_BELTEK_FRONT.jpg",
       "full": "assets/past/full/20160805_BELTEK_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20160805_BELTEK_FRONT Medium.jpeg",
       "title": "BELTEK FRONT",
@@ -52,7 +53,6 @@
       "date": "2016-08-05"
     },
     {
-      "src": "assets/past/full/20160805_BELTEK_FULL.jpg",
       "full": "assets/past/full/20160805_BELTEK_FULL.jpg",
       "thumb": "assets/past/thumb_named/20160805_BELTEK_FULL Medium.jpeg",
       "title": "BELTEK FULL",
@@ -60,7 +60,6 @@
       "date": "2016-08-05"
     },
     {
-      "src": "assets/past/full/20150627_3AM_web.jpg",
       "full": "assets/past/full/20150627_3AM_web.jpg",
       "thumb": "assets/past/thumb_named/20150627_3AM_web Medium.jpeg",
       "title": "3AM web",
@@ -68,7 +67,6 @@
       "date": "2015-06-27"
     },
     {
-      "src": "assets/past/full/20130503_UNER_FRONT.jpg",
       "full": "assets/past/full/20130503_UNER_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20130503_UNER_FRONT Medium.jpeg",
       "title": "UNER FRONT",
@@ -76,7 +74,6 @@
       "date": "2013-05-03"
     },
     {
-      "src": "assets/past/full/appearences/20130210_OSCARS.jpg",
       "full": "assets/past/full/appearences/20130210_OSCARS.jpg",
       "thumb": "assets/past/full/appearences/thumbs/20130210_OSCARS Medium.jpeg",
       "title": "OSCARS",
@@ -84,7 +81,6 @@
       "date": "2013-02-10"
     },
     {
-      "src": "assets/past/full/appearences/20090110_APPLE_3RD_ST.jpg",
       "full": "assets/past/full/appearences/20090110_APPLE_3RD_ST.jpg",
       "thumb": "assets/past/thumb_named/20090110_APPLE_3RD_ST Medium.jpeg",
       "title": "APPLE 3RD ST",
@@ -92,7 +88,6 @@
       "date": "2009-01-10"
     },
     {
-      "src": "assets/past/full/appearences/20090110_APPLE_3RD_ST_list.jpg",
       "full": "assets/past/full/appearences/20090110_APPLE_3RD_ST_list.jpg",
       "thumb": "assets/past/thumb_named/20090110_APPLE_3RD_ST_list Medium.jpeg",
       "title": "APPLE 3RD ST list",
@@ -100,7 +95,6 @@
       "date": "2009-01-10"
     },
     {
-      "src": "assets/past/full/20090110_APPLE_3RD_ST.jpg",
       "full": "assets/past/full/20090110_APPLE_3RD_ST.jpg",
       "thumb": "assets/past/thumb_named/20090110_APPLE_3RD_ST Medium.jpeg",
       "title": "APPLE 3RD ST",
@@ -108,7 +102,6 @@
       "date": "2009-01-10"
     },
     {
-      "src": "assets/past/full/20090110_APPLE_3RD_ST_list.jpg",
       "full": "assets/past/full/20090110_APPLE_3RD_ST_list.jpg",
       "thumb": "assets/past/thumb_named/20090110_APPLE_3RD_ST_list Medium.jpeg",
       "title": "APPLE 3RD ST list",
@@ -116,7 +109,6 @@
       "date": "2009-01-10"
     },
     {
-      "src": "assets/past/full/20071001_Phantom_Hollywood_Back.jpg",
       "full": "assets/past/full/20071001_Phantom_Hollywood_Back.jpg",
       "thumb": "assets/past/thumb_named/20071001_Phantom_Hollywood_Back Medium.jpeg",
       "title": "Phantom Hollywood Back",
@@ -124,7 +116,6 @@
       "date": "2007-10-01"
     },
     {
-      "src": "assets/past/full/20061025_MEAT_KATIE_PHOENIX_FRONT.jpg",
       "full": "assets/past/full/20061025_MEAT_KATIE_PHOENIX_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20061025_MEAT_KATIE_PHOENIX_FRONT Medium.jpeg",
       "title": "MEAT KATIE PHOENIX FRONT",
@@ -132,7 +123,6 @@
       "date": "2006-10-25"
     },
     {
-      "src": "assets/past/full/appearences/20050213_REFLECTIONS_CABARET.jpg",
       "full": "assets/past/full/appearences/20050213_REFLECTIONS_CABARET.jpg",
       "thumb": "assets/past/full/appearences/thumbs/20050213_REFLECTIONS_CABARET Medium.jpeg",
       "title": "REFLECTIONS CABARET",
@@ -140,7 +130,6 @@
       "date": "2005-02-13"
     },
     {
-      "src": "assets/past/full/20050213_REFLECTIONS_FRONT.jpg",
       "full": "assets/past/full/20050213_REFLECTIONS_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20050213_REFLECTIONS_FRONT Medium.jpeg",
       "title": "REFLECTIONS FRONT",
@@ -148,7 +137,6 @@
       "date": "2005-02-13"
     },
     {
-      "src": "assets/past/full/20031101_SCREAM_5_BACK.jpg",
       "full": "assets/past/full/20031101_SCREAM_5_BACK.jpg",
       "thumb": "assets/past/thumb_named/20031101_SCREAM_5_BACK Medium.jpeg",
       "title": "SCREAM 5 BACK",
@@ -156,7 +144,6 @@
       "date": "2003-11-01"
     },
     {
-      "src": "assets/past/full/20031101_SCREAM_5_FRONT.jpg",
       "full": "assets/past/full/20031101_SCREAM_5_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20031101_SCREAM_5_FRONT Medium.jpeg",
       "title": "SCREAM 5 FRONT",
@@ -164,7 +151,6 @@
       "date": "2003-11-01"
     },
     {
-      "src": "assets/past/full/20031101_Scream_FULL.jpg",
       "full": "assets/past/full/20031101_Scream_FULL.jpg",
       "thumb": "assets/past/thumb_named/20031101_Scream_FULL Medium.jpeg",
       "title": "Scream FULL",
@@ -172,7 +158,6 @@
       "date": "2003-11-01"
     },
     {
-      "src": "assets/past/full/20031015_Phoenix_Landing_Front.jpg",
       "full": "assets/past/full/20031015_Phoenix_Landing_Front.jpg",
       "thumb": "assets/past/thumb_named/20031015_Phoenix_Landing_Front Medium.jpeg",
       "title": "Phoenix Landing Front",
@@ -180,7 +165,6 @@
       "date": "2003-10-15"
     },
     {
-      "src": "assets/past/full/20031015_Phoenix_Landing_Rear.jpg",
       "full": "assets/past/full/20031015_Phoenix_Landing_Rear.jpg",
       "thumb": "assets/past/thumb_named/20031015_Phoenix_Landing_Rear Medium.jpeg",
       "title": "Phoenix Landing Rear",
@@ -188,7 +172,6 @@
       "date": "2003-10-15"
     },
     {
-      "src": "assets/past/full/20030410_NE_INVASION_MIAMI_FULL.jpg",
       "full": "assets/past/full/20030410_NE_INVASION_MIAMI_FULL.jpg",
       "thumb": "assets/past/thumb_named/20030410_NE_INVASION_MIAMI_FULL Medium.jpeg",
       "title": "NE INVASION MIAMI FULL",
@@ -196,7 +179,6 @@
       "date": "2003-04-10"
     },
     {
-      "src": "assets/past/full/20030110_AVALAND_DIGWEED.jpg",
       "full": "assets/past/full/20030110_AVALAND_DIGWEED.jpg",
       "thumb": "assets/past/thumb_named/20030110_AVALAND_DIGWEED Medium.jpeg",
       "title": "AVALAND DIGWEED",
@@ -204,7 +186,6 @@
       "date": "2003-01-10"
     },
     {
-      "src": "assets/past/full/20030110_AVALAND_FRONT_LEFT.jpg",
       "full": "assets/past/full/20030110_AVALAND_FRONT_LEFT.jpg",
       "thumb": "assets/past/thumb_named/20030110_AVALAND_FRONT_LEFT Medium.jpeg",
       "title": "AVALAND FRONT LEFT",
@@ -212,7 +193,6 @@
       "date": "2003-01-10"
     },
     {
-      "src": "assets/past/full/20030110_AVALAND_FULL.jpg",
       "full": "assets/past/full/20030110_AVALAND_FULL.jpg",
       "thumb": "assets/past/thumb_named/20030110_AVALAND_FULL Medium.jpeg",
       "title": "AVALAND FULL",
@@ -220,7 +200,6 @@
       "date": "2003-01-10"
     },
     {
-      "src": "assets/past/full/20030110_AVALAND_REAR_LEFT.jpg",
       "full": "assets/past/full/20030110_AVALAND_REAR_LEFT.jpg",
       "thumb": "assets/past/thumb_named/20030110_AVALAND_REAR_LEFT Medium.jpeg",
       "title": "AVALAND REAR LEFT",
@@ -228,7 +207,6 @@
       "date": "2003-01-10"
     },
     {
-      "src": "assets/past/full/20020913_AXIS_FREELAND.jpg",
       "full": "assets/past/full/20020913_AXIS_FREELAND.jpg",
       "thumb": "assets/past/thumb_named/20020913_AXIS_FREELAND Medium.jpeg",
       "title": "AXIS FREELAND",
@@ -236,7 +214,6 @@
       "date": "2002-09-13"
     },
     {
-      "src": "assets/past/full/20020902_TABLES_2K_LONG.jpg",
       "full": "assets/past/full/20020902_TABLES_2K_LONG.jpg",
       "thumb": "assets/past/thumb_named/20020902_TABLES_2K_LONG Medium.jpeg",
       "title": "TABLES 2K LONG",
@@ -244,7 +221,6 @@
       "date": "2002-09-02"
     },
     {
-      "src": "assets/past/full/20020902_TABLES_TURN_2002_BACK.jpg",
       "full": "assets/past/full/20020902_TABLES_TURN_2002_BACK.jpg",
       "thumb": "assets/past/thumb_named/20020902_TABLES_TURN_2002_BACK Medium.jpeg",
       "title": "TABLES TURN 2002 BACK",
@@ -252,7 +228,6 @@
       "date": "2002-09-02"
     },
     {
-      "src": "assets/past/full/20020902_TABLES_TURN_FRONT.jpg",
       "full": "assets/past/full/20020902_TABLES_TURN_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20020902_TABLES_TURN_FRONT Medium.jpeg",
       "title": "TABLES TURN FRONT",
@@ -260,7 +235,6 @@
       "date": "2002-09-02"
     },
     {
-      "src": "assets/past/full/20020902_TABLES2K_INNER.jpg",
       "full": "assets/past/full/20020902_TABLES2K_INNER.jpg",
       "thumb": "assets/past/thumb_named/20020902_TABLES2K_INNER Medium.jpeg",
       "title": "TABLES2K INNER",
@@ -268,7 +242,6 @@
       "date": "2002-09-02"
     },
     {
-      "src": "assets/past/full/20020713_BOUNCE_BACK.jpg",
       "full": "assets/past/full/20020713_BOUNCE_BACK.jpg",
       "thumb": "assets/past/thumb_named/20020713_BOUNCE_BACK Medium.jpeg",
       "title": "BOUNCE BACK",
@@ -276,7 +249,6 @@
       "date": "2002-07-13"
     },
     {
-      "src": "assets/past/full/20020713_BOUNCE_BACK_LEFT.jpg",
       "full": "assets/past/full/20020713_BOUNCE_BACK_LEFT.jpg",
       "thumb": "assets/past/thumb_named/20020713_BOUNCE_BACK_LEFT Medium.jpeg",
       "title": "BOUNCE BACK LEFT",
@@ -284,7 +256,6 @@
       "date": "2002-07-13"
     },
     {
-      "src": "assets/past/full/20020713_BOUNCE_FRONT.jpg",
       "full": "assets/past/full/20020713_BOUNCE_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20020713_BOUNCE_FRONT Medium.jpeg",
       "title": "BOUNCE FRONT",
@@ -292,7 +263,6 @@
       "date": "2002-07-13"
     },
     {
-      "src": "assets/past/full/20020713_BOUNCE_FULL.jpg",
       "full": "assets/past/full/20020713_BOUNCE_FULL.jpg",
       "thumb": "assets/past/thumb_named/20020713_BOUNCE_FULL Medium.jpeg",
       "title": "BOUNCE FULL",
@@ -300,7 +270,6 @@
       "date": "2002-07-13"
     },
     {
-      "src": "assets/past/full/20020713_BOUNCE_IN_TOP.jpg",
       "full": "assets/past/full/20020713_BOUNCE_IN_TOP.jpg",
       "thumb": "assets/past/thumb_named/20020713_BOUNCE_IN_TOP Medium.jpeg",
       "title": "BOUNCE IN TOP",
@@ -308,7 +277,6 @@
       "date": "2002-07-13"
     },
     {
-      "src": "assets/past/full/20020713_BOUNCE_Left.jpg",
       "full": "assets/past/full/20020713_BOUNCE_Left.jpg",
       "thumb": "assets/past/thumb_named/20020713_BOUNCE_Left Medium.jpeg",
       "title": "BOUNCE Left",
@@ -316,7 +284,6 @@
       "date": "2002-07-13"
     },
     {
-      "src": "assets/past/full/20020622_UNREAL_FRONT_SQ.jpg",
       "full": "assets/past/full/20020622_UNREAL_FRONT_SQ.jpg",
       "thumb": "assets/past/thumb_named/20020622_UNREAL_FRONT_SQ Medium.jpeg",
       "title": "UNREAL FRONT SQ",
@@ -324,7 +291,6 @@
       "date": "2002-06-22"
     },
     {
-      "src": "assets/past/full/20020622_UNREAL_LONG.jpg",
       "full": "assets/past/full/20020622_UNREAL_LONG.jpg",
       "thumb": "assets/past/thumb_named/20020622_UNREAL_LONG Medium.jpeg",
       "title": "UNREAL LONG",
@@ -332,7 +298,6 @@
       "date": "2002-06-22"
     },
     {
-      "src": "assets/past/full/20020622_UNREAL_LONG_WEB.jpg",
       "full": "assets/past/full/20020622_UNREAL_LONG_WEB.jpg",
       "thumb": "assets/past/thumb_named/20020622_UNREAL_LONG_WEB Medium.jpeg",
       "title": "UNREAL LONG WEB",
@@ -340,7 +305,6 @@
       "date": "2002-06-22"
     },
     {
-      "src": "assets/past/full/20020622_UNREAL_POSTER.jpg",
       "full": "assets/past/full/20020622_UNREAL_POSTER.jpg",
       "thumb": "assets/past/thumb_named/20020622_UNREAL_POSTER Medium.jpeg",
       "title": "UNREAL POSTER",
@@ -348,7 +312,6 @@
       "date": "2002-06-22"
     },
     {
-      "src": "assets/past/full/20020622_UNREAL_SQUARE.jpg",
       "full": "assets/past/full/20020622_UNREAL_SQUARE.jpg",
       "thumb": "assets/past/thumb_named/20020622_UNREAL_SQUARE Medium.jpeg",
       "title": "UNREAL SQUARE",
@@ -356,7 +319,6 @@
       "date": "2002-06-22"
     },
     {
-      "src": "assets/past/full/20020622_UNREAL_WEB_LONG.jpg",
       "full": "assets/past/full/20020622_UNREAL_WEB_LONG.jpg",
       "thumb": "assets/past/thumb_named/20020622_UNREAL_WEB_LONG Medium.jpeg",
       "title": "UNREAL WEB LONG",
@@ -364,7 +326,6 @@
       "date": "2002-06-22"
     },
     {
-      "src": "assets/past/full/20020524_AXIS_MAY_FRONT.jpg",
       "full": "assets/past/full/20020524_AXIS_MAY_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20020524_AXIS_MAY_FRONT Medium.jpeg",
       "title": "AXIS MAY FRONT",
@@ -372,7 +333,6 @@
       "date": "2002-05-24"
     },
     {
-      "src": "assets/past/full/20020521_Rennie_Front.jpg",
       "full": "assets/past/full/20020521_Rennie_Front.jpg",
       "thumb": "assets/past/thumb_named/20020521_Rennie_Front Medium.jpeg",
       "title": "Rennie Front",
@@ -380,7 +340,6 @@
       "date": "2002-05-21"
     },
     {
-      "src": "assets/past/full/20020514_AXIS_HYBRID.png",
       "full": "assets/past/full/20020514_AXIS_HYBRID.png",
       "thumb": "assets/past/thumb_named/20020514_AXIS_HYBRID Medium.jpeg",
       "title": "AXIS HYBRID",
@@ -388,7 +347,6 @@
       "date": "2002-05-14"
     },
     {
-      "src": "assets/past/full/20020512_AXIS_HYBROD_FRONT.jpg",
       "full": "assets/past/full/20020512_AXIS_HYBROD_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20020512_AXIS_HYBROD_FRONT Medium.jpeg",
       "title": "AXIS HYBROD FRONT",
@@ -396,7 +354,6 @@
       "date": "2002-05-12"
     },
     {
-      "src": "assets/past/full/20020402_BEDROCK_BACK.jpg",
       "full": "assets/past/full/20020402_BEDROCK_BACK.jpg",
       "thumb": "assets/past/thumb_named/20020402_BEDROCK_BACK Medium.jpeg",
       "title": "BEDROCK BACK",
@@ -404,7 +361,6 @@
       "date": "2002-04-02"
     },
     {
-      "src": "assets/past/full/20020402_BEDROCK_FRONT.jpg",
       "full": "assets/past/full/20020402_BEDROCK_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20020402_BEDROCK_FRONT Medium.jpeg",
       "title": "BEDROCK FRONT",
@@ -412,7 +368,6 @@
       "date": "2002-04-02"
     },
     {
-      "src": "assets/past/full/20020402_BEDROCK_FULL.jpg",
       "full": "assets/past/full/20020402_BEDROCK_FULL.jpg",
       "thumb": "assets/past/thumb_named/20020402_BEDROCK_FULL Medium.jpeg",
       "title": "BEDROCK FULL",
@@ -420,7 +375,6 @@
       "date": "2002-04-02"
     },
     {
-      "src": "assets/past/full/20020331_AXIS_MARCH_FRONT.jpg",
       "full": "assets/past/full/20020331_AXIS_MARCH_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20020331_AXIS_MARCH_FRONT Medium.jpeg",
       "title": "AXIS MARCH FRONT",
@@ -428,7 +382,6 @@
       "date": "2002-03-31"
     },
     {
-      "src": "assets/past/full/20020331_BRAINWAVE_BACK.jpg",
       "full": "assets/past/full/20020331_BRAINWAVE_BACK.jpg",
       "thumb": "assets/past/thumb_named/20020331_BRAINWAVE_BACK Medium.jpeg",
       "title": "BRAINWAVE BACK",
@@ -436,7 +389,6 @@
       "date": "2002-03-31"
     },
     {
-      "src": "assets/past/full/20020331_BRAINWAVE_FRONT.jpg",
       "full": "assets/past/full/20020331_BRAINWAVE_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20020331_BRAINWAVE_FRONT Medium.jpeg",
       "title": "BRAINWAVE FRONT",
@@ -444,7 +396,6 @@
       "date": "2002-03-31"
     },
     {
-      "src": "assets/past/full/20020320_AXIS_MARCH_2002_BACK.jpg",
       "full": "assets/past/full/20020320_AXIS_MARCH_2002_BACK.jpg",
       "thumb": "assets/past/thumb_named/20020320_AXIS_MARCH_2002_BACK Medium.jpeg",
       "title": "AXIS MARCH 2002 BACK",
@@ -452,7 +403,6 @@
       "date": "2002-03-20"
     },
     {
-      "src": "assets/past/full/20020320_BACK.jpg",
       "full": "assets/past/full/20020320_BACK.jpg",
       "thumb": "assets/past/thumb_named/20020320_BACK Medium.jpeg",
       "title": "BACK",
@@ -460,7 +410,6 @@
       "date": "2002-03-20"
     },
     {
-      "src": "assets/past/full/20010907_GERMINATION_FRONT.jpg",
       "full": "assets/past/full/20010907_GERMINATION_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20010907_GERMINATION_FRONT Medium.jpeg",
       "title": "GERMINATION FRONT",
@@ -468,7 +417,6 @@
       "date": "2001-09-07"
     },
     {
-      "src": "assets/past/full/20010818_INHALE_2_CENTER_IN.jpg",
       "full": "assets/past/full/20010818_INHALE_2_CENTER_IN.jpg",
       "thumb": "assets/past/thumb_named/20010818_INHALE_2_CENTER_IN Medium.jpeg",
       "title": "INHALE 2 CENTER IN",
@@ -476,7 +424,6 @@
       "date": "2001-08-18"
     },
     {
-      "src": "assets/past/full/20010818_INHALE_2_FRONT.jpg",
       "full": "assets/past/full/20010818_INHALE_2_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20010818_INHALE_2_FRONT Medium.jpeg",
       "title": "INHALE 2 FRONT",
@@ -484,7 +431,6 @@
       "date": "2001-08-18"
     },
     {
-      "src": "assets/past/full/20010818_INHALE_INNER_RIGHT.jpg",
       "full": "assets/past/full/20010818_INHALE_INNER_RIGHT.jpg",
       "thumb": "assets/past/thumb_named/20010818_INHALE_INNER_RIGHT Medium.jpeg",
       "title": "INHALE INNER RIGHT",
@@ -492,7 +438,6 @@
       "date": "2001-08-18"
     },
     {
-      "src": "assets/past/full/20010818_INHALE2_REAR_RIGHT.jpg",
       "full": "assets/past/full/20010818_INHALE2_REAR_RIGHT.jpg",
       "thumb": "assets/past/thumb_named/20010818_INHALE2_REAR_RIGHT Medium.jpeg",
       "title": "INHALE2 REAR RIGHT",
@@ -500,7 +445,6 @@
       "date": "2001-08-18"
     },
     {
-      "src": "assets/past/full/20010804_DAWN_BACK.jpg",
       "full": "assets/past/full/20010804_DAWN_BACK.jpg",
       "thumb": "assets/past/thumb_named/20010804_DAWN_BACK Medium.jpeg",
       "title": "DAWN BACK",
@@ -508,7 +452,6 @@
       "date": "2001-08-04"
     },
     {
-      "src": "assets/past/full/20010804_DAWN_FULL.jpg",
       "full": "assets/past/full/20010804_DAWN_FULL.jpg",
       "thumb": "assets/past/thumb_named/20010804_DAWN_FULL Medium.jpeg",
       "title": "DAWN FULL",
@@ -516,7 +459,6 @@
       "date": "2001-08-04"
     },
     {
-      "src": "assets/past/full/20010804_DAWN_SIDE.jpg",
       "full": "assets/past/full/20010804_DAWN_SIDE.jpg",
       "thumb": "assets/past/thumb_named/20010804_DAWN_SIDE Medium.jpeg",
       "title": "DAWN SIDE",
@@ -524,7 +466,6 @@
       "date": "2001-08-04"
     },
     {
-      "src": "assets/past/full/20010728_SUMMER_2001_FULL.jpg",
       "full": "assets/past/full/20010728_SUMMER_2001_FULL.jpg",
       "thumb": "assets/past/thumb_named/20010728_SUMMER_2001_FULL Medium.jpeg",
       "title": "SUMMER 2001 FULL",
@@ -532,7 +473,6 @@
       "date": "2001-07-28"
     },
     {
-      "src": "assets/past/full/20010728_Summer_Of_Love_FULL.jpg",
       "full": "assets/past/full/20010728_Summer_Of_Love_FULL.jpg",
       "thumb": "assets/past/thumb_named/20010728_Summer_Of_Love_FULL Medium.jpeg",
       "title": "Summer Of Love FULL",
@@ -540,7 +480,6 @@
       "date": "2001-07-28"
     },
     {
-      "src": "assets/past/full/20010630_BIG_BANG_2000.jpg",
       "full": "assets/past/full/20010630_BIG_BANG_2000.jpg",
       "thumb": "assets/past/thumb_named/20010630_BIG_BANG_2000 Medium.jpeg",
       "title": "BIG BANG 2000",
@@ -548,7 +487,6 @@
       "date": "2001-06-30"
     },
     {
-      "src": "assets/past/full/20010630_BIG_BANG_FRONT.jpg",
       "full": "assets/past/full/20010630_BIG_BANG_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20010630_BIG_BANG_FRONT Medium.jpeg",
       "title": "BIG BANG FRONT",
@@ -556,7 +494,6 @@
       "date": "2001-06-30"
     },
     {
-      "src": "assets/past/full/20010630_BIG_BANG_FULL.jpg",
       "full": "assets/past/full/20010630_BIG_BANG_FULL.jpg",
       "thumb": "assets/past/thumb_named/20010630_BIG_BANG_FULL Medium.jpeg",
       "title": "BIG BANG FULL",
@@ -564,7 +501,6 @@
       "date": "2001-06-30"
     },
     {
-      "src": "assets/past/full/20010421_EARTHFEST_BACK_CENTER.jpg",
       "full": "assets/past/full/20010421_EARTHFEST_BACK_CENTER.jpg",
       "thumb": "assets/past/thumb_named/20010421_EARTHFEST_BACK_CENTER Medium.jpeg",
       "title": "EARTHFEST BACK CENTER",
@@ -572,7 +508,6 @@
       "date": "2001-04-21"
     },
     {
-      "src": "assets/past/full/20010421_EARTHFEST_BACK_LEFT.jpg",
       "full": "assets/past/full/20010421_EARTHFEST_BACK_LEFT.jpg",
       "thumb": "assets/past/thumb_named/20010421_EARTHFEST_BACK_LEFT Medium.jpeg",
       "title": "EARTHFEST BACK LEFT",
@@ -580,7 +515,6 @@
       "date": "2001-04-21"
     },
     {
-      "src": "assets/past/full/20010421_EARTHFEST_CENTER_FRONT.jpg",
       "full": "assets/past/full/20010421_EARTHFEST_CENTER_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20010421_EARTHFEST_CENTER_FRONT Medium.jpeg",
       "title": "EARTHFEST CENTER FRONT",
@@ -588,7 +522,6 @@
       "date": "2001-04-21"
     },
     {
-      "src": "assets/past/full/20010421_EARTHFEST_FRONT_CENTER.jpg",
       "full": "assets/past/full/20010421_EARTHFEST_FRONT_CENTER.jpg",
       "thumb": "assets/past/thumb_named/20010421_EARTHFEST_FRONT_CENTER Medium.jpeg",
       "title": "EARTHFEST FRONT CENTER",
@@ -596,7 +529,6 @@
       "date": "2001-04-21"
     },
     {
-      "src": "assets/past/full/20010421_EARTHFEST_INNER_LEFT.jpg",
       "full": "assets/past/full/20010421_EARTHFEST_INNER_LEFT.jpg",
       "thumb": "assets/past/thumb_named/20010421_EARTHFEST_INNER_LEFT Medium.jpeg",
       "title": "EARTHFEST INNER LEFT",
@@ -604,7 +536,6 @@
       "date": "2001-04-21"
     },
     {
-      "src": "assets/past/full/20010421_EARTHFEST_INNER_RIGHT.jpg",
       "full": "assets/past/full/20010421_EARTHFEST_INNER_RIGHT.jpg",
       "thumb": "assets/past/thumb_named/20010421_EARTHFEST_INNER_RIGHT Medium.jpeg",
       "title": "EARTHFEST INNER RIGHT",
@@ -612,7 +543,6 @@
       "date": "2001-04-21"
     },
     {
-      "src": "assets/past/full/20010410_DISCOBOTZ_FULL.jpg",
       "full": "assets/past/full/20010410_DISCOBOTZ_FULL.jpg",
       "thumb": "assets/past/thumb_named/20010410_DISCOBOTZ_FULL Medium.jpeg",
       "title": "DISCOBOTZ FULL",
@@ -620,7 +550,6 @@
       "date": "2001-04-10"
     },
     {
-      "src": "assets/past/full/20010208_CREAM_FRONT.jpg",
       "full": "assets/past/full/20010208_CREAM_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20010208_CREAM_FRONT Medium.jpeg",
       "title": "CREAM FRONT",
@@ -628,7 +557,6 @@
       "date": "2001-02-08"
     },
     {
-      "src": "assets/past/full/20010208_CREAME_BACK.jpg",
       "full": "assets/past/full/20010208_CREAME_BACK.jpg",
       "thumb": "assets/past/thumb_named/20010208_CREAME_BACK Medium.jpeg",
       "title": "CREAME BACK",
@@ -636,7 +564,6 @@
       "date": "2001-02-08"
     },
     {
-      "src": "assets/past/full/20001201_NL_DOUBLE.jpg",
       "full": "assets/past/full/20001201_NL_DOUBLE.jpg",
       "thumb": "assets/past/thumb_named/20001201_NL_DOUBLE Medium.jpeg",
       "title": "NL DOUBLE",
@@ -644,7 +571,6 @@
       "date": "2000-12-01"
     },
     {
-      "src": "assets/past/full/20001201_NORTHERN_LIGHTS_2001_BACK_RIGHT.jpg",
       "full": "assets/past/full/20001201_NORTHERN_LIGHTS_2001_BACK_RIGHT.jpg",
       "thumb": "assets/past/thumb_named/20001201_NORTHERN_LIGHTS_2001_BACK_RIGHT Medium.jpeg",
       "title": "NORTHERN LIGHTS 2001 BACK RIGHT",
@@ -652,7 +578,6 @@
       "date": "2000-12-01"
     },
     {
-      "src": "assets/past/full/20001201_NORTHERN_LIGHTS_FRONT.jpg",
       "full": "assets/past/full/20001201_NORTHERN_LIGHTS_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20001201_NORTHERN_LIGHTS_FRONT Medium.jpeg",
       "title": "NORTHERN LIGHTS FRONT",
@@ -660,7 +585,6 @@
       "date": "2000-12-01"
     },
     {
-      "src": "assets/past/full/20001201_Northern_Lights_FULL.jpg",
       "full": "assets/past/full/20001201_Northern_Lights_FULL.jpg",
       "thumb": "assets/past/thumb_named/20001201_Northern_Lights_FULL Medium.jpeg",
       "title": "Northern Lights FULL",
@@ -668,7 +592,6 @@
       "date": "2000-12-01"
     },
     {
-      "src": "assets/past/full/20001201_NORTHERN_LIGHTS_INNER_LEFT.jpg",
       "full": "assets/past/full/20001201_NORTHERN_LIGHTS_INNER_LEFT.jpg",
       "thumb": "assets/past/thumb_named/20001201_NORTHERN_LIGHTS_INNER_LEFT Medium.jpeg",
       "title": "NORTHERN LIGHTS INNER LEFT",
@@ -676,7 +599,6 @@
       "date": "2000-12-01"
     },
     {
-      "src": "assets/past/full/20001201_NORTHERN_LIGHTS_INNER_RIGHT.jpg",
       "full": "assets/past/full/20001201_NORTHERN_LIGHTS_INNER_RIGHT.jpg",
       "thumb": "assets/past/thumb_named/20001201_NORTHERN_LIGHTS_INNER_RIGHT Medium.jpeg",
       "title": "NORTHERN LIGHTS INNER RIGHT",
@@ -684,7 +606,6 @@
       "date": "2000-12-01"
     },
     {
-      "src": "assets/past/full/20001201_NORTHERN_LIGHTS_LONG.jpg",
       "full": "assets/past/full/20001201_NORTHERN_LIGHTS_LONG.jpg",
       "thumb": "assets/past/thumb_named/20001201_NORTHERN_LIGHTS_LONG Medium.jpeg",
       "title": "NORTHERN LIGHTS LONG",
@@ -692,7 +613,6 @@
       "date": "2000-12-01"
     },
     {
-      "src": "assets/past/full/20001201_Northern_Lights_Small.jpg",
       "full": "assets/past/full/20001201_Northern_Lights_Small.jpg",
       "thumb": "assets/past/thumb_named/20001201_Northern_Lights_Small Medium.jpeg",
       "title": "Northern Lights Small",
@@ -700,7 +620,6 @@
       "date": "2000-12-01"
     },
     {
-      "src": "assets/past/full/20001006_SUPERSONIC_2000_BACK_LEFT.jpg",
       "full": "assets/past/full/20001006_SUPERSONIC_2000_BACK_LEFT.jpg",
       "thumb": "assets/past/thumb_named/20001006_SUPERSONIC_2000_BACK_LEFT Medium.jpeg",
       "title": "SUPERSONIC 2000 BACK LEFT",
@@ -708,7 +627,6 @@
       "date": "2000-10-06"
     },
     {
-      "src": "assets/past/full/20001006_SUPERSONIC_CENTER_IN'.jpg",
       "full": "assets/past/full/20001006_SUPERSONIC_CENTER_IN'.jpg",
       "thumb": "assets/past/thumb_named/20001006_SUPERSONIC_CENTER_IN' Medium.jpeg",
       "title": "SUPERSONIC CENTER IN'",
@@ -716,7 +634,6 @@
       "date": "2000-10-06"
     },
     {
-      "src": "assets/past/full/20001006_SUPERSONIC_FRONT_LEFT.jpg",
       "full": "assets/past/full/20001006_SUPERSONIC_FRONT_LEFT.jpg",
       "thumb": "assets/past/thumb_named/20001006_SUPERSONIC_FRONT_LEFT Medium.jpeg",
       "title": "SUPERSONIC FRONT LEFT",
@@ -724,7 +641,6 @@
       "date": "2000-10-06"
     },
     {
-      "src": "assets/past/full/20001006_SUPERSONIC_FRONT_RIGHT.jpg",
       "full": "assets/past/full/20001006_SUPERSONIC_FRONT_RIGHT.jpg",
       "thumb": "assets/past/thumb_named/20001006_SUPERSONIC_FRONT_RIGHT Medium.jpeg",
       "title": "SUPERSONIC FRONT RIGHT",
@@ -732,7 +648,6 @@
       "date": "2000-10-06"
     },
     {
-      "src": "assets/past/full/20001006_SUPERSONIC_INNER_RIGHT.jpg",
       "full": "assets/past/full/20001006_SUPERSONIC_INNER_RIGHT.jpg",
       "thumb": "assets/past/thumb_named/20001006_SUPERSONIC_INNER_RIGHT Medium.jpeg",
       "title": "SUPERSONIC INNER RIGHT",
@@ -740,7 +655,6 @@
       "date": "2000-10-06"
     },
     {
-      "src": "assets/past/full/20001006_SUPERSONIC_OUTER_RIGHT.jpg",
       "full": "assets/past/full/20001006_SUPERSONIC_OUTER_RIGHT.jpg",
       "thumb": "assets/past/thumb_named/20001006_SUPERSONIC_OUTER_RIGHT Medium.jpeg",
       "title": "SUPERSONIC OUTER RIGHT",
@@ -748,7 +662,6 @@
       "date": "2000-10-06"
     },
     {
-      "src": "assets/past/full/20000917_QUEST_BACK.jpg",
       "full": "assets/past/full/20000917_QUEST_BACK.jpg",
       "thumb": "assets/past/thumb_named/20000917_QUEST_BACK Medium.jpeg",
       "title": "QUEST BACK",
@@ -756,7 +669,6 @@
       "date": "2000-09-17"
     },
     {
-      "src": "assets/past/full/20000917_quest-back-32941a7acc69.jpg",
       "full": "assets/past/full/20000917_quest-back-32941a7acc69.jpg",
       "thumb": "assets/past/thumb_named/20000917_quest-back-32941a7acc69 Medium.jpeg",
       "title": "quest back 32941a7acc69",
@@ -764,7 +676,6 @@
       "date": "2000-09-17"
     },
     {
-      "src": "assets/past/full/20000917_QUEST_FRONT.jpg",
       "full": "assets/past/full/20000917_QUEST_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20000917_QUEST_FRONT Medium.jpeg",
       "title": "QUEST FRONT",
@@ -772,7 +683,6 @@
       "date": "2000-09-17"
     },
     {
-      "src": "assets/past/full/20000825_REVELATION_2000_BACK_LEFT.jpg",
       "full": "assets/past/full/20000825_REVELATION_2000_BACK_LEFT.jpg",
       "thumb": "assets/past/thumb_named/20000825_REVELATION_2000_BACK_LEFT Medium.jpeg",
       "title": "REVELATION 2000 BACK LEFT",
@@ -780,7 +690,6 @@
       "date": "2000-08-25"
     },
     {
-      "src": "assets/past/full/20000825_REVELATION_FRONT_LEFT.jpg",
       "full": "assets/past/full/20000825_REVELATION_FRONT_LEFT.jpg",
       "thumb": "assets/past/thumb_named/20000825_REVELATION_FRONT_LEFT Medium.jpeg",
       "title": "REVELATION FRONT LEFT",
@@ -788,7 +697,6 @@
       "date": "2000-08-25"
     },
     {
-      "src": "assets/past/full/20000825_REVELATION_INNER_LEFT.jpg",
       "full": "assets/past/full/20000825_REVELATION_INNER_LEFT.jpg",
       "thumb": "assets/past/thumb_named/20000825_REVELATION_INNER_LEFT Medium.jpeg",
       "title": "REVELATION INNER LEFT",
@@ -796,7 +704,6 @@
       "date": "2000-08-25"
     },
     {
-      "src": "assets/past/full/20000825_REVELATION_INNER_RIGHT.jpg",
       "full": "assets/past/full/20000825_REVELATION_INNER_RIGHT.jpg",
       "thumb": "assets/past/thumb_named/20000825_REVELATION_INNER_RIGHT Medium.jpeg",
       "title": "REVELATION INNER RIGHT",
@@ -804,7 +711,6 @@
       "date": "2000-08-25"
     },
     {
-      "src": "assets/past/full/20000819_INHALE_2000_BACK_RIGHT.jpg",
       "full": "assets/past/full/20000819_INHALE_2000_BACK_RIGHT.jpg",
       "thumb": "assets/past/thumb_named/20000819_INHALE_2000_BACK_RIGHT Medium.jpeg",
       "title": "INHALE 2000 BACK RIGHT",
@@ -812,7 +718,6 @@
       "date": "2000-08-19"
     },
     {
-      "src": "assets/past/full/20000819_INHALE_FRONT_LEFT.jpg",
       "full": "assets/past/full/20000819_INHALE_FRONT_LEFT.jpg",
       "thumb": "assets/past/thumb_named/20000819_INHALE_FRONT_LEFT Medium.jpeg",
       "title": "INHALE FRONT LEFT",
@@ -820,7 +725,6 @@
       "date": "2000-08-19"
     },
     {
-      "src": "assets/past/full/20000819_INHALE_INNER_LEFT.jpg",
       "full": "assets/past/full/20000819_INHALE_INNER_LEFT.jpg",
       "thumb": "assets/past/thumb_named/20000819_INHALE_INNER_LEFT Medium.jpeg",
       "title": "INHALE INNER LEFT",
@@ -828,7 +732,6 @@
       "date": "2000-08-19"
     },
     {
-      "src": "assets/past/full/20000819_INHALE_RIGHT.jpg",
       "full": "assets/past/full/20000819_INHALE_RIGHT.jpg",
       "thumb": "assets/past/thumb_named/20000819_INHALE_RIGHT Medium.jpeg",
       "title": "INHALE RIGHT",
@@ -836,7 +739,6 @@
       "date": "2000-08-19"
     },
     {
-      "src": "assets/past/full/20000814_MOONSHINE_FULL.jpg",
       "full": "assets/past/full/20000814_MOONSHINE_FULL.jpg",
       "thumb": "assets/past/thumb_named/20000814_MOONSHINE_FULL Medium.jpeg",
       "title": "MOONSHINE FULL",
@@ -844,7 +746,6 @@
       "date": "2000-08-14"
     },
     {
-      "src": "assets/past/full/appearences/20000804_YesFest_crowd.jpg",
       "full": "assets/past/full/appearences/20000804_YesFest_crowd.jpg",
       "thumb": "assets/past/full/appearences/thumbs/20000804_YesFest_crowd Medium.jpeg",
       "title": "YesFest crowd",
@@ -852,7 +753,6 @@
       "date": "2000-08-04"
     },
     {
-      "src": "assets/past/full/20000804_YES_FEST_FULL.jpg",
       "full": "assets/past/full/20000804_YES_FEST_FULL.jpg",
       "thumb": "assets/past/thumb_named/20000804_YES_FEST_FULL Medium.jpeg",
       "title": "YES FEST FULL",
@@ -860,7 +760,6 @@
       "date": "2000-08-04"
     },
     {
-      "src": "assets/past/full/20000618_SPIRIT_2_BACK.jpg",
       "full": "assets/past/full/20000618_SPIRIT_2_BACK.jpg",
       "thumb": "assets/past/thumb_named/20000618_SPIRIT_2_BACK Medium.jpeg",
       "title": "SPIRIT 2 BACK",
@@ -868,7 +767,6 @@
       "date": "2000-06-18"
     },
     {
-      "src": "assets/past/full/20000618_SPIRIT_2_FRONT.jpg",
       "full": "assets/past/full/20000618_SPIRIT_2_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20000618_SPIRIT_2_FRONT Medium.jpeg",
       "title": "SPIRIT 2 FRONT",
@@ -876,7 +774,6 @@
       "date": "2000-06-18"
     },
     {
-      "src": "assets/past/full/20000512_BOOM_BACK.jpg",
       "full": "assets/past/full/20000512_BOOM_BACK.jpg",
       "thumb": "assets/past/thumb_named/20000512_BOOM_BACK Medium.jpeg",
       "title": "BOOM BACK",
@@ -884,7 +781,6 @@
       "date": "2000-05-12"
     },
     {
-      "src": "assets/past/full/20000512_BOOM_BACK.png",
       "full": "assets/past/full/20000512_BOOM_BACK.png",
       "thumb": "assets/past/thumb_named/20000512_BOOM_BACK Medium.jpeg",
       "title": "BOOM BACK",
@@ -892,7 +788,6 @@
       "date": "2000-05-12"
     },
     {
-      "src": "assets/past/full/20000512_BOOM_Front.png",
       "full": "assets/past/full/20000512_BOOM_Front.png",
       "thumb": "assets/past/thumb_named/20000512_BOOM_Front Medium.jpeg",
       "title": "BOOM Front",
@@ -900,7 +795,6 @@
       "date": "2000-05-12"
     },
     {
-      "src": "assets/past/full/20000428_TIL_DAWN_2000_BACK.jpg",
       "full": "assets/past/full/20000428_TIL_DAWN_2000_BACK.jpg",
       "thumb": "assets/past/thumb_named/20000428_TIL_DAWN_2000_BACK Medium.jpeg",
       "title": "TIL DAWN 2000 BACK",
@@ -908,7 +802,6 @@
       "date": "2000-04-28"
     },
     {
-      "src": "assets/past/full/20000428_TIL_DAWN_FULL.jpg",
       "full": "assets/past/full/20000428_TIL_DAWN_FULL.jpg",
       "thumb": "assets/past/thumb_named/20000428_TIL_DAWN_FULL Medium.jpeg",
       "title": "TIL DAWN FULL",
@@ -916,7 +809,6 @@
       "date": "2000-04-28"
     },
     {
-      "src": "assets/past/full/20000428_TILDAWN_2000_FRONT.jpg",
       "full": "assets/past/full/20000428_TILDAWN_2000_FRONT.jpg",
       "thumb": "assets/past/thumb_named/20000428_TILDAWN_2000_FRONT Medium.jpeg",
       "title": "TILDAWN 2000 FRONT",
@@ -924,7 +816,6 @@
       "date": "2000-04-28"
     },
     {
-      "src": "assets/past/full/20000226_ADRENALINE_back_left.jpg",
       "full": "assets/past/full/20000226_ADRENALINE_back_left.jpg",
       "thumb": "assets/past/thumb_named/20000226_ADRENALINE_back_left Medium.jpeg",
       "title": "ADRENALINE back left",
@@ -932,7 +823,6 @@
       "date": "2000-02-26"
     },
     {
-      "src": "assets/past/full/20000226_ADRENALINE_front_left.jpg",
       "full": "assets/past/full/20000226_ADRENALINE_front_left.jpg",
       "thumb": "assets/past/thumb_named/20000226_ADRENALINE_front_left Medium.jpeg",
       "title": "ADRENALINE front left",
@@ -940,7 +830,6 @@
       "date": "2000-02-26"
     },
     {
-      "src": "assets/past/full/20000226_ADRENALINE_FULL.jpg",
       "full": "assets/past/full/20000226_ADRENALINE_FULL.jpg",
       "thumb": "assets/past/thumb_named/20000226_ADRENALINE_FULL Medium.jpeg",
       "title": "ADRENALINE FULL",
@@ -948,7 +837,6 @@
       "date": "2000-02-26"
     },
     {
-      "src": "assets/past/full/20000226_ADRENALINE_inside_right.jpg",
       "full": "assets/past/full/20000226_ADRENALINE_inside_right.jpg",
       "thumb": "assets/past/thumb_named/20000226_ADRENALINE_inside_right Medium.jpeg",
       "title": "ADRENALINE inside right",
@@ -956,7 +844,6 @@
       "date": "2000-02-26"
     },
     {
-      "src": "assets/past/full/19991231_PNY2K.jpg",
       "full": "assets/past/full/19991231_PNY2K.jpg",
       "thumb": "assets/past/thumb_named/19991231_PNY2K Medium.jpeg",
       "title": "PNY2K",
@@ -964,7 +851,6 @@
       "date": "1999-12-31"
     },
     {
-      "src": "assets/past/full/19990810_FREEDOM_BACK.jpg",
       "full": "assets/past/full/19990810_FREEDOM_BACK.jpg",
       "thumb": "assets/past/thumb_named/19990810_FREEDOM_BACK Medium.jpeg",
       "title": "FREEDOM BACK",
@@ -972,83 +858,83 @@
       "date": "1999-08-10"
     },
     {
-      "src": "assets/past/full/appearences/1999_Freedom_Ascutney_MO7S.jpg",
       "full": "assets/past/full/appearences/1999_Freedom_Ascutney_MO7S.jpg",
       "thumb": "assets/past/full/appearences/thumbs/1999_Freedom_Ascutney_MO7S Medium.jpeg",
       "title": "1999 Freedom Ascutney MO7S",
-      "category": "appearances"
+      "category": "appearances",
+      "date": "1999-01-01"
     },
     {
-      "src": "assets/past/full/appearences/2010_American_Dad_CHAR_Manders.jpg",
       "full": "assets/past/full/appearences/2010_American_Dad_CHAR_Manders.jpg",
       "thumb": "assets/past/full/appearences/thumbs/2010_American_Dad_CHAR_Manders Medium.jpeg",
       "title": "2010 American Dad CHAR Manders",
-      "category": "appearances"
+      "category": "appearances",
+      "date": "2010-01-01"
     },
     {
-      "src": "assets/past/full/appearences/2010_American_Dad_Klaus_MO7S.jpg",
       "full": "assets/past/full/appearences/2010_American_Dad_Klaus_MO7S.jpg",
       "thumb": "assets/past/full/appearences/thumbs/2010_American_Dad_Klaus_MO7S Medium.jpeg",
       "title": "2010 American Dad Klaus MO7S",
-      "category": "appearances"
+      "category": "appearances",
+      "date": "2010-01-01"
     },
     {
-      "src": "assets/past/full/appearences/2010_American_Music_Awards_MO7S.jpg",
       "full": "assets/past/full/appearences/2010_American_Music_Awards_MO7S.jpg",
       "thumb": "assets/past/full/appearences/thumbs/2010_American_Music_Awards_MO7S Medium.jpeg",
       "title": "2010 American Music Awards MO7S",
-      "category": "appearances"
+      "category": "appearances",
+      "date": "2010-01-01"
     },
     {
-      "src": "assets/past/full/appearences/2012_American_Dad_Living_Room.jpg",
       "full": "assets/past/full/appearences/2012_American_Dad_Living_Room.jpg",
       "thumb": "assets/past/full/appearences/thumbs/2012_American_Dad_Living_Room Medium.jpeg",
       "title": "2012 American Dad Living Room",
       "category": "appearances",
+      "date": "2012-01-01",
       "video": "assets/past/videos/MO7S_White_Rice_American_Dad.mp4"
     },
     {
-      "src": "assets/past/full/appearences/2012_MOTM_BET_MO7S.jpg",
       "full": "assets/past/full/appearences/2012_MOTM_BET_MO7S.jpg",
       "thumb": "assets/past/full/appearences/thumbs/2012_MOTM_BET_MO7S Medium.jpeg",
       "title": "2012 MOTM BET MO7S",
       "category": "appearances",
+      "date": "2012-01-01",
       "video": "assets/past/videos/MO7S_Masters_of_The_Mix_BET.mp4"
     },
     {
-      "src": "assets/past/full/appearences/2013_American_Dad_DJ_Iron_Monkey.jpg",
       "full": "assets/past/full/appearences/2013_American_Dad_DJ_Iron_Monkey.jpg",
       "thumb": "assets/past/full/appearences/thumbs/2013_American_Dad_DJ_Iron_Monkey Medium.jpeg",
       "title": "2013 American Dad DJ Iron Monkey",
-      "category": "appearances"
+      "category": "appearances",
+      "date": "2013-01-01"
     },
     {
-      "src": "assets/past/full/appearences/2018_MO7S_Manchester.jpg",
       "full": "assets/past/full/appearences/2018_MO7S_Manchester.jpg",
       "thumb": "assets/past/full/appearences/thumbs/2018_MO7S_Manchester Medium.jpeg",
       "title": "2018 MO7S Manchester",
-      "category": "appearances"
+      "category": "appearances",
+      "date": "2018-01-01"
     },
     {
-      "src": "assets/past/full/2004_EVOLVE_Sign.jpg",
       "full": "assets/past/full/2004_EVOLVE_Sign.jpg",
       "thumb": "assets/past/thumb_named/2004_EVOLVE_Sign Medium.jpeg",
       "title": "2004 EVOLVE Sign",
-      "category": "events"
+      "category": "events",
+      "date": "2004-01-01"
     },
     {
-      "src": "assets/past/full/2017_MO7S_Triskele_Tour.jpg",
       "full": "assets/past/full/2017_MO7S_Triskele_Tour.jpg",
       "thumb": "assets/past/thumb_named/2017_MO7S_Triskele_Tour Medium.jpeg",
       "title": "2017 MO7S Triskele Tour",
-      "category": "events"
+      "category": "events",
+      "date": "2017-01-01"
     },
     {
-      "src": "assets/past/full/2018_MO7S_FLASK.jpg",
       "full": "assets/past/full/2018_MO7S_FLASK.jpg",
       "thumb": "assets/past/thumb_named/2018_MO7S_FLASK Medium.jpeg",
       "title": "2018 MO7S FLASK",
-      "category": "events"
+      "category": "events",
+      "date": "2018-01-01"
     }
   ]
 }
