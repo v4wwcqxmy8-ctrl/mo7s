@@ -1,10 +1,3 @@
-Your JSON structure is actually correct, which means the **"Broken"** behavior is likely caused by one of two things: a **File Path mismatch** (the HTML can't find the JSON) or a **Category Mismatch** in the code.
-
-However, I have updated your JSON below to ensure maximum compatibility with your script. I have standardized the date formats and verified the category keys.
-
-**Save this exactly as `past-manifest.json` in the same folder as `past.html`:**
-
-```json
 {
   "count": 132,
   "items": [
