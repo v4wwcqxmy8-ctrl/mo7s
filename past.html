@@ -502,7 +502,7 @@
   </header>
 
   <main>
-        <details class="sect" id="appearances">
+        <details class="sect" id="appearances" open>
       <summary>
         <span class="chev">›</span>
         <h2 class="section__title">appearances</h2>
@@ -512,7 +512,7 @@
       </div>
     </details>
 
-    <details class="sect" id="events">
+    <details class="sect" id="events" open>
       <summary>
         <span class="chev">›</span>
         <h2 class="section__title">events</h2>
@@ -918,10 +918,11 @@
 
         function openSection() {
           const h = (location.hash || '').replace('#','');
+          const defaults = new Set(['appearances','events']);
           for (const k of ['appearances','events','portfolio','releases']) {
             const d = document.getElementById(k);
             if (d && d.tagName === 'DETAILS') {
-              d.open = (h ? (k === h) : false);
+              d.open = h ? (k === h) : defaults.has(k);
             }
           }
         }
