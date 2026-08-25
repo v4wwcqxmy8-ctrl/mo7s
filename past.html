@@ -475,6 +475,34 @@
     .mixmeta a { color: #cccccc; text-decoration: none; }
     .mixmeta a:hover { text-decoration: underline; }
 
+    figure {
+      margin: 0 0 18px;
+      display: grid;
+      gap: 14px;
+    }
+
+    figure .card {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 18px 60px rgba(0,0,0,0.7);
+      background: #050505;
+    }
+
+    figure .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    figcaption {
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 1rem;
+    }
+
+    .em { color: var(--ink); }
+
     @media (max-width: 640px) {
       .hint { display: none; }
       .wall { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
@@ -502,6 +530,15 @@
   </header>
 
   <main>
+    <figure>
+      <div class="card">
+        <img src="assets/present/blood-of-zeus-1600.jpg" alt="Blood of Zeus" loading="eager" decoding="async" />
+      </div>
+      <figcaption>
+        After 3 seasons, <span class="em">Stephen</span> wrapped up production on <span class="em">Blood of Zeus</span> on Netflix where he was the <span class="em">Director of Technology</span>. A big salute to the Cast &amp; Crew. Powerhouse team and everyone at Netflix!!
+      </figcaption>
+    </figure>
+
         <details class="sect" id="appearances" open>
       <summary>
         <span class="chev">›</span>
