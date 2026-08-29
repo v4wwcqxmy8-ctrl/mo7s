@@ -333,6 +333,7 @@
 
     .viewer__frame {
       width: min(92vw, 960px);
+      min-height: min(60vh, 480px);
       max-height: 88vh;
       border-radius: 16px;
       overflow: hidden;
@@ -702,6 +703,9 @@
       if (!item) return;
 
       viewer.setAttribute('aria-hidden', 'false');
+      // Compensate for the vanishing scrollbar so the fixed overlay doesn't shift right.
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.paddingRight = scrollbarWidth > 0 ? scrollbarWidth + 'px' : '';
       document.body.style.overflow = 'hidden';
 
       cap.textContent = item?.title || '';
@@ -743,6 +747,7 @@
       viewerVid.removeAttribute('src');
       viewerVid.load();
       document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
       currentView = [];
       viewPos = -1;
       muteBtn.style.display = 'none';
