@@ -27,6 +27,11 @@
       --radius: 14px;
     }
 
+    html {
+      /* Reserve scrollbar space so locking body scroll never resizes the viewport under the fixed viewer overlay. */
+      scrollbar-gutter: stable both-edges;
+    }
+
     * { box-sizing: border-box; }
 
     body {
@@ -589,7 +594,7 @@
         <div class="embeds-row">
           <div class="embed">
             <a class="am-stack" href="https://music.apple.com/us/artist/mo7s/56543" target="_blank" rel="noopener noreferrer" aria-label="MO7S on Apple Music">
-              <img class="am-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music/v4/22/5f/83/225f83d8-94f0-c735-dc54-6f77c513f5c0/888608738279.jpg/600x600bb.jpg" alt="MO7S cover art" loadi[...]
+              <img class="am-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music/v4/22/5f/83/225f83d8-94f0-c735-dc54-6f77c513f5c0/888608738279.jpg/600x600bb.jpg" alt="MO7S cover art" loading="lazy" decoding="async" />
             </a>
           </div>
         </div>
@@ -703,9 +708,6 @@
       if (!item) return;
 
       viewer.setAttribute('aria-hidden', 'false');
-      // Compensate for the vanishing scrollbar so the fixed overlay doesn't shift right.
-      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-      document.body.style.paddingRight = scrollbarWidth > 0 ? scrollbarWidth + 'px' : '';
       document.body.style.overflow = 'hidden';
 
       cap.textContent = item?.title || '';
@@ -747,7 +749,6 @@
       viewerVid.removeAttribute('src');
       viewerVid.load();
       document.body.style.overflow = '';
-      document.body.style.paddingRight = '';
       currentView = [];
       viewPos = -1;
       muteBtn.style.display = 'none';
