@@ -879,6 +879,13 @@
       "date": "2010-01-01"
     },
     {
+      "full": "assets/past/full/appearences/2012_American_Dad_Living_Room.jpg",
+      "thumb": "assets/past/full/appearences/thumbs/2012_American_Dad_Living_Room Medium.jpeg",
+      "title": "2012 American Dad Living Room",
+      "category": "media",
+      "date": "2012-01-01"
+    },
+    {
       "full": "assets/past/full/appearences/2012_MOTM_BET_MO7S.jpg",
       "thumb": "assets/past/videos/thumbs/MO7S_Masters_of_The_Mix_BET.jpg",
       "title": "2012 MOTM BET MO7S",
@@ -892,14 +899,6 @@
       "title": "2013 American Dad DJ Iron Monkey",
       "category": "media",
       "date": "2013-01-01"
-    },
-    {
-      "full": "assets/past/full/appearences/2013_American_Dad_DJ_Iron_Monkey.jpg",
-      "thumb": "assets/past/videos/thumbs/901 DANCE SEQ_medium.jpg",
-      "title": "901 Dance Sequence",
-      "category": "appearances",
-      "date": "2026-01-01",
-      "video": "assets/past/videos/901 DANCE SEQ_medium.mov"
     },
     {
       "full": "assets/past/full/appearences/2012_American_Dad_Living_Room.jpg",
