@@ -582,7 +582,7 @@
   </header>
 
   <main>
-    <details class="sect" id="media" open>
+    <details class="sect" id="media">
       <summary>
         <span class="chev">›</span>
         <h2 class="section__title">media</h2>
@@ -625,7 +625,7 @@
       </div>
     </details>
 
-    <details class="sect" id="industry" open>
+    <details class="sect" id="industry">
       <summary>
         <span class="chev">›</span>
         <h2 class="section__title">industry</h2>
@@ -635,7 +635,7 @@
       </div>
     </details>
 
-    <details class="sect" id="celebrity" open>
+    <details class="sect" id="celebrity">
       <summary>
         <span class="chev">›</span>
         <h2 class="section__title">celebrity</h2>
@@ -645,7 +645,7 @@
       </div>
     </details>
 
-    <details class="sect" id="events" open>
+    <details class="sect" id="events">
       <summary>
         <span class="chev">›</span>
         <h2 class="section__title">events</h2>
@@ -1065,11 +1065,10 @@
 
         function openSection() {
           const h = (location.hash || '').replace('#','');
-          const defaults = new Set(['media','industry','celebrity','events']);
           for (const k of ['media','industry','celebrity','events','portfolio','releases']) {
             const d = document.getElementById(k);
             if (d && d.tagName === 'DETAILS') {
-              d.open = h ? (k === h) : defaults.has(k) || ['media','industry','celebrity'].includes(k);
+              d.open = h === k;
             }
           }
         }
