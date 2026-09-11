@@ -861,14 +861,14 @@
       "full": "assets/past/full/appearences/2010_American_Dad_CHAR_Manders.jpg",
       "thumb": "assets/past/full/appearences/thumbs/2010_American_Dad_CHAR_Manders Medium.jpeg",
       "title": "2010 American Dad CHAR Manders",
-      "category": "appearances",
+      "category": "media",
       "date": "2010-01-01"
     },
     {
       "full": "assets/past/full/appearences/2010_American_Dad_Klaus_MO7S.jpg",
       "thumb": "assets/past/full/appearences/thumbs/2010_American_Dad_Klaus_MO7S Medium.jpeg",
       "title": "2010 American Dad Klaus MO7S",
-      "category": "appearances",
+      "category": "media",
       "date": "2010-01-01"
     },
     {
@@ -880,7 +880,7 @@
     },
     {
       "full": "assets/past/full/appearences/2012_American_Dad_Living_Room.jpg",
-      "thumb": "assets/past/full/appearences/thumbs/2012_American_Dad_Living_Room Medium.jpeg",
+      "thumb": "assets/past/videos/thumbs/MO7S_White_Rice_American_Dad.jpg",
       "title": "2012 American Dad Living Room",
       "category": "appearances",
       "date": "2012-01-01",
@@ -888,7 +888,7 @@
     },
     {
       "full": "assets/past/full/appearences/2012_MOTM_BET_MO7S.jpg",
-      "thumb": "assets/past/full/appearences/thumbs/2012_MOTM_BET_MO7S Medium.jpeg",
+      "thumb": "assets/past/videos/thumbs/MO7S_Masters_of_The_Mix_BET.jpg",
       "title": "2012 MOTM BET MO7S",
       "category": "appearances",
       "date": "2012-01-01",
@@ -898,8 +898,48 @@
       "full": "assets/past/full/appearences/2013_American_Dad_DJ_Iron_Monkey.jpg",
       "thumb": "assets/past/full/appearences/thumbs/2013_American_Dad_DJ_Iron_Monkey Medium.jpeg",
       "title": "2013 American Dad DJ Iron Monkey",
-      "category": "appearances",
+      "category": "media",
       "date": "2013-01-01"
+    },
+    {
+      "full": "assets/past/full/appearences/2013_American_Dad_DJ_Iron_Monkey.jpg",
+      "thumb": "assets/past/videos/thumbs/901 DANCE SEQ_medium.jpg",
+      "title": "901 Dance Sequence",
+      "category": "appearances",
+      "date": "2026-01-01",
+      "video": "assets/past/videos/901 DANCE SEQ_medium.mov"
+    },
+    {
+      "full": "assets/past/full/appearences/2012_American_Dad_Living_Room.jpg",
+      "thumb": "assets/past/videos/thumbs/American_Dad_MO7S_Appearance_White_Rice.jpg",
+      "title": "American Dad Appearance: White Rice",
+      "category": "appearances",
+      "date": "2026-01-01",
+      "video": "assets/past/videos/American_Dad_MO7S_Appearance_White_Rice.mov"
+    },
+    {
+      "full": "assets/past/full/appearences/2012_American_Dad_Living_Room.jpg",
+      "thumb": "assets/past/videos/thumbs/American_Dad_MO7S_Kill_Computer_Synch.jpg",
+      "title": "American Dad: Kill Computer Synch",
+      "category": "appearances",
+      "date": "2026-01-01",
+      "video": "assets/past/videos/American_Dad_MO7S_Kill_Computer_Synch.mov"
+    },
+    {
+      "full": "assets/past/full/appearences/2012_American_Dad_Living_Room.jpg",
+      "thumb": "assets/past/videos/thumbs/American_Dad_MO7S_Tesla_Synch.jpg",
+      "title": "American Dad: Tesla Synch",
+      "category": "appearances",
+      "date": "2026-01-01",
+      "video": "assets/past/videos/American_Dad_MO7S_Tesla_Synch.mp4"
+    },
+    {
+      "full": "assets/past/full/appearences/2012_American_Dad_Living_Room.jpg",
+      "thumb": "assets/past/videos/thumbs/American_Dad_Monism_Science_Fact_Synch.jpg",
+      "title": "American Dad: Science Fact Synch",
+      "category": "appearances",
+      "date": "2026-01-01",
+      "video": "assets/past/videos/American_Dad_Monism_Science_Fact_Synch.mp4"
     },
     {
       "full": "assets/past/full/appearences/2018_MO7S_Manchester.jpg",
@@ -907,6 +947,125 @@
       "title": "2018 MO7S Manchester",
       "category": "appearances",
       "date": "2018-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7165.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7165.jpg",
+      "title": "The Greats Promo 7165",
+      "category": "celebrity",
+      "date": "2026-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7166.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7166.jpg",
+      "title": "The Greats Promo 7166",
+      "category": "celebrity",
+      "date": "2026-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7167.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7167.jpg",
+      "title": "The Greats Promo 7167",
+      "category": "celebrity",
+      "date": "2026-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7168.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7168.jpg",
+      "title": "The Greats Promo 7168",
+      "category": "celebrity",
+      "date": "2026-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7169.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7169.jpg",
+      "title": "The Greats Promo 7169",
+      "category": "celebrity",
+      "date": "2026-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7170.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7170.jpg",
+      "title": "The Greats Promo 7170",
+      "category": "celebrity",
+      "date": "2026-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7171.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7171.jpg",
+      "title": "The Greats Promo 7171",
+      "category": "celebrity",
+      "date": "2026-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7172.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7172.jpg",
+      "title": "The Greats Promo 7172",
+      "category": "celebrity",
+      "date": "2026-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7175.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7175.jpg",
+      "title": "The Greats Promo 7175",
+      "category": "celebrity",
+      "date": "2026-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7176.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7176.jpg",
+      "title": "The Greats Promo 7176",
+      "category": "celebrity",
+      "date": "2026-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7177.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7177.jpg",
+      "title": "The Greats Promo 7177",
+      "category": "celebrity",
+      "date": "2026-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7178.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7178.jpg",
+      "title": "The Greats Promo 7178",
+      "category": "celebrity",
+      "date": "2026-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7179.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7179.jpg",
+      "title": "The Greats Promo 7179",
+      "category": "celebrity",
+      "date": "2026-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7180.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7180.jpg",
+      "title": "The Greats Promo 7180",
+      "category": "celebrity",
+      "date": "2026-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7181.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7181.jpg",
+      "title": "The Greats Promo 7181",
+      "category": "celebrity",
+      "date": "2026-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7182.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7182.jpg",
+      "title": "The Greats Promo 7182",
+      "category": "celebrity",
+      "date": "2026-01-01"
+    },
+    {
+      "full": "assets/past/celebrity/IMG_7184.jpeg",
+      "thumb": "assets/past/celebrity/thumbs/IMG_7184.jpg",
+      "title": "The Greats Promo 7184",
+      "category": "celebrity",
+      "date": "2026-01-01"
     },
     {
       "full": "assets/past/full/2004_EVOLVE_Sign.jpg",

@@ -180,6 +180,46 @@
       color: rgba(242,242,242,0.65);
     }
 
+    .credits {
+      display: grid;
+      gap: 18px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .credit {
+      display: grid;
+      gap: 4px;
+    }
+
+    .credit__title {
+      color: var(--ink);
+      font-size: 1rem;
+    }
+
+    .credit__meta {
+      font-size: 0.92rem;
+    }
+
+    .credit__notice {
+      padding-top: 2px;
+      color: rgba(242,242,242,0.58);
+      font-size: 0.88rem;
+    }
+
+    .credit__rule {
+      width: 100%;
+      margin: 0;
+      border: 0;
+      border-top: 1px solid rgba(255,255,255,0.14);
+    }
+
+    #media .sect__body > section {
+      margin-top: 30px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.10);
+    }
+
     .embed {
       margin: 10px 0 14px;
     }
@@ -230,6 +270,10 @@
       grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
       gap: var(--gap);
       align-items: start;
+    }
+
+    .video-assets {
+      margin-top: 18px;
     }
 
     .flyer {
@@ -527,7 +571,9 @@
       </div>
 
       <nav class="subnav" aria-label="Past sections">
-        <a href="#appearances" id="lnk-appearances">appearances</a>
+        <a href="#media" id="lnk-media">media</a>
+        <a href="#industry" id="lnk-industry">industry</a>
+        <a href="#celebrity" id="lnk-celebrity">celebrity</a>
         <a href="#events" id="lnk-events">events</a>
         <a href="#portfolio" id="lnk-portfolio">portfolio</a>
         <a href="#releases" id="lnk-releases">releases</a>
@@ -536,13 +582,66 @@
   </header>
 
   <main>
-        <details class="sect" id="appearances" open>
+    <details class="sect" id="media" open>
       <summary>
         <span class="chev">›</span>
-        <h2 class="section__title">appearances</h2>
+        <h2 class="section__title">media</h2>
       </summary>
       <div class="sect__body">
-        <div class="wall" id="wall-appearances"></div>
+        <div class="wall" id="wall-videos"></div>
+        <section aria-labelledby="music-credits-title">
+          <h2 class="section__title" id="music-credits-title">music &amp; rights credits</h2>
+          <div class="credits">
+            <div class="credit">
+              <div class="credit__title">&ldquo;Kill Computer&rdquo; (Nullspace Remix)</div>
+              <div class="credit__meta">by MO7S</div>
+              <div class="credit__meta">Registered with BMI &copy; 2011 Monism Music</div>
+            </div>
+            <div class="credit">
+              <div class="credit__title">&ldquo;Umbra&rdquo; (DpL &amp; Cates Remix)</div>
+              <div class="credit__meta">by MO7S</div>
+              <div class="credit__meta">Registered with BMI &copy; 2008 Monism Music</div>
+              <div class="credit__meta">Appears in <em>Season 12, Episode 1: &ldquo;Blonde Ambition&rdquo;</em></div>
+              <div class="credit__meta">Original airdate: October 20, 2014</div>
+            </div>
+            <div class="credit">
+              <div class="credit__title">&ldquo;Science Fact&rdquo;</div>
+              <div class="credit__meta">by Jon Cates</div>
+              <div class="credit__meta">Registered with BMI &copy; 2012 Monism Music</div>
+              <div class="credit__meta">Appears in <em>Season 8, Episode 7: &ldquo;National Treasure 4&rdquo;</em></div>
+              <div class="credit__meta">Original airdate: December 23, 2012</div>
+            </div>
+            <div class="credit">
+              <div class="credit__title">&ldquo;Tesla&rdquo;</div>
+              <div class="credit__meta">by MO7S</div>
+              <div class="credit__meta">Registered with BMI &copy; 2011 Monism Music</div>
+              <div class="credit__meta">Appears in <em>Season 6, Episode 19: &ldquo;Gorilla&rsquo;s in the Mist&rdquo;</em></div>
+              <div class="credit__meta">Original airdate: May 22, 2011</div>
+            </div>
+            <hr class="credit__rule" />
+            <div class="credit__notice">Video courtesy of 20th Century Fox Animation. All rights reserved.</div>
+          </div>
+        </section>
+      </div>
+    </details>
+
+    <details class="sect" id="industry" open>
+      <summary>
+        <span class="chev">›</span>
+        <h2 class="section__title">industry</h2>
+      </summary>
+      <div class="sect__body">
+        <div class="wall" id="wall-industry"></div>
+      </div>
+    </details>
+
+    <details class="sect" id="celebrity" open>
+      <summary>
+        <span class="chev">›</span>
+        <h2 class="section__title">celebrity</h2>
+      </summary>
+      <div class="sect__body">
+        <div class="wall" id="wall-celebrity"></div>
       </div>
     </details>
 
@@ -627,7 +726,9 @@
 
     const wallEvents = document.getElementById('wall-events');
     const wallReleases = document.getElementById('wall-releases');
-    const wallAppearances = document.getElementById('wall-appearances');
+    const wallIndustry = document.getElementById('wall-industry');
+    const wallCelebrity = document.getElementById('wall-celebrity');
+    const wallVideos = document.getElementById('wall-videos');
     const viewer = document.getElementById('viewer');
     const viewerImg = document.getElementById('viewerImg');
     const viewerVid = document.getElementById('viewerVid');
@@ -824,7 +925,7 @@
     frame.addEventListener('touchstart', onTouchStart, { passive: true });
     frame.addEventListener('touchend', onTouchEnd, { passive: true });
 
-    fetch(MANIFEST_URL)
+    fetch(MANIFEST_URL + '?v=' + Date.now())
       .then(r => r.json())
       .then(data => {
         ITEMS = data.items || [];
@@ -841,9 +942,10 @@
           return Number.isFinite(t) ? t : -Infinity;
         }
 
-        const buckets = { appearances: [], events: [], releases: [] };
+        const buckets = { media: [], appearances: [], celebrity: [], events: [], releases: [] };
         ITEMS.forEach((item, i) => {
           const cat = (item.category || 'events').toLowerCase();
+          if (cat === 'appearances' && item.video) return;
           (buckets[cat] || buckets.events).push({ item, i });
         });
 
@@ -901,7 +1003,7 @@
         }
         buckets.events = newEvents;
 
-        const frags = { appearances: document.createDocumentFragment(), events: document.createDocumentFragment(), releases: document.createDocumentFragment() };
+        const frags = { media: document.createDocumentFragment(), industry: document.createDocumentFragment(), celebrity: document.createDocumentFragment(), events: document.createDocumentFragment(), releases: document.createDocumentFragment() };
 
         function makeTile(item, i, view, pos) {
           const a = document.createElement('a');
@@ -931,19 +1033,29 @@
 
         const eventsView = buckets.events.map(x => x.i);
         const releasesView = buckets.releases.map(x => x.i);
-        const appearancesView = buckets.appearances.map(x => x.i);
+        const industryView = buckets.appearances.map(x => x.i);
+        const celebrityView = buckets.celebrity.map(x => x.i);
+        const mediaView = buckets.media.map(x => x.i).concat(ITEMS.map((item, i) => item.video ? i : []).flat());
 
         buckets.events.forEach(({ item, i }, pos) => frags.events.appendChild(makeTile(item, i, eventsView, pos)));
         buckets.releases.forEach(({ item, i }, pos) => frags.releases.appendChild(makeTile(item, i, releasesView, pos)));
-        buckets.appearances.forEach(({ item, i }, pos) => frags.appearances.appendChild(makeTile(item, i, appearancesView, pos)));
+        buckets.appearances.forEach(({ item, i }, pos) => frags.industry.appendChild(makeTile(item, i, industryView, pos)));
+        buckets.media.forEach(({ item, i }, pos) => frags.media.appendChild(makeTile(item, i, mediaView, pos)));
+        buckets.celebrity.forEach(({ item, i }, pos) => frags.celebrity.appendChild(makeTile(item, i, celebrityView, pos)));
 
         wallEvents.appendChild(frags.events);
         wallReleases.appendChild(frags.releases);
-        wallAppearances.appendChild(frags.appearances);
+        wallIndustry.appendChild(frags.industry);
+        wallCelebrity.appendChild(frags.celebrity);
+
+        const videoRows = ITEMS.map((item, i) => ({ item, i })).filter(({ item }) => item.video);
+        const videosView = videoRows.map(x => x.i);
+        videoRows.forEach(({ item, i }, pos) => frags.media.appendChild(makeTile(item, i, mediaView, buckets.media.length + pos)));
+        wallVideos.appendChild(frags.media);
 
         function setActive() {
           const h = (location.hash || '').replace('#','');
-          for (const k of ['appearances','events','portfolio','releases']) {
+          for (const k of ['media','industry','celebrity','events','portfolio','releases']) {
             const a = document.getElementById('lnk-'+k);
             if (a) a.setAttribute('aria-current', k===h ? 'page' : 'false');
           }
@@ -953,11 +1065,11 @@
 
         function openSection() {
           const h = (location.hash || '').replace('#','');
-          const defaults = new Set(['appearances','events']);
-          for (const k of ['appearances','events','portfolio','releases']) {
+          const defaults = new Set(['media','industry','celebrity','events']);
+          for (const k of ['media','industry','celebrity','events','portfolio','releases']) {
             const d = document.getElementById(k);
             if (d && d.tagName === 'DETAILS') {
-              d.open = h ? (k === h) : defaults.has(k);
+              d.open = h ? (k === h) : defaults.has(k) || ['media','industry','celebrity'].includes(k);
             }
           }
         }
