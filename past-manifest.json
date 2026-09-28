@@ -862,21 +862,24 @@
       "thumb": "assets/past/full/appearences/thumbs/2010_American_Dad_CHAR_Manders Medium.jpeg",
       "title": "2010 American Dad CHAR Manders",
       "category": "appearances",
-      "date": "2010-01-01"
+      "date": "2010-01-01",
+      "appearanceGroup": "tv-spots"
     },
     {
       "full": "assets/past/full/appearences/2010_American_Dad_Klaus_MO7S.jpg",
       "thumb": "assets/past/full/appearences/thumbs/2010_American_Dad_Klaus_MO7S Medium.jpeg",
       "title": "2010 American Dad Klaus MO7S",
       "category": "appearances",
-      "date": "2010-01-01"
+      "date": "2010-01-01",
+      "appearanceGroup": "tv-spots"
     },
     {
       "full": "assets/past/full/appearences/2010_American_Music_Awards_MO7S.jpg",
       "thumb": "assets/past/full/appearences/thumbs/2010_American_Music_Awards_MO7S Medium.jpeg",
       "title": "2010 American Music Awards MO7S",
       "category": "appearances",
-      "date": "2010-01-01"
+      "date": "2010-01-01",
+      "appearanceGroup": "tv-spots"
     },
     {
       "full": "assets/past/full/appearences/2012_American_Dad_Living_Room.jpg",
@@ -899,7 +902,8 @@
       "thumb": "assets/past/full/appearences/thumbs/2013_American_Dad_DJ_Iron_Monkey Medium.jpeg",
       "title": "2013 American Dad DJ Iron Monkey",
       "category": "appearances",
-      "date": "2013-01-01"
+      "date": "2013-01-01",
+      "appearanceGroup": "tv-spots"
     },
     {
       "full": "assets/past/full/appearences/2018_MO7S_Manchester.jpg",
@@ -928,6 +932,38 @@
       "title": "2018 MO7S FLASK",
       "category": "events",
       "date": "2018-01-01"
+    },
+    {
+      "full": "assets/video/posters/American_Dad_MO7S_Appearance_White_Rice.jpg",
+      "thumb": "assets/video/posters/American_Dad_MO7S_Appearance_White_Rice.jpg",
+      "title": "American Dad — Appearance / White Rice",
+      "category": "appearances",
+      "date": "2026-03-01",
+      "video": "assets/video/American_Dad_MO7S_Appearance_White_Rice.mov"
+    },
+    {
+      "full": "assets/video/posters/American_Dad_MO7S_Kill_Computer_Synch.jpg",
+      "thumb": "assets/video/posters/American_Dad_MO7S_Kill_Computer_Synch.jpg",
+      "title": "American Dad — Kill Computer Synch",
+      "category": "appearances",
+      "date": "2026-03-01",
+      "video": "assets/video/American_Dad_MO7S_Kill_Computer_Synch.mov"
+    },
+    {
+      "full": "assets/video/posters/American_Dad_MO7S_Tesla_Synch.jpg",
+      "thumb": "assets/video/posters/American_Dad_MO7S_Tesla_Synch.jpg",
+      "title": "American Dad — Tesla Synch",
+      "category": "appearances",
+      "date": "2026-03-01",
+      "video": "assets/video/American_Dad_MO7S_Tesla_Synch.mp4"
+    },
+    {
+      "full": "assets/video/posters/American_Dad_Monism_Science_Fact_Synch.jpg",
+      "thumb": "assets/video/posters/American_Dad_Monism_Science_Fact_Synch.jpg",
+      "title": "American Dad — Monism / Science Fact Synch",
+      "category": "appearances",
+      "date": "2026-03-01",
+      "video": "assets/video/American_Dad_Monism_Science_Fact_Synch.mp4"
     }
   ]
 }

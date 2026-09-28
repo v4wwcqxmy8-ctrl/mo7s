@@ -141,6 +141,85 @@
       display: block;
     }
 
+    .services {
+      width: min(720px, 100%);
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.02);
+      padding: 28px 24px;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.7);
+      text-align: center;
+    }
+
+    .services h1 {
+      margin: 0 0 18px;
+      font-family: 'Roadway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      color: var(--ink);
+      text-align: center;
+    }
+
+    .services h2 {
+      margin: 26px 0 6px;
+      font-family: 'Roadway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 1rem;
+      color: var(--ink);
+    }
+
+    .services h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .services h3 {
+      margin: 26px 0 6px;
+      font-family: 'Roadway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      color: rgba(242,242,242,0.85);
+    }
+
+    .services .tags {
+      margin: 0 0 12px;
+      font-weight: 600;
+      color: rgba(242,242,242,0.85);
+      font-size: 0.95rem;
+    }
+
+    .services p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .services p:last-child {
+      margin-bottom: 0;
+    }
+
+    .services .contact {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.10);
+      text-align: center;
+      color: var(--ink);
+      font-size: 0.95rem;
+    }
+
+    .services .contact a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .services .contact a:hover {
+      border-bottom-color: rgba(255,255,255,0.6);
+    }
+
   </style>
 </head>
 <body>
@@ -156,6 +235,7 @@
         <a href="past.html">past</a>
         <a href="present.html">present</a>
         <a href="future.html" aria-current="page">future</a>
+        <a href="future.html#services" id="lnk-services">services</a>
       </nav>
     </div>
   </header>
@@ -164,6 +244,45 @@
     <div class="card">
       <img src="assets/2026_Marquee.1.jpeg" alt="2026 Marquee" loading="eager" decoding="async" />
     </div>
+
+    <section id="services" class="services" aria-labelledby="services-title">
+      <h1 id="services-title">Services</h1>
+
+      <h2>DJ</h2>
+      <p class="tags">Vinyl · Digital · Techno · House · Breakbeat · Speed Garage · Turntablism</p>
+      <p>Stephen’s notoriety as a progressive underground disc jockey spans three decades. Starting in the seminal East Coast rave scene of the 1990s, he moved to Los Angeles during the electronic music boom of the 2000s, establishing a distinctive presence across clubs, festivals, TV, and animation.</p>
+
+      <h2>Producer</h2>
+      <p class="tags">Original Music · Remixes · Sound Design · Licensing</p>
+      <p>A DIY self-starter, Stephen entered music publishing soon after arriving in Los Angeles, building his own label, Monism, and releasing hundreds of works. His catalog has been licensed to major television networks and streaming platforms, while retaining 100% ownership of his works.</p>
+      <p>By operating independently of traditional music-industry gatekeepers, he built a sustainable model for himself and the artists around him—handling publishing, distribution, licensing, and administration directly.</p>
+      <p>His sound-design work has also found its way into popular apps and mobile devices across iOS and Android.</p>
+
+      <h2>Technical Consultation</h2>
+      <p class="tags">Audio · AV/IT · Networks · Production Technology · Systems Integration</p>
+      <p>An Apple alumnus, Stephen went on to support productions and organizations including <em>Family Guy</em> and Aftermath Entertainment during <em>Straight Outta Compton</em>.</p>
+      <p>His work sits at the intersection of creative production and technical infrastructure: evaluating environments, identifying bottlenecks, and building systems that allow creative teams to work more effectively.</p>
+      <p>From audio and post-production to networks, security, systems integration, and production technology, Stephen brings decades of experience translating creative requirements into practical technical solutions.</p>
+
+      <h3>Services</h3>
+      <p>Whether you’re looking for a DJ, commissioning original music or sound design, licensing a catalog, or need technical expertise for a creative environment, MO7S can scale to the project.</p>
+      <p class="tags">Retail · Corporate · Private · Production · Consulting</p>
+
+      <p class="contact">Contact: <a href="mailto:info@mo7s.com">info@mo7s.com</a></p>
+    </section>
   </main>
+
+  <script>
+    // Local-only placeholder wiring for the services tab; highlights the link when its section is in view/hash.
+    (function () {
+      const link = document.getElementById('lnk-services');
+      function setActive() {
+        const h = (location.hash || '').replace('#', '');
+        if (link) link.setAttribute('aria-current', h === 'services' ? 'page' : 'false');
+      }
+      setActive();
+      window.addEventListener('hashchange', setActive);
+    })();
+  </script>
 </body>
 </html>

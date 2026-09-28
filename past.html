@@ -232,6 +232,26 @@
       align-items: start;
     }
 
+    .appearance-group + .appearance-group {
+      margin-top: 24px;
+    }
+
+    .appearance-group__title {
+      margin: 0 0 12px;
+      color: rgba(242,242,242,0.65);
+      font-family: 'Roadway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .appearance-group__empty {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
     .flyer {
       position: relative;
       display: block;
@@ -542,7 +562,22 @@
         <h2 class="section__title">appearances</h2>
       </summary>
       <div class="sect__body">
-        <div class="wall" id="wall-appearances"></div>
+        <section class="appearance-group" aria-labelledby="appearance-title-tv-spots">
+          <h3 class="appearance-group__title" id="appearance-title-tv-spots">TV Spots</h3>
+          <div class="wall" id="wall-appearances-tv-spots"></div>
+        </section>
+        <section class="appearance-group" aria-labelledby="appearance-title-club-spots">
+          <h3 class="appearance-group__title" id="appearance-title-club-spots">Club Spots</h3>
+          <div class="wall" id="wall-appearances-club-spots"></div>
+        </section>
+        <section class="appearance-group" aria-labelledby="appearance-title-club-shots">
+          <h3 class="appearance-group__title" id="appearance-title-club-shots">Club Shots</h3>
+          <div class="wall" id="wall-appearances-club-shots"></div>
+        </section>
+        <section class="appearance-group" aria-labelledby="appearance-title-celebrity-sightings">
+          <h3 class="appearance-group__title" id="appearance-title-celebrity-sightings">Celebrity Sightings</h3>
+          <div class="wall" id="wall-appearances-celebrity-sightings"></div>
+        </section>
       </div>
     </details>
 
@@ -627,7 +662,12 @@
 
     const wallEvents = document.getElementById('wall-events');
     const wallReleases = document.getElementById('wall-releases');
-    const wallAppearances = document.getElementById('wall-appearances');
+    const appearanceWalls = {
+      'tv-spots': document.getElementById('wall-appearances-tv-spots'),
+      'club-spots': document.getElementById('wall-appearances-club-spots'),
+      'club-shots': document.getElementById('wall-appearances-club-shots'),
+      'celebrity-sightings': document.getElementById('wall-appearances-celebrity-sightings')
+    };
     const viewer = document.getElementById('viewer');
     const viewerImg = document.getElementById('viewerImg');
     const viewerVid = document.getElementById('viewerVid');
@@ -931,15 +971,38 @@
 
         const eventsView = buckets.events.map(x => x.i);
         const releasesView = buckets.releases.map(x => x.i);
-        const appearancesView = buckets.appearances.map(x => x.i);
-
         buckets.events.forEach(({ item, i }, pos) => frags.events.appendChild(makeTile(item, i, eventsView, pos)));
         buckets.releases.forEach(({ item, i }, pos) => frags.releases.appendChild(makeTile(item, i, releasesView, pos)));
-        buckets.appearances.forEach(({ item, i }, pos) => frags.appearances.appendChild(makeTile(item, i, appearancesView, pos)));
 
         wallEvents.appendChild(frags.events);
         wallReleases.appendChild(frags.releases);
-        wallAppearances.appendChild(frags.appearances);
+
+        const appearanceGroups = {
+          'tv-spots': [],
+          'club-spots': [],
+          'club-shots': [],
+          'celebrity-sightings': []
+        };
+        const animatedExtensions = /\.(?:gif|apng|webm|m4v|mov|mp4)$/i;
+        buckets.appearances.forEach((row) => {
+          const explicitGroup = String(row.item.appearanceGroup || '').toLowerCase();
+          const mediaUrl = row.item.video || row.item.full || '';
+          const group = explicitGroup || (animatedExtensions.test(mediaUrl) ? 'tv-spots' : 'celebrity-sightings');
+          (appearanceGroups[group] || appearanceGroups['celebrity-sightings']).push(row);
+        });
+
+        Object.entries(appearanceGroups).forEach(([group, rows]) => {
+          const view = rows.map(x => x.i);
+          const fragment = document.createDocumentFragment();
+          rows.forEach(({ item, i }, pos) => fragment.appendChild(makeTile(item, i, view, pos)));
+          appearanceWalls[group].appendChild(fragment);
+          if (!rows.length) {
+            const empty = document.createElement('p');
+            empty.className = 'appearance-group__empty';
+            empty.textContent = 'No assets yet.';
+            appearanceWalls[group].appendChild(empty);
+          }
+        });
 
         function setActive() {
           const h = (location.hash || '').replace('#','');
